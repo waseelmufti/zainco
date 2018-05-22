@@ -61,5 +61,9 @@ $route['contact'] = 'frontend/contact';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+/*Auth Routes*/
+$route['usr'] = 'auth/login';
+$route['usr/login'] = 'auth/login';
+$route['usr/logout'] = 'auth/logout';
 /* Admin Routes*/
 $route['admin/dashboard'] = 'admin';
