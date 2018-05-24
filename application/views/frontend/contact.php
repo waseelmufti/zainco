@@ -49,7 +49,7 @@
             <li class="mobile-hidden"><span aria-hidden="true" class="desktop-hidden mobile-hidden desktop-hidden"></span> <a href="contact.html"></a></li>
 <li class="desktop-hidden"><span aria-hidden="true" class="desktop-hidden mobile-hidden desktop-hidden"></span> <a href="tel:"></a></li>
 
-            <li><span aria-hidden="true" class="icon icon-mail"></span> <a href="mailto:globemotors@hotmail.co.uk" title="Email Us">Email Us</a></li>
+            <li><span aria-hidden="true" class="icon icon-mail"></span> <a href="mailto:" title="Email Us">Email Us</a></li>
 
           </ul>
         </div>
@@ -101,28 +101,57 @@
       <div class="contact-widget">
         <div class="pad-20 overflow-hidden">
           <a id="email-us"></a>
-<form action="https://www.globemotorswalsall.co.uk/email.php" method="post">
-  <input type="hidden" name="subject" value="">
+<?php echo form_open('contact-form'); ?>
+  <input type="hidden" name="subject" value="contact_form">
 
   <fieldset title="Contact Form">
     <h3><span aria-hidden="true" class="icon icon-mail"></span> Email Us</h3>
+
+<!--  Show Success or Error Message -->
+    <?php if($this->session->flashdata('success')) {?>
+    <div class="twelvecol" style="padding: 5px 5px; background: rgba(67, 188, 71, 0.7); color: #fff;"><?= $this->session->flashdata('success') ?></div>
+  <?php } ?>
+  <?php if($this->session->flashdata('error')) {?>
+  <div class="twelvecol" style="padding: 5px; background: rgba(242, 36, 36, 0.7); color: #fff;"><?= $this->session->flashdata('error') ?></div>
+<?php } ?>
     <div class="row">
-      <div class="twelvecol"><input size=40 name="name" value="Name" placeholder="Name" type="text"></div>
+      <div class="twelvecol"><input size=40 name="name" value="Name" placeholder="Name" type="text" required></div>
     </div>
     <div class="row">
-      <div class="twelvecol"><input size=40 name="telephone" value="Tel / Mob" placeholder="Tel / Mob" type="text"></div>
+      <div class="twelvecol"><input size=40 name="phone" value="Tel / Mob" placeholder="Tel / Mob" type="text"></div>
     </div>
     <div class="row">
-      <div class="twelvecol"><input size=40 name="email" value="Email" placeholder="Email" type="text"></div>
+      <div class="twelvecol"><input size=40 name="email" value="Email" placeholder="Email" type="text" required></div>
     </div>
     <div class="row">
-      <div class="twelvecol"><textarea rows=5 cols=40 name="question" placeholder="Enter your enquiry">Enter your enquiry</textarea></div>
+      <div class="twelvecol"><textarea rows=5 cols=40 name="message" placeholder="Enter your enquiry">Enter your enquiry</textarea></div>
     </div>
 
 
     <!-- CAPTCHA -->
-    <div id="recaptcha_widget" >
-      <div></div>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <div class="row">
+    <div class="twelvecol">
+      <div class="g-recaptcha" data-sitekey="6Le7RFsUAAAAAPXnED-n8tIogLAF30sl5YgWxrC_"></div>
+      <noscript>
+      <div>
+        <div style="width: 302px; height: 422px; position: relative;">
+          <div style="width: 302px; height: 422px; position: absolute;">
+            <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Le7RFsUAAAAAPXnED-n8tIogLAF30sl5YgWxrC_"
+                    frameborder="0" scrolling="no"
+                    style="width: 302px; height:422px; border-style: none;">
+            </iframe>
+          </div>
+        </div>
+        <div style="width: 300px; height: 60px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+          <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                       class="g-recaptcha-response"
+                       style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;" >
+          </textarea>
+        </div>
+      </div>
+      </noscript>
+    </div>
     </div>
     <!-- //CAPTCHA -->
 
@@ -132,7 +161,7 @@
     </div>
   </fieldset>
 
-</form>
+<?php echo form_close(); ?>
         </div>
       </div>
     </div>

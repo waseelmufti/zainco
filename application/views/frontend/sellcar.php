@@ -31,25 +31,32 @@
 
 		<p>Complete our simple to use valuation form below to get started.</p>
 
-		<form action="https://www.globemotorswalsall.co.uk/sellcar.php" method="post">
-
+<?php echo form_open('sell-form'); ?>
   <h3>Car Valuation</h3>
+
+  <!--  Show Success or Error Message -->
+      <?php if($this->session->flashdata('success')) {?>
+      <div class="twelvecol" style="padding: 5px 5px; background: rgba(67, 188, 71, 0.7); color: #fff;"><?= $this->session->flashdata('success') ?></div>
+    <?php } ?>
+    <?php if($this->session->flashdata('error')) {?>
+    <div class="twelvecol" style="padding: 5px; background: rgba(242, 36, 36, 0.7); color: #fff;"><?= $this->session->flashdata('error') ?></div>
+  <?php } ?>
 
   <div class="row">
     <div class="sixcol"><label>Reg number <span class="required">*</span></label></div>
-    <div class="sixcol last"><input type="text" size=10 name="registration" value="" /></div>
+    <div class="sixcol last"><input type="text" size=10 name="registration" value="" required/></div>
   </div>
   <div class="row">
     <div class="sixcol"><label>Make of car <span class="required">*</span></label></div>
-    <div class="sixcol last"><input type="text" size=40 name="make" value="" /></div>
+    <div class="sixcol last"><input type="text" size=40 name="make" value="" required/></div>
   </div>
   <div class="row">
     <div class="sixcol"><label>Model <span class="required">*</span></label></div>
-    <div class="sixcol last"><input type="text" size=40 name="model" value="" /></div>
+    <div class="sixcol last"><input type="text" size=40 name="model" value="" required/></div>
   </div>
   <div class="row">
     <div class="sixcol"><label>Year <span class="required">*</span></label></div>
-    <div class="sixcol last"><input type="text" size=10 name="year" value="" /></div>
+    <div class="sixcol last"><input type="text" size=10 name="year" value="" required/></div>
   </div>
   <div class="row">
     <div class="sixcol"><label>Mileage </label></div>
@@ -57,23 +64,23 @@
   </div>
   <div class="row">
     <div class="sixcol"><label>Name <span class="required">*</span></label></div>
-    <div class="sixcol last"><input type="text" size=40 name="name" value="" /></div>
+    <div class="sixcol last"><input type="text" size=40 name="name" value="" required/></div>
   </div>
   <div class="row">
     <div class="sixcol"><label>Email <span class="required">*</span></label></div>
-    <div class="sixcol last"><input type="text" size=40 name="email" value="" /></div>
+    <div class="sixcol last"><input type="text" size=40 name="email" value="" required/></div>
   </div>
   <div class="row">
     <div class="sixcol"><label>Telephone <span class="required">*</span></label></div>
-    <div class="sixcol last"><input type="text" size=40 name="telephone" value="" /></div>
+    <div class="sixcol last"><input type="text" size=40 name="phone" value="" required/></div>
   </div>
 
   <div class="row">
     <div class="sixcol"></div>
-    <div id="sellcar-submit" class="sixcol last"><input type="submit" value="Next Stage" class="button green" /></div>
+    <div id="sellcar-submit" class="sixcol last"><input type="submit" value="Submit" class="button green" /></div>
   </div>
 
-</form>
+<?php echo form_close(); ?>
 
 
           </div>

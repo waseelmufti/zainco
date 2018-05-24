@@ -65,5 +65,11 @@ $route['translate_uri_dashes'] = FALSE;
 $route['usr'] = 'auth/login';
 $route['usr/login'] = 'auth/login';
 $route['usr/logout'] = 'auth/logout';
+
 /* Admin Routes*/
 $route['admin/dashboard'] = 'admin';
+
+/* Form Submission Routes*/
+$route['contact-form'] = 'form/contact';
+$route['sell-form'] = 'form/sellCar';
+$route['carlocator'] = 'form/carLocator';
