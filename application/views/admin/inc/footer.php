@@ -1,8 +1,5 @@
 <footer class="main-footer">
-  <div class="pull-right hidden-xs">
-    <b>Version</b> 2.3.8
-  </div>
-  <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+  <strong>Copyright &copy; <?= date('Y') ?> <a href="#"></a>.</strong> All rights
   reserved.
 </footer>
 
@@ -14,12 +11,54 @@
 <!-- Bootstrap 3.3.6 -->
 <script src="<?php echo base_url(); ?>assets/admin/js/bootstrap.min.js"></script>
 <!-- SlimScroll -->
-<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="<?php echo base_url(); ?>assets/admin/js/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
-<script src="../../plugins/fastclick/fastclick.js"></script>
+<script src="<?php echo base_url(); ?>assets/admin/js/plugins/fastclick/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="<?php echo base_url(); ?>assets/admin/js/app.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url(); ?>assets/admin/js/demo.js"></script>
+<script
+src="<?php echo base_url(); ?>assets/admin/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script type="text/javascript">
+// this function add/remove dynamic fields
+    (function($){
+      $.fn.addfield = function(field_container, field_name){
+      this.on('click', function(e){
+        e.preventDefault();
+        var field_holder = $(field_container);
+        var field = '<div class="input-group" style="margin-top:10px;">\
+        <input class="form-control" type="text" name="'+field_name+'[]">\
+        <span class="input-group-btn">\
+        <button type="button" class="btn btn-danger btn-flat remove">X</button>\
+        </span>\
+        </div>';
+        $(field).appendTo(field_holder);
+        $('.remove').removefield();
+      });
+      return this;
+    };
+  $.fn.removefield = function(){
+    this.on('click', function(e){
+      e.preventDefault();
+      $(this).parents('.input-group').remove();
+
+    });
+  };
+
+})(jQuery);
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('#interior').addfield('div.interior', 'interior');
+  $('#comfort').addfield('div.comfort', 'comfort');
+  $('#exterior').addfield('div.exterior', 'exterior');
+  $('#safety').addfield('div.safety', 'safety');
+  $('#other').addfield('div.other', 'other');
+  //bootstrap WYSIHTML5 - text editor
+  $(".textarea").wysihtml5();
+});
+
+</script>
 </body>
 </html>

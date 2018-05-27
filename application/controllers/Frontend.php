@@ -5,6 +5,7 @@ class Frontend extends CI_Controller{
   public function __construct(){
     parent::__construct();
     $this->load->library('session');
+    $this->load->model('car/car_model');
   }
 
   public function index(){
@@ -14,8 +15,9 @@ class Frontend extends CI_Controller{
   }
 
   public function showroom(){
+    $data['cars'] = $this->car_model->get_list();
     $this->load->view('frontend/inc/header');
-    $this->load->view('frontend/showroom');
+    $this->load->view('frontend/showroom', $data);
     $this->load->view('frontend/inc/footer');
   }
 

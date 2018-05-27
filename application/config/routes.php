@@ -68,7 +68,11 @@ $route['usr/logout'] = 'auth/logout';
 
 /* Admin Routes*/
 $route['admin/dashboard'] = 'admin';
-
+$route['admin/dashboard/car'] = 'car/carList';
+$route['admin/dashboard/car/add'] = 'car/carAdd';
+$route['admin/dashboard/car/save'] = 'car/carSave';
+$route['admin/dashboard/car/edit/(:num)'] = 'car/carEdit/$1';
+$route['admin/dashboard/car/delete/(:num)'] = 'car/carDelete/$1';
 /* Form Submission Routes*/
 $route['contact-form'] = 'form/contact';
 $route['sell-form'] = 'form/sellCar';
