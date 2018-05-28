@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Car_model extends CI_Model{
+class car_model extends CI_Model{
   public function __construct(){
     parent::__construct();
   }
@@ -11,6 +11,12 @@ class Car_model extends CI_Model{
     $query = $this->db->get('car_table');
     return $query->result();
   }
+
+  public function get_imgs($id){
+    $query = $this->db->where('car_id', $id)->get('car_image');
+    return $query->result();
+  }
+
   public function saveCar($car){
 
     $insert = $this->db->insert('car_table', $car);

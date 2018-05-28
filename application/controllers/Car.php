@@ -10,7 +10,7 @@ public function __construct(){
     redirect('usr/login');
   }
 
-  $this->load->model('car/car_model');
+  $this->load->model('car/car_model', 'car_model');
 }
 
 public function carList(){
