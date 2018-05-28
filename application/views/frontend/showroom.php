@@ -332,7 +332,9 @@
                   </div> -->
                   <!-- // END Mobile Only -->
                   <div class="results-btn-view fivecol last mobile-half-col">
-                    <a href="" class="button black full" title="View Vehicle Details"><span aria-hidden="true" class="icon icon-search"></span> View Vehicle</a>
+                    <a href="<?php echo site_url().'showroom/'.$car->id ?>" class="button black full" title="View Vehicle Details">
+                      <span aria-hidden="true" class="icon icon-search"></span> View Vehicle
+                    </a>
                   </div>
                 </div>
               </div>

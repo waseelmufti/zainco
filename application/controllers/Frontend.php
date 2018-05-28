@@ -21,6 +21,12 @@ class Frontend extends CI_Controller{
     $this->load->view('frontend/inc/footer');
   }
 
+public function showcar($id){
+  $data = $this->car_model->get_car($id);
+  $this->load->view('frontend/inc/header');
+  $this->load->view('frontend/singlecar', $data);
+  $this->load->view('frontend/inc/footer');
+}
   public function sellCar(){
     $this->load->view('frontend/inc/header');
     $this->load->view('frontend/sellcar');

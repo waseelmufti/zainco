@@ -17,6 +17,36 @@ class car_model extends CI_Model{
     return $query->result();
   }
 
+  public function get_car($id){
+    $data = array();
+    $car = $this->db->where('id', $id)->get('car_table')->result();
+    if($car){
+      $interior = $this->db->where('car_id', $id)->get('interior')->result();
+      $this->db->select('feature');
+      $exterior = $this->db->where('car_id', $id)->get('exterior')->result();
+      $this->db->select('feature');
+      $comfort = $this->db->where('car_id', $id)->get('comfort')->result();
+      $this->db->select('feature');
+      $safety = $this->db->where('car_id', $id)->get('safety')->result();
+      $this->db->select('feature');
+      $other = $this->db->where('car_id', $id)->get('other')->result();
+      $this->db->select('image');
+      $car_image = $this->db->where('car_id', $id)->get('car_image')->result();
+
+      $data = array(
+        'car' => $car,
+        'interior' => $interior,
+        'exterior' => $exterior,
+        'comfort' => $comfort,
+        'safety' => $safety,
+        'other' => $other,
+        'car_image' => $car_image,
+      );
+
+    }
+    return $data;
+  }
+
   public function saveCar($car){
 
     $insert = $this->db->insert('car_table', $car);
