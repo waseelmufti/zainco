@@ -18,9 +18,9 @@
             <div class="foot-contact">
               <p>Why not talk to us directly by giving us a call or sending us an email.</p>
               <ul>
-                <li><span class="fa fa-phone"></span> <a href="contact.html" title="Contact us">0121 5262220</a></li>
-                <li><span class="fa fa-phone"></span> <a href="contact.html" title="Contact us">07944 706957</a></li>
-                <li><span class="fa fa-envelope"></span> <a href="mailto:globemotors@hotmail.co.uk" title="Contact us">Email us</a></li>
+                <li><span class="fa fa-phone"></span> <a href="" title="Contact us">0121 5262220</a></li>
+                <li><span class="fa fa-phone"></span> <a href="" title="Contact us">07944 706957</a></li>
+                <li><span class="fa fa-envelope"></span> <a href="" title="Contact us">Email us</a></li>
               </ul>
 
             </div>
@@ -96,7 +96,7 @@
             <div class="sixcol">
 
               <ul class="frlist">
-                <li><img src="img-src/themev2/theme/click-foot.png" alt="Powered by Click Dealer"> &copy; 2018 - <a rel="external nofollow" href="http://www.clickdealer.co.uk/" title="Click Dealer">Website powered By Click Dealer</a></li>
+                <li><img src="img-src/themev2/theme/click-foot.png" alt="Powered by Click Dealer"> &copy; <?php echo date('Y') ?> - <a rel="external nofollow" href="" title="Click Dealer">Website powered By Click Dealer</a></li>
               </ul>
 
             </div>
@@ -104,11 +104,11 @@
             <div class="sixcol last">
 
                 <ul class="icons-social">
-                  <li><a href="http://www.facebook.com/sharer.php?u=http://www.globemotorswalsall.co.uk" title="Share us on Facebook" target="_blank"><span aria-hidden="true" class="fa fa-facebook"></span></a></li>
-                  <li><a href="http://twitter.com/share?url=http://www.globemotorswalsall.co.uk" title="Share us on Twitter" target="_blank"><span aria-hidden="true" class="fa fa-twitter"></span></a></li>
-                  <li><a href="https://plus.google.com/share?url=http://www.globemotorswalsall.co.uk" title="See our Google Plus page" target="_blank"><span aria-hidden="true" class="fa fa-google-plus"></span></a></li>
-                  <!-- <li><a href="https://uk.pinterest.com/reedautos/" title="See us on Pinterest" target="_blank"><span aria-hidden="true" class="fa fa-pinterest"></span></a></li>
-                  <li><a href="http://linkedin.com/" title="Add us on Linkedin" target="_blank"><span aria-hidden="true" class="fa fa-linkedin"></span></a></li> -->
+                  <li><a href="#fb" title="Share us on Facebook" target="_blank"><span aria-hidden="true" class="fa fa-facebook"></span></a></li>
+                  <li><a href="#tw" title="Share us on Twitter" target="_blank"><span aria-hidden="true" class="fa fa-twitter"></span></a></li>
+                  <li><a href="#g" title="See our Google Plus page" target="_blank"><span aria-hidden="true" class="fa fa-google-plus"></span></a></li>
+                  <!-- <li><a href="" title="See us on Pinterest" target="_blank"><span aria-hidden="true" class="fa fa-pinterest"></span></a></li>
+                  <li><a href="" title="Add us on Linkedin" target="_blank"><span aria-hidden="true" class="fa fa-linkedin"></span></a></li> -->
                 </ul>
 
             </div>
