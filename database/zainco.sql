@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 28, 2018 at 12:35 AM
+-- Generation Time: May 30, 2018 at 04:58 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -21,6 +21,23 @@ SET time_zone = "+00:00";
 --
 -- Database: `zainco`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `book_drive`
+--
+
+CREATE TABLE `book_drive` (
+  `id` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `phone` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `message` text NOT NULL,
+  `make_of` varchar(255) NOT NULL,
+  `model` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -90,12 +107,13 @@ CREATE TABLE `car_table` (
   `discount` float NOT NULL,
   `body_style` varchar(150) NOT NULL,
   `color` varchar(100) NOT NULL,
+  `mileage` float NOT NULL,
   `no_doors` int(11) NOT NULL,
   `no_seats` int(11) NOT NULL,
   `engine_size` int(11) NOT NULL,
   `engine_capacity` float NOT NULL,
   `fuel_type` varchar(100) NOT NULL,
-  `transmission` float NOT NULL,
+  `transmission` varchar(150) NOT NULL,
   `co_emission` float NOT NULL,
   `ins_grp` int(11) NOT NULL,
   `mpg` float NOT NULL,
@@ -119,29 +137,29 @@ CREATE TABLE `car_table` (
 -- Dumping data for table `car_table`
 --
 
-INSERT INTO `car_table` (`id`, `title`, `makeof`, `model`, `price`, `discount`, `body_style`, `color`, `no_doors`, `no_seats`, `engine_size`, `engine_capacity`, `fuel_type`, `transmission`, `co_emission`, `ins_grp`, `mpg`, `fuel_cons_ur`, `fuel_cons_ex`, `fuel_cons_com`, `z_s_mph`, `top_speed`, `cylinders`, `engine_pow`, `engine_tor`, `length`, `wheelbase`, `width`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'ABS', 'abc', 'abc', 123, 12, 'abc', 'abc', 2, 2, 12, 12, 'abc', 0, 12, 0, 123, 12, 12, 12, 12, 1234, 4, 1234, 12, 12, 32, 21, '<p>abc<br></p>', '2018-05-27 10:51:46', '2018-05-27 10:51:46'),
-(2, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 2, 2, 123, 123, 'abc', 0, 12.3, 22, 123, 123, 0, 0, 0, 12.2, 12, 122, 12.2, 12.2, 12.2, 12.1, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 11:02:25', '2018-05-27 11:02:25'),
-(3, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 2, 2, 123, 123, 'abc', 0, 12.3, 22, 123, 123, 0, 0, 0, 12.2, 12, 122, 12.2, 12.2, 12.2, 12.1, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 11:09:36', '2018-05-27 11:09:36'),
-(4, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 2, 2, 123, 123, 'abc', 0, 12.3, 22, 123, 123, 0, 0, 0, 12.2, 12, 122, 12.2, 12.2, 12.2, 12.1, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 11:10:49', '2018-05-27 11:10:49'),
-(5, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 2, 2, 123, 123, 'abc', 0, 12.3, 22, 123, 123, 0, 0, 0, 12.2, 12, 122, 12.2, 12.2, 12.2, 12.1, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 11:14:07', '2018-05-27 11:14:07'),
-(6, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 3, 3, 12, 12, 'abc', 0, 123, 12, 12.2, 12, 21, 12, 0, 12, 2, 32, 32, 23, 23, 23, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabc abcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 15:14:28', '2018-05-27 15:14:28'),
-(7, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 3, 3, 12, 12, 'abc', 0, 123, 12, 12.2, 12, 21, 12, 0, 12, 2, 32, 32, 23, 23, 23, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabc abcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 15:15:38', '2018-05-27 15:15:38'),
-(8, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 3, 3, 12, 12, 'abc', 0, 123, 12, 12.2, 12, 21, 12, 0, 12, 2, 32, 32, 23, 23, 23, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabc abcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 15:16:21', '2018-05-27 15:16:21'),
-(9, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 3, 3, 12, 12, 'abc', 0, 123, 12, 12.2, 12, 21, 12, 0, 12, 2, 32, 32, 23, 23, 23, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabc abcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 15:29:16', '2018-05-27 15:29:16'),
-(10, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 3, 3, 12, 12, 'abc', 0, 123, 12, 12.2, 12, 21, 12, 0, 12, 2, 32, 32, 23, 23, 23, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabc abcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 16:06:11', '2018-05-27 16:06:11'),
-(11, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 3, 3, 12, 12, 'abc', 0, 123, 12, 12.2, 12, 21, 12, 0, 12, 2, 32, 32, 23, 23, 23, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabc abcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 16:08:59', '2018-05-27 16:08:59'),
-(12, 'ABS', 'ABS', 'ABS', 1234, 0, 'ABS', 'ABS', 12, 12, 12, 12, 'ABS', 0, 12, 12, 12, 12, 12, 12, 0, 12, 12, 12, 12, 12, 12, 12, '<p>ABSABSABSABSABSABSABSABSABSABSABSABS<br></p>', '2018-05-27 18:12:37', '2018-05-27 18:12:37'),
-(13, 'abs', 'abs', 'abs', 112, 0, 'abs', 'abs', 12, 12, 123, 123, 'abs', 0, 12, 12, 12, 12, 12, 12, 0, 12, 12, 12, 12, 12, 12, 12, '<p>absabsabsabsabsabsabsabs<br></p>', '2018-05-27 18:18:48', '2018-05-27 18:18:48'),
-(14, 'abs', 'abs', 'abs', 112, 0, 'abs', 'abs', 12, 12, 123, 123, 'abs', 0, 12, 12, 12, 12, 12, 12, 0, 12, 12, 12, 12, 12, 12, 12, '<p>absabsabsabsabsabsabsabs<br></p>', '2018-05-27 18:21:38', '2018-05-27 18:21:38'),
-(15, 'abs', 'abs', 'abs', 112, 0, 'abs', 'abs', 12, 12, 123, 123, 'abs', 0, 12, 12, 12, 12, 12, 12, 0, 12, 12, 12, 12, 12, 12, 12, '<p>absabsabsabsabsabsabsabs<br></p>', '2018-05-27 18:28:10', '2018-05-27 18:28:10'),
-(16, 'abc', 'abcabc', 'abc', 123, 0, 'abc', 'abc', 2, 3, 12, 12, 'abc', 0, 123, 11, 122, 12, 12, 0, 0, 123, 2, 2, 2, 22, 2222, 22, '<p>abcabcabcabcabcabcabc<br></p>', '2018-05-27 18:31:22', '2018-05-27 18:31:22'),
-(17, 'abc', 'abcabc', 'abc', 123, 0, 'abc', 'abc', 2, 3, 12, 12, 'abc', 0, 123, 11, 122, 12, 12, 0, 0, 123, 2, 2, 2, 22, 2222, 22, '<p>abcabcabcabcabcabcabc<br></p>', '2018-05-27 18:36:51', '2018-05-27 18:36:51'),
-(18, 'abc', 'abcabc', 'abc', 123, 0, 'abc', 'abc', 2, 3, 12, 12, 'abc', 0, 123, 11, 122, 12, 12, 0, 0, 123, 2, 2, 2, 22, 2222, 22, '<p>abcabcabcabcabcabcabc<br></p>', '2018-05-27 18:44:05', '2018-05-27 18:44:05'),
-(19, 'abs', 'abs', 'abs', 12, 0, 'abs', 'abs', 2, 3, 2, 22, 'abs', 0, 23, 12, 12, 12, 0, 0, 0, 12, 2, 22, 22, 12, 32, 22, '<p>absabsabsabsabsabsabsabsabs<br></p>', '2018-05-27 18:45:50', '2018-05-27 18:45:50'),
-(20, 'abs', 'abs', 'abs', 12, 0, 'abs', 'abs', 2, 3, 2, 22, 'abs', 0, 23, 12, 12, 12, 0, 0, 0, 12, 2, 22, 22, 12, 32, 22, '<p>absabsabsabsabsabsabsabsabs<br></p>', '2018-05-27 18:55:13', '2018-05-27 18:55:13'),
-(21, 'abs', 'abs', 'abs', 12, 0, 'abs', 'abs', 2, 3, 2, 22, 'abs', 0, 23, 12, 12, 12, 0, 0, 0, 12, 2, 22, 22, 12, 32, 22, '<p>absabsabsabsabsabsabsabsabs<br></p>', '2018-05-27 18:55:25', '2018-05-27 18:55:25'),
-(22, 'ABD', 'ABC', 'ABC', 12, 0, 'ABC', 'ABC', 3, 3, 23, 32, 'ABC', 0, 12, 12, 12, 12, 21, 0, 0, 12, 2, 2, 2, 22, 22, 22, '<p>ABCABCABCABCABCABCABCABCABCABC<br></p>', '2018-05-27 19:01:11', '2018-05-27 19:01:11');
+INSERT INTO `car_table` (`id`, `title`, `makeof`, `model`, `price`, `discount`, `body_style`, `color`, `mileage`, `no_doors`, `no_seats`, `engine_size`, `engine_capacity`, `fuel_type`, `transmission`, `co_emission`, `ins_grp`, `mpg`, `fuel_cons_ur`, `fuel_cons_ex`, `fuel_cons_com`, `z_s_mph`, `top_speed`, `cylinders`, `engine_pow`, `engine_tor`, `length`, `wheelbase`, `width`, `description`, `created_at`, `updated_at`) VALUES
+(1, 'ABS', 'abc', 'abc', 123, 12, 'abc', 'abc', 0, 2, 2, 12, 12, 'abc', 'automatic', 12, 0, 123, 12, 12, 12, 12, 1234, 4, 1234, 12, 12, 32, 21, '<p>abc<br></p>', '2018-05-27 10:51:46', '2018-05-28 17:00:23'),
+(2, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 0, 2, 2, 123, 123, 'abc', 'automatic', 12.3, 22, 123, 123, 0, 0, 0, 12.2, 12, 122, 12.2, 12.2, 12.2, 12.1, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 11:02:25', '2018-05-28 17:00:23'),
+(3, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 0, 2, 2, 123, 123, 'abc', 'automatic', 12.3, 22, 123, 123, 0, 0, 0, 12.2, 12, 122, 12.2, 12.2, 12.2, 12.1, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 11:09:36', '2018-05-28 17:00:23'),
+(4, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 0, 2, 2, 123, 123, 'abc', 'automatic', 12.3, 22, 123, 123, 0, 0, 0, 12.2, 12, 122, 12.2, 12.2, 12.2, 12.1, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 11:10:49', '2018-05-28 17:00:23'),
+(5, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 0, 2, 2, 123, 123, 'abc', 'automatic', 12.3, 22, 123, 123, 0, 0, 0, 12.2, 12, 122, 12.2, 12.2, 12.2, 12.1, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 11:14:07', '2018-05-28 17:00:23'),
+(6, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 0, 3, 3, 12, 12, 'abc', 'automatic', 123, 12, 12.2, 12, 21, 12, 0, 12, 2, 32, 32, 23, 23, 23, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabc abcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 15:14:28', '2018-05-28 17:00:23'),
+(7, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 0, 3, 3, 12, 12, 'abc', 'automatic', 123, 12, 12.2, 12, 21, 12, 0, 12, 2, 32, 32, 23, 23, 23, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabc abcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 15:15:38', '2018-05-28 17:00:23'),
+(8, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 0, 3, 3, 12, 12, 'abc', 'automatic', 123, 12, 12.2, 12, 21, 12, 0, 12, 2, 32, 32, 23, 23, 23, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabc abcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 15:16:21', '2018-05-28 17:00:23'),
+(9, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 0, 3, 3, 12, 12, 'abc', 'automatic', 123, 12, 12.2, 12, 21, 12, 0, 12, 2, 32, 32, 23, 23, 23, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabc abcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 15:29:16', '2018-05-28 17:00:23'),
+(10, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 0, 3, 3, 12, 12, 'abc', 'automatic', 123, 12, 12.2, 12, 21, 12, 0, 12, 2, 32, 32, 23, 23, 23, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabc abcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 16:06:11', '2018-05-28 17:00:23'),
+(11, 'abc', 'abc', 'abc', 123, 0, 'abc', 'abc', 0, 3, 3, 12, 12, 'abc', 'automatic', 123, 12, 12.2, 12, 21, 12, 0, 12, 2, 32, 32, 23, 23, 23, '<p>abcabcabcabcabcabcabcabcabcabcabcabcabcabcabc abcabcabcabcabcabcabcabcabcabcabcabcabcabc<br></p>', '2018-05-27 16:08:59', '2018-05-28 17:00:23'),
+(12, 'ABS', 'ABS', 'ABS', 1234, 0, 'ABS', 'ABS', 0, 12, 12, 12, 12, 'ABS', 'automatic', 12, 12, 12, 12, 12, 12, 0, 12, 12, 12, 12, 12, 12, 12, '<p>ABSABSABSABSABSABSABSABSABSABSABSABS<br></p>', '2018-05-27 18:12:37', '2018-05-28 17:00:23'),
+(13, 'abs', 'abs', 'abs', 112, 0, 'abs', 'abs', 0, 12, 12, 123, 123, 'abs', 'automatic', 12, 12, 12, 12, 12, 12, 0, 12, 12, 12, 12, 12, 12, 12, '<p>absabsabsabsabsabsabsabs<br></p>', '2018-05-27 18:18:48', '2018-05-28 17:00:23'),
+(14, 'abs', 'abs', 'abs', 112, 0, 'abs', 'abs', 0, 12, 12, 123, 123, 'abs', 'automatic', 12, 12, 12, 12, 12, 12, 0, 12, 12, 12, 12, 12, 12, 12, '<p>absabsabsabsabsabsabsabs<br></p>', '2018-05-27 18:21:38', '2018-05-28 17:00:23'),
+(15, 'abs', 'abs', 'abs', 112, 0, 'abs', 'abs', 0, 12, 12, 123, 123, 'abs', 'automatic', 12, 12, 12, 12, 12, 12, 0, 12, 12, 12, 12, 12, 12, 12, '<p>absabsabsabsabsabsabsabs<br></p>', '2018-05-27 18:28:10', '2018-05-28 17:00:23'),
+(16, 'abc', 'abcabc', 'abc', 123, 0, 'abc', 'abc', 0, 2, 3, 12, 12, 'abc', 'automatic', 123, 11, 122, 12, 12, 0, 0, 123, 2, 2, 2, 22, 2222, 22, '<p>abcabcabcabcabcabcabc<br></p>', '2018-05-27 18:31:22', '2018-05-28 17:00:23'),
+(17, 'abc', 'abcabc', 'abc', 123, 0, 'abc', 'abc', 0, 2, 3, 12, 12, 'abc', 'automatic', 123, 11, 122, 12, 12, 0, 0, 123, 2, 2, 2, 22, 2222, 22, '<p>abcabcabcabcabcabcabc<br></p>', '2018-05-27 18:36:51', '2018-05-28 17:00:23'),
+(18, 'abc', 'abcabc', 'abc', 123, 0, 'abc', 'abc', 0, 2, 3, 12, 12, 'abc', 'automatic', 123, 11, 122, 12, 12, 0, 0, 123, 2, 2, 2, 22, 2222, 22, '<p>abcabcabcabcabcabcabc<br></p>', '2018-05-27 18:44:05', '2018-05-28 17:00:23'),
+(19, 'abs', 'abs', 'abs', 12, 0, 'abs', 'abs', 0, 2, 3, 2, 22, 'abs', 'automatic', 23, 12, 12, 12, 0, 0, 0, 12, 2, 22, 22, 12, 32, 22, '<p>absabsabsabsabsabsabsabsabs<br></p>', '2018-05-27 18:45:50', '2018-05-28 17:00:23'),
+(20, 'abs', 'abs', 'abs', 12, 0, 'abs', 'abs', 0, 2, 3, 2, 22, 'abs', 'automatic', 23, 12, 12, 12, 0, 0, 0, 12, 2, 22, 22, 12, 32, 22, '<p>absabsabsabsabsabsabsabsabs<br></p>', '2018-05-27 18:55:13', '2018-05-28 17:00:23'),
+(21, 'abs', 'abs', 'abs', 12, 0, 'abs', 'abs', 0, 2, 3, 2, 22, 'abs', 'automatic', 23, 12, 12, 12, 0, 0, 0, 12, 2, 22, 22, 12, 32, 22, '<p>absabsabsabsabsabsabsabsabs<br></p>', '2018-05-27 18:55:25', '2018-05-28 17:00:23'),
+(22, 'ABD', 'ABC', 'ABC', 12, 0, 'ABC', 'ABC', 0, 3, 3, 23, 32, 'ABC', 'automatic', 12, 12, 12, 12, 21, 0, 0, 12, 2, 2, 2, 22, 22, 22, '<p>ABCABCABCABCABCABCABCABCABCABC<br></p>', '2018-05-27 19:01:11', '2018-05-28 17:00:23');
 
 -- --------------------------------------------------------
 
@@ -416,6 +434,12 @@ INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `email`, `pass
 --
 
 --
+-- Indexes for table `book_drive`
+--
+ALTER TABLE `book_drive`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `car_image`
 --
 ALTER TABLE `car_image`
@@ -484,6 +508,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `book_drive`
+--
+ALTER TABLE `book_drive`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `car_image`
