@@ -45,40 +45,20 @@
 
 			        	<div class="eightcol">
 			          	<div id="gallery-2" class="royalSlider rsDefault rsHor rsFade rsWithThumbs rsWithThumbsHor" style="height: 596.094px;">
-                    <div class="rsOverflow" style="width: 700px; height: 524px;">
-                      <div class="rsContainer">
-                        <?php foreach ($car_image as $img) {  ?>
-                          <div style="z-index: 0; display: none; opacity: 0; position: absolute; left: 0px; top: 0px; transition-duration: 0ms; transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);" class="rsSlide ">
-                            <img class="rsImg" src="<?= site_url('uploads/images/').$img->image ?>" style="width: 700px; height: 468px; margin-left: 0px; margin-top: 28px;">
-                          </div>
-                        <?php } ?>
+                    <div class="rsOverflow" style="width: 700px; height: 600px;">
+                     <div class="slider-for">
+                         <?php foreach ($car_image as $img) {  ?>
+                         <img class="rsImg" src="<?= site_url('uploads/images/').$img->image ?>" style="width: 700px; height: 468px; margin-left: 0px; margin-top: 28px;">
+                         <?php } ?>
+                     </div>
+                     <div class="slider-nav">
+                         <?php foreach ($car_image as $img) {  ?>
+                         <img class="rsImg" src="<?= site_url('uploads/images/').$img->image ?>">
+                         <?php } ?>
+                     </div>
+                          
                       </div>
-                          <div class="rsFullscreenBtn">
-                            <div class="rsFullscreenIcn"></div>
-                          </div>
-                          <div class="rsArrow rsArrowLeft rsHidden" style="display: block;">
-                            <div class="rsArrowIcn"></div>
-                        </div>
-                        <div class="rsArrow rsArrowRight rsHidden" style="display: block;">
-                          <div class="rsArrowIcn"></div>
-                        </div>
-                      </div>
-                      <div class="rsNav rsThumbs rsThumbsHor">
-                        <div class="rsThumbsContainer" style="transition-property: -webkit-transform; width: 1824px; transition-duration: 600ms; transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95); transform: translate3d(-548px, 0px, 0px);">
-                          <?php foreach ($car_image as $img) { ?>
-                            <div class="rsNavItem rsThumb">
-                              <img class="rsTmb" src="<?= site_url('uploads/images/').$img->image ?>" alt="<?= $car[0]->title ?>" width="96" height="72">
-                            </div>
-                          <?php } ?>
-                        </div>
-                        <div class="rsThumbsArrow rsThumbsArrowLeft">
-                          <div class="rsThumbsArrowIcn"></div>
-                        </div>
-                        <div class="rsThumbsArrow rsThumbsArrowRight">
-                          <div class="rsThumbsArrowIcn"></div>
-                        </div>
-                      </div>
-                    </div>
+                   </div>
 
 			            <div class="clear"></div>
 

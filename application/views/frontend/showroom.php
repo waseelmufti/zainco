@@ -306,11 +306,11 @@
                     <div class="pad-10-top-bottom">
                       <ul>
                         <li>
-                          <span aria-hidden="true" class="icon-checkmark"></span> Electric Windows - Front/Rear</li>
-                          <li><span aria-hidden="true" class="icon-checkmark"></span> Ashtray/Lighter</li>
-                          <li><span aria-hidden="true" class="icon-checkmark"></span> Chassis - Sport</li>
-                          <li><span aria-hidden="true" class="icon-checkmark"></span> Seat Height Adjustment - Electric Front/Driver Memory</li>
-                          <li><span aria-hidden="true" class="icon-checkmark"></span> Spare Wheel - Unspecified</li>
+                          <span aria-hidden="true" class="icon-checkmark"></span> <?= $car->fea_1 ?></li>
+                          <li><span aria-hidden="true" class="icon-checkmark"></span> <?= $car->fea_2 ?></li>
+                          <li><span aria-hidden="true" class="icon-checkmark"></span> <?= $car->fea_3 ?></li>
+                          <li><span aria-hidden="true" class="icon-checkmark"></span> <?= $car->fea_4 ?></li>
+                          <li><span aria-hidden="true" class="icon-checkmark"></span> <?= $car->fea_5 ?></li>
                       </ul>
                     </div>
                   </div>

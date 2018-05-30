@@ -309,7 +309,7 @@
                                         <div id="hmpg-picks-carousel" class="touchcarousel  three-d">
                                             <ul class="touchcarousel-container">
                                                 <?php foreach($cars as $car){ ?>
-                                                
+
                                                 <li id="pick_2" class="touchcarousel-item">
                                                     <a href="#" title="<?= $car->title ?>">
                                                     <img class="home-carousel-img" alt="<?= $car->title ?>" src="<?= site_url('uploads/images/').$car->image ?>"></a>
@@ -319,8 +319,8 @@
                                                         <em class="carousel-info"><?= $car->makeof. ' ' . $car->model ?> <span>Rs.<?= $car->price ?></span></em></a>
                                                     </div>
                                                 </li>
-   
-<?php } ?>
+
+                                                <?php } ?>
                                             </ul>
                                         </div>
                                     </div>
@@ -344,7 +344,19 @@
 
 
                                     <div class="eightcol">
-                                        <div id="cloned-hometext" class="about-text"></div>
+                                        <div id="cloned-hometext" class="about-text">
+                                            <h1>Welcome to Best Motors</h1>
+
+                                            <p>If you are looking for great savings on quality used cars in the main area , then you have reached the right place. Globe Motors are a specialist used car dealer based in West Midlands . We are proud to offer you a first class customer service and very competitive pricing, so please browse our stock list. At Globe Motors we stock a range of used cars to suit all budgets and lifestyles so we are sure to have the right car for you.</p>
+
+                                            <p>If you are looking for a second hand car in main , then don't delay, call us today to book a test drive. In order to offer cars to suit everyone we make sure that we update our stock list regularly. It is therefore always worth giving us a call, even if you don't see what you are looking for on our website.</p>
+
+                                            <p>We realise that buying a car can be a daunting experience, but don't worry, we are well established within the Walsall area and come with a great reputation. Furthermore we offer excellent advice and experience on vehicles and vehicle maintenance. Our friendly staff will go the extra mile to guarantee that you receive the advice you need. This is the reason why many of our customers keep coming back to us.</p>
+
+                                            <p>At Globe Motors we don't just sell cars, we do everything possible to get you driving your perfect car. Why not come along to our dealership in Walsall? We look forward to meeting you!</p>
+
+                                            <p><strong>Globe Motors, Used Cars You Can Rely On, great deals on used cars in Birmingham, Walsall, Aldridge, Bloxwich, Darlaston, Bilston, Wolverhampton, Dudley, Stourbridge.</strong></p>
+                                        </div>
                                     </div>
 
                                     <div class="fourcol last">
@@ -354,17 +366,17 @@
 
                                                     <h2>Get In Touch</h2>
                                                     <div class="pad-15 overflow-hidden">
-                                                        <p><strong>Globe Motors</strong></p>
-                                                        <address>Darlaston Road<br>Walsall<br>West Midlands<br>WS2 9SG<br></address>
+                                                        <p><strong>Best Motors</strong></p>
+                                                        <address>----- Road<br>-----<br>West -----<br>---- ---<br></address>
 
-                                                        <br />
+                                                        <br>
 
                                                         <div class="contact-box">
                                                             <ul>
-                                                                <li class="mobile-hidden"><span aria-hidden="true" class="icon icon-phone-2"></span> <a href="contact.html">0121 5262220</a></li>
-                                                                <li class="desktop-hidden"><span aria-hidden="true" class="icon icon-phone-2"></span> <a href="tel:01215262220">01215262220</a></li>
+                                                                <li class="mobile-hidden"><span aria-hidden="true" class="icon icon-phone-2"></span> <a href="contact.html">0123 456789</a></li>
+                                                                <li class="desktop-hidden"><span aria-hidden="true" class="icon icon-phone-2"></span> <a href="tel:01215262220">012345678</a></li>
 
-                                                                <li class="mobile-hidden"><span aria-hidden="true" class="icon icon-mobile"></span> <a href="contact.html">07944 706957</a></li>
+                                                                <li class="mobile-hidden"><span aria-hidden="true" class="icon icon-mobile"></span> <a href="contact.html">0123 4567890</a></li>
 
                                                                 <li class="mobile-hidden"><span aria-hidden="true" class="desktop-hidden mobile-hidden desktop-hidden"></span> <a href="contact.html"></a></li>
                                                                 <li class="desktop-hidden"><span aria-hidden="true" class="desktop-hidden mobile-hidden desktop-hidden"></span> <a href="tel:"></a></li>

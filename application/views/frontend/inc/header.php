@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/'); ?>style.css">
     <link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/'); ?>custom.css">
     <link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/'); ?>slick.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/'); ?>slick-theme.css">
     <link rel="canonical" href="<?php echo site_url(); ?>">
     <link rel="icon" type="image/png" href="<?php echo site_url(" assets/img/ "); ?>favicon.png">
     <!--    <link rel="alternate" type="application/rss+xml" title="Globe Motors Feed" href="rss.php" />-->

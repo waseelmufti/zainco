@@ -40,14 +40,16 @@
           </ul>
         </li>
         <li>
-          <a href="">
-            <i class="fa fa-envelope"></i> <span>Inquires</span>
-            <!-- <span class="pull-right-container">
-              <small class="label pull-right bg-yellow">12</small>
-              <small class="label pull-right bg-green">16</small>
-              <small class="label pull-right bg-red">5</small>
-            </span> -->
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Inquiry Manager</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
           </a>
+          <ul class="treeview-menu">
+            <li><a href="<?= site_url('admin/dashboard/contact') ?>"><i class="fa fa-circle-o"></i>Contact</a></li>
+            <li><a href="<?= site_url('admin/dashboard/car/add') ?>"><i class="fa fa-circle-o"></i></a></li>
+          </ul>
         </li>
       </ul>
     </section>

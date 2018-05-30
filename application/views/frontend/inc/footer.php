@@ -133,17 +133,35 @@
 <!-- Google Libraries API -->
 <script defer type="text/javascript" src="<?= site_url('assets/js/') ?>slick.min.js"></script>
 <script>
-$('document').ready(function(){
-    
-    $('.new-slider').slick({
-        arrows: false,
-        dots: false,
-        speed: 2000,
-        autoplay: true,
-        slidesToScroll: 1,
-        //autoplaySpeed: 2000,
-  });
-});
+    $('document').ready(function() {
+
+        $('.new-slider').slick({
+            arrows: false,
+            dots: false,
+            speed: 2000,
+            autoplay: true,
+            slidesToScroll: 1,
+            //autoplaySpeed: 2000,
+        });
+
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 10,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: false,
+            arrows: true,
+            centerMode: true,
+            focusOnSelect: true
+        });
+    });
+
 </script>
 <script defer type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.plugins-min.js"></script>
 <script defer type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.custom-config-min.js"></script>
@@ -177,6 +195,7 @@ $('document').ready(function(){
         },
         "email": ""
     }
+
 </script>
 
 
@@ -196,6 +215,7 @@ $('document').ready(function(){
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(wf, s);
     })();
+
 </script>
 </body>
 
