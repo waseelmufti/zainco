@@ -8,7 +8,7 @@ class car_model extends CI_Model{
   }
 
   public function get_list(){
-    $query = $this->db->get('car_table');
+    $query = $this->db->order_by('created_at', 'DESC')->get('car_table');
     return $query->result();
   }
 
@@ -46,6 +46,15 @@ class car_model extends CI_Model{
     }
     return $data;
   }
+    
+    public function get_car_img(){
+        $this->db->select('car_table.id, car_table.title, car_table.makeof, car_table.model, car_table.price, car_image.image');
+        $this->db->from('car_table');
+        $this->db->join('car_image', 'car_table.id = car_image.car_id', 'left');
+        $this->db->group_by('car_table.id');
+        $car = $this->db->limit(10)->order_by('car_table.created_at','DESC')->get();
+        return array('cars' => $car->result());
+    }
 
   public function saveCar($car){
 

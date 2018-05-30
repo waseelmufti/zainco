@@ -1,0 +1,64 @@
+.content {
+    padding: 150px 0 50px 50px;
+    box-sizing: border-box;
+    width: 40%;
+    height: 100%;
+    text-align: left;
+    /*    background: #222;*/
+    background: linear-gradient(to right, #222 0, rgba(34, 34, 34, 0) 100%);
+    color: #fff;
+}
+
+.content h2 {
+    font-family: Cabin, Arial, sans-serif;
+    color: #fff;
+    font-size: 50px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0 0;
+}
+
+.content em {
+    font-family: Cabin, Arial, sans-serif;
+    line-height: 1.8;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    display: block;
+    position: relative;
+    padding: 8px 0;
+    margin: 0 auto;
+    border-top: 1px double #fff;
+}
+
+.content a {
+    color: #fff;
+    display: block;
+    margin: 20px 0;
+    font-family: Cabin, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 20px;
+    transition: all .3s ease;
+    border: 1px solid #fff;
+    width: auto;
+    float: left;
+}
+
+.touchcarousel-item {
+    height: 157px;
+    overflow: hidden;
+    background-color: rgba(0,0,0, 0.6);
+}
+#latest-arival{
+    max-width: 90%;
+    
+}

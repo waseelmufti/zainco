@@ -9,8 +9,9 @@ class Frontend extends CI_Controller{
   }
 
   public function index(){
+    $data = $this->car_model->get_car_img();
     $this->load->view('frontend/inc/header');
-    $this->load->view('frontend/index');
+    $this->load->view('frontend/index', $data);
     $this->load->view('frontend/inc/footer');
   }
 
