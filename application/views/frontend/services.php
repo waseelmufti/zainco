@@ -10,7 +10,8 @@
   <div class="pad-20 overflow-hidden">
 
     <div class="row mobile-hidden">
-      <div class="twelvecol page-hdr" id="page-hdr-service">
+      <div class="twelvecol page-hdr" id="page-hdr-service" style="background: url(<?= site_url('assets/img/theme/page-hdr-service.jpg')?>) center top no-repeat;
+background-size: cover;">
         <h1>Servicing</h1>
       </div>
     </div>

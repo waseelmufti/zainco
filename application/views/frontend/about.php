@@ -9,7 +9,8 @@
         <div class="eightcol block">
           <div class="pad-20 overflow-hidden">
              <div class="row mobile-hidden">
-                  <div class="twelvecol page-hdr" id="page-hdr-about">
+                  <div class="twelvecol page-hdr" id="page-hdr-about" style="background: url(<?= site_url('assets/img/theme/page-hdr-about.jpg')?>) center top no-repeat;
+background-size: cover;">
                     <h1>Globe Motors: Car Sales</h1>
                   </div>
                 </div>

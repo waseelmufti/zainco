@@ -47,8 +47,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?= site_url('admin/dashboard/contact') ?>"><i class="fa fa-circle-o"></i>Contact</a></li>
-            <li><a href="<?= site_url('admin/dashboard/car/add') ?>"><i class="fa fa-circle-o"></i></a></li>
+            <li><a href="<?= site_url('admin/dashboard/contact') ?>"><i class="fa fa-circle-o"></i>Contact Inquiries</a></li>
+            <li><a href="<?= site_url('admin/dashboard/sell-car') ?>"><i class="fa fa-circle-o"></i>Sell Car Inquiries</a></li>
           </ul>
         </li>
       </ul>

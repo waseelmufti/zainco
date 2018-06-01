@@ -74,7 +74,15 @@ $route['admin/dashboard/car/add'] = 'car/carAdd';
 $route['admin/dashboard/car/save'] = 'car/carSave';
 $route['admin/dashboard/car/edit/(:num)'] = 'car/carEdit/$1';
 $route['admin/dashboard/car/delete/(:num)'] = 'car/carDelete/$1';
+
 $route['admin/dashboard/contact'] = 'inquiry/contact';
+$route['admin/dashboard/contact/show/(:num)'] = 'inquiry/contact_show/$1';
+$route['admin/dashboard/contact/delete/(:num)'] = 'inquiry/contact_delete/$1';
+
+$route['admin/dashboard/sell-car'] = 'inquiry/sellcar';
+$route['admin/dashboard/sell-car/show/(:num)'] = 'inquiry/sellcar_show/$1';
+$route['admin/dashboard/sell-car/delete/(:num)'] = 'inquiry/sellcar_delete/$1';
+
 /* Form Submission Routes*/
 $route['contact-form'] = 'form/contact';
 $route['sell-form'] = 'form/sellCar';

@@ -12,7 +12,8 @@
 
 
             <div class="row mobile-hidden">
-      		<div class="twelvecol page-hdr" id="page-hdr-sellcar">
+      		<div class="twelvecol page-hdr" id="page-hdr-sellcar" style="background: url(<?= site_url('assets/img/theme/page-hdr-sellcar.jpg')?>) center top no-repeat;
+background-size: cover;">
         	   <h1>Vehicle Valuation</h1>
       		</div>
    	    </div>

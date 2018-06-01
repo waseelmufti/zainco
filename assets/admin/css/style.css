@@ -1,0 +1,6 @@
+.table-hover > tbody > .read{
+    background-color: #f5f5f5;
+}
+.table-hover > tbody > .read:hover{
+    background-color: #fff;
+}

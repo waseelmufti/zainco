@@ -9,7 +9,8 @@
 <div class="eightcol block">
   <div class="pad-20 overflow-hidden">
         <div class="row mobile-hidden">
-          <div class="twelvecol page-hdr" id="page-hdr-reviews">
+          <div class="twelvecol page-hdr" id="page-hdr-reviews" style="background: url(<?= site_url('assets/img/theme/page-hdr-testimonials.jpg')?>) center top no-repeat;
+background-size: cover;">
             <h1>Customer Reviews</h1>
           </div>
         </div>
