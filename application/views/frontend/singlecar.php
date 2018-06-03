@@ -119,9 +119,12 @@
 	<!-- Mobile Only CTA -->
 		<li class="desktop-hidden"><a href="tel:01215262220" class=""><span aria-hidden="true" class="icon icon-phone-2"></span> 0121 5262220</a></li>
 	<!-- // END Mobile Only CTA -->
-    <li id="reserve" class=""><a href="" class=""><span aria-hidden="true" class="icon icon-medal"></span>Reserve Vehicle</a></li>
-    <li id="test" class=""><a href="" class=""><span aria-hidden="true" class="icon icon-steering-wheel"></span>Book Test Drive</a></li>
-    <li id="enquire" class=""><a href="" class=""><span aria-hidden="true" class="icon icon-comments-2"></span>Send An Enquiry</a></li>
+    <li id="reserve" class=""><a href="<?= site_url('buy-it-now/').$car[0]->id ?>" class=""><span aria-hidden="true" class="icon icon-medal"></span>Reserve Vehicle</a></li>
+    
+    <li id="test" class=""><a href="<?= site_url('book-test-drive/').$car[0]->id ?>" class=""><span aria-hidden="true" class="icon icon-steering-wheel"></span>Book Test Drive</a></li>
+    
+    <li id="enquire" class=""><a href="<?= site_url('enquiry/').$car[0]->id ?>" class=""><span aria-hidden="true" class="icon icon-comments-2"></span>Send An Enquiry</a></li>
+    
     <li id="print" class="mobile-hidden">
     <a href="" title="Print" target="_blank"><span aria-hidden="true" class="icon icon-printer"></span>Print This Page</a></li>
     <li id="pex" class="mobile-hidden"><a href="" title="Part Ex Your Car"><span aria-hidden="true" class="icon icon-spin"></span>Part Exchange</a></li>
