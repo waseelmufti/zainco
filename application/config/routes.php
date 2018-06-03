@@ -59,6 +59,10 @@ $route['services'] = 'frontend/services';
 $route['about-us'] = 'frontend/aboutUs';
 $route['testimonials'] = 'frontend/testimonials';
 $route['contact'] = 'frontend/contact';
+$route['thankyou'] = 'frontend/thankyou';
+$route['buy-it-now/(:num)'] = 'frontend/buy_now/$1'; 
+$route['book-test-drive/(:num)'] = 'frontend/book_test_drive/$1'; 
+$route['enquiry/(:num)'] = 'frontend/enquiry/$1'; 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
@@ -83,7 +87,23 @@ $route['admin/dashboard/sell-car'] = 'inquiry/sellcar';
 $route['admin/dashboard/sell-car/show/(:num)'] = 'inquiry/sellcar_show/$1';
 $route['admin/dashboard/sell-car/delete/(:num)'] = 'inquiry/sellcar_delete/$1';
 
+$route['admin/dashboard/reserve-car'] = 'inquiry/enquiry';
+$route['admin/dashboard/reserve-car/show/(:num)'] = 'inquiry/enquiry_show/$1';
+$route['admin/dashboard/reserve-car/delete/(:num)'] = 'inquiry/enquiry_delete/$1';
+
+$route['admin/dashboard/test-drive'] = 'inquiry/enquiry';
+$route['admin/dashboard/test-drive/show/(:num)'] = 'inquiry/enquiry_show/$1';
+$route['admin/dashboard/test-drive/delete/(:num)'] = 'inquiry/enquiry_delete/$1';
+
+$route['admin/dashboard/enquiry'] = 'inquiry/enquiry';
+$route['admin/dashboard/enquiry/show/(:num)'] = 'inquiry/enquiry_show/$1';
+$route['admin/dashboard/enquiry/delete/(:num)'] = 'inquiry/enquiry_delete/$1';
+
+
+
+
 /* Form Submission Routes*/
 $route['contact-form'] = 'form/contact';
 $route['sell-form'] = 'form/sellCar';
 $route['carlocator'] = 'form/carLocator';
+$route['enquiry'] = 'form/enquiry';

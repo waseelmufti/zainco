@@ -7,7 +7,25 @@ class Car_model extends CI_Model{
     parent::__construct();
   }
 
-  public function get_list(){
+  public function get_list($make = NULL, $model = NULL, $price = NULL, $body_style = NULL, $transmission = NULL, $fuel_type = NULL){
+      if($make){
+            $this->db->where('makeof', $make);
+        }
+        if($model){
+            $this->db->where('model', $model);
+        }
+        if($price){
+            $this->db->where('pirce <=', $price);
+        }
+        if($body_style){
+            $this->db->where('body_style', $body_style);
+        }
+        if($transmission){
+            $this->db->where('transmission', $transmission);
+        }
+        if($fuel_type){
+            $this->db->where('fuel_type', $fuel_type);
+        }
     $query = $this->db->order_by('created_at', 'DESC')->get('car_table');
     return $query->result();
   }

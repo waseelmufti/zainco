@@ -101,7 +101,7 @@
       <div class="contact-widget">
         <div class="pad-20 overflow-hidden">
           <a id="email-us"></a>
-<?php echo form_open('contact-form'); ?>
+<?php echo form_open('contact-form', array('class' => '_form')); ?>
   <input type="hidden" name="subject" value="contact_form">
 
   <fieldset title="Contact Form">

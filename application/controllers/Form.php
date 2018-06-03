@@ -57,4 +57,42 @@ class Form extends CI_Controller{
   public function carLocator($car){
 
   }
+    
+public function enquiry(){
+    $this->form_validation->set_rules('name', 'Name', 'required');
+    $this->form_validation->set_rules('phone', 'Phone', 'required');
+    $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
+    $this->form_validation->set_rules('message', 'Message', 'required');
+    
+    if($this->form_validation->run() != FALSE){
+        $flag = $this->form_model->save_enquiry($this->input->post());
+        if($flag){
+          $this->session->set_flashdata('success', '<h3>Your Message has been sent successfully</h3>
+          <p>Thank you for sending us your enquiry, we will get back to you as soon as we can.</p>');
+            redirect('thankyou');
+        }else{
+          $this->session->set_flashdata('error', 'There is an error, Please try again');
+        }
+    }else{
+        $err = validation_errors('<div style="color: #fff;">', '</div>');
+        $this->session->set_flashdata('error', $err);
+      }
+    $form_type = $this->input->post('form_type');
+    $page = '';
+    switch($form_type){
+        case 'reserve':
+            $page = 'buy-it-now/';
+            break;
+        case 'testdrive':
+            $page = 'book-test-drive/';
+            break;
+        case 'enquiry':
+            $page = 'enquiry/';
+            break;
+        default:
+            $page = 'showroom/';
+            break;    
+    }
+    redirect($page.$this->input->post('vehicle_id'));
+}    
 }

@@ -40,4 +40,20 @@ class Inquiry_model extends CI_Model{
         return $result->result();
     }
     
+    public function get_enquiries($form_type){
+        $result = $this->db->where('form_type', $form_type)->get('enquiry');
+        return $result->result();
+    }
+    
+    public function get_enquiry($id, $form){
+        $result = $this->db->where('id', $id)
+                            ->where('form_type', $form)->get('enquiry');
+        return $result->result();
+    }
+    public function delete_enquiry($id, $form){
+        $this->db->where('id', $id)
+            ->where('form_type', $form);
+        return $this->db->delete('enquiry');
+    }
+    
 }

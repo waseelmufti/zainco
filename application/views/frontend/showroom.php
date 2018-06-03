@@ -53,7 +53,7 @@
     }
 
     if (onrefresh==1) {
-      $("#search-advanced").html('<div class="row"><br/><center>Loading . . . . </center><br/></div>');
+      
     }
     $.ajax({
       type: "POST",
@@ -71,25 +71,96 @@
 </script>
 
 <!-- Advanced Search Form -->
+  <!-- Advanced Search Form -->
+<div class="breadcrumb clear-fix">
+
+    <div class="wrapper">
+        <div class="container">
+
+            <ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                <li class="breadcrumb__listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="/">
+        <span itemprop="name">Home</span>
+    </a>
+    <meta itemprop="position" content="1" />
+</li><li class="breadcrumb__listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="javascript:void(0)">
+        <span itemprop="name">Used Cars</span>
+    </a>
+    <meta itemprop="position" content="2" />
+</li>
+            </ol>
+
+        </div>
+    </div>
+
+</div>
+
 <div class="row-block results-adv-search">
-  <div class="container">
+    <div class="container">
+        <div class="row">
+
+            <div class="container">
+                <div id="advanced-sticky-wrap">
+                    <div class="wrapper">
+
+                        <div id="search-advanced" class="widget">
+                            <form action="" method="get">
+    <div class="row">
+        <div class="threecol">
+            <select name="make" id="make" onchange="loadSearch(0,1);  ">
+                <option value="" selected="selected">Any Make</option>
+            </select>
+        </div>
+        <div class="threecol">
+            <select name="model" id="model" onchange="loadSearch(0,1);  ">
+                <option value="" selected="selected">Any Model</option>
+            </select>
+        </div>
+        <div class="threecol">
+            <select name="price" id="price" onchange="loadSearch(0,1);  ">
+                <option value="" selected="selected">Maximum Price</option>
+            </select>
+        </div>
+        <div class="threecol last">
+            <button type="reset" class="button green full mobile-hidden" onclick="resetSearch();">
+                <span aria-hidden="true" class="icon-search"></span> Reset selections
+            </button>
+        </div>
+    </div>
     <div class="row">
 
-      <div class="container">
-        <div id="advanced-sticky-wrap">
-          <div class="wrapper">
-
-            <div id="search-advanced" class="widget">
-
-            </div>
-
-          </div>
+        <div class="threecol">
+            <select name="body" id="body" onchange="loadSearch(0,1);">
+                <option value="" selected="selected">Any Body Style</option>
+            </select></div>
+        <div class="threecol">
+            <select name="gearbox" id="gearbox" onchange="loadSearch(0,1);  ">
+                <option value="" selected="selected">Any Transmission</option>
+            </select>
         </div>
-      </div>
+        <div class="threecol">
+            <select name="fuel_type" id="fuel_type" onchange="loadSearch(0,1);  ">
+                <option value="" selected="selected">Any Fuel type</option>
+            </select>
+        </div>
+        <div class="threecol last">
+            <button type="button" class="button green full" onclick="submit();"><span aria-hidden="true" class="icon-search"></span> Search</button>
+        </div>
 
     </div>
-  </div>
+
+</form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
+<!-- //Advanced Search Form -->
 <!-- //Advanced Search Form -->
 
 <input type="hidden" id="button_class_hidden" value="button green full"/>

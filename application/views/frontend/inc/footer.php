@@ -132,6 +132,7 @@
 
 <!-- Google Libraries API -->
 <script defer type="text/javascript" src="<?= site_url('assets/js/') ?>slick.min.js"></script>
+<!--<script type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.captcha.basic.min"></script>-->
 <script>
     $('document').ready(function() {
 
@@ -160,6 +161,8 @@
             centerMode: true,
             focusOnSelect: true
         });
+        
+        $('._form').captcha();
     });
 
 </script>

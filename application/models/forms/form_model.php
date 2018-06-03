@@ -35,4 +35,26 @@ class Form_model extends CI_Model{
     $flag = $this->db->insert('car_valuation', $data);
     return $flag;
   }
+    
+    public function save_enquiry($values){
+        
+        if($values['form_type'] || $values['vehicle_id'] || $values['subject']){
+            $data = array(
+            'form_type' => $values['form_type'],
+                'subject' => $values['subject'],
+                'name' => $values['name'],
+                'phone' => $values['phone'],
+                'email' => $values['email'],
+                'message' => $values['message'],
+                'car_id' => $values['vehicle_id'],
+                'active' => 0,
+                
+            );
+            
+            $flag = $this->db->insert( 'enquiry', $data);
+            return $flag;
+        }
+        
+        return FALSE;
+    }
 }

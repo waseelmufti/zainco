@@ -41,14 +41,27 @@
         </li>
         <li>
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Inquiry Manager</span>
+            <i class="fa fa-dashboard"></i> <span>Messages</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?= site_url('admin/dashboard/contact') ?>"><i class="fa fa-circle-o"></i>Contact Inquiries</a></li>
-            <li><a href="<?= site_url('admin/dashboard/sell-car') ?>"><i class="fa fa-circle-o"></i>Sell Car Inquiries</a></li>
+            <li><a href="<?= site_url('admin/dashboard/contact') ?>"><i class="fa fa-circle-o"></i>Contact Messages</a></li>
+            <li><a href="<?= site_url('admin/dashboard/sell-car') ?>"><i class="fa fa-circle-o"></i>Sell Car Massages</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Enquiries</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?= site_url('admin/dashboard/reserve-car') ?>"><i class="fa fa-circle-o"></i>Reserve Vehical</a></li>
+            <li><a href="<?= site_url('admin/dashboard/test-drive') ?>"><i class="fa fa-circle-o"></i>Test Drive</a></li>
+            <li><a href="<?= site_url('admin/dashboard/enquiry') ?>"><i class="fa fa-circle-o"></i>General Enquiries</a></li>
           </ul>
         </li>
       </ul>

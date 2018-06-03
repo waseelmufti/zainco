@@ -63,6 +63,42 @@ public function showcar($id){
     $this->load->view('frontend/contact');
     $this->load->view('frontend/inc/footer');
   }
+    public function thankyou(){
+    
+    $this->load->view('frontend/inc/header');
+    $this->load->view('frontend/thankyou');
+    $this->load->view('frontend/inc/footer');
+}
+    
+public function buy_now($id){
+    $car = $this->car_model->get_car($id);
+    if(!$car){
+        redirect('404');
+    }
+    $this->load->view('frontend/inc/header');
+    $this->load->view('frontend/buynow', $car);
+    $this->load->view('frontend/inc/footer');
+}
+
+    public function book_test_drive($id){
+    $car = $this->car_model->get_car($id);
+    if(!$car){
+        redirect('404');
+    }
+    $this->load->view('frontend/inc/header');
+    $this->load->view('frontend/testdrive', $car);
+    $this->load->view('frontend/inc/footer');
+}
+    
+    public function enquiry($id){
+    $car = $this->car_model->get_car($id);
+    if(!$car){
+        redirect('404');
+    }
+    $this->load->view('frontend/inc/header');
+    $this->load->view('frontend/enquiry', $car);
+    $this->load->view('frontend/inc/footer');
+}
 
 
 }
