@@ -22,6 +22,8 @@ class Auth extends CI_Controller{
         if( $result !== false){
           $this->session->username = $this->input->post('username');
           redirect('admin/dashboard');
+        }else{
+         $this->session->set_flashdata('error', 'Username, Email or Password is Incorrect! <br> Please Enter Valid Information');   
         }
     }
     $this->load->view('auth/login');

@@ -73,6 +73,8 @@ $route['usr/logout'] = 'auth/logout';
 
 /* Admin Routes*/
 $route['admin/dashboard'] = 'admin';
+$route['admin/dashboard/edit/profile/(:any)'] = 'admin/admin_profile/$1';
+$route['profile/update'] = 'admin/update_profile';
 $route['admin/dashboard/car'] = 'car/carList';
 $route['admin/dashboard/car/add'] = 'car/carAdd';
 $route['admin/dashboard/car/save'] = 'car/carSave';

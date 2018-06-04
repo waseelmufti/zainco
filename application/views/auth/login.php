@@ -30,6 +30,11 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Sign in to start your session</p>
+    
+       <?php if($this->session->flashdata('error')) {?>
+        <div class="alert alert-danger"><?= $this->session->flashdata('error') ?></div>
+      <?php } ?>
+      
     <?php if(validation_errors()): ?>
     <div class="alert alert-danger">
         <?php echo validation_errors(); ?>
