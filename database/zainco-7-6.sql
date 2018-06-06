@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2018 at 05:38 PM
+-- Generation Time: Jun 06, 2018 at 09:54 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -199,7 +199,9 @@ CREATE TABLE `car_table` (
 INSERT INTO `car_table` (`id`, `title`, `makeof`, `model`, `price`, `discount`, `registered`, `owners`, `body_style`, `color`, `mileage`, `no_doors`, `no_seats`, `engine_size`, `engine_capacity`, `fuel_type`, `transmission`, `co_emission`, `ins_grp`, `mpg`, `gearbox`, `fea_1`, `fea_2`, `fea_3`, `fea_4`, `fea_5`, `fuel_cons_ur`, `fuel_cons_ex`, `fuel_cons_com`, `z_s_mph`, `top_speed`, `cylinders`, `engine_pow`, `engine_tor`, `length`, `wheelbase`, `width`, `description`, `created_at`, `updated_at`) VALUES
 (23, '2009 09 BMW X5 3.0 D M SPORT 5d AUTO 232 BHP', 'BMW', 'X5 3.0 D M', 14495, 0, '2009', '1', 'Estate', 'Silver', 98000, 5, 7, 2993, 3, 'Diesel', 'Automatic', 214, 43, 34.9, 'Automatic', '', '', '', '', '', 27.7, 40.9, 34.9, 8.1, 134, 6, 232, 384, 4851, 2933, 1994, '<p>\r\n</p><h2></h2>\r\n																	<div>\r\n																		<ul></ul>\r\n																	</div>\r\n																	<div><b>For more info on this vehicle call our showroom on 0121 5262220</b>\r\n\r\n							                      \r\n																		<p>STAR SILVER STUNNING\r\nEXAMPLE, UPTO DATE SERVICE HISTORY, PRO SAT NAV + DAKOTA LEATHER + BUY\r\nWITH CONFIDENCE PACKAGE + 12 MONTHS RAC WARRANTY + 12 MONTHS RAC\r\nBREAKDOWN + 12 MONTHS NEW MOT + RAC 82 POINT APPROVED INSPECTION  + LOW\r\nRATE FINANCE ARRANGED + 2 MONTHS PAUSE PLAN FINANCE DEAL +</p>\r\n																		<p></p>\r\n\r\n							                      <p>Every effort has been made to ensure the\r\n accuracy of the above information but errors may occur. Please check\r\nwith a salesperson.</p>\r\n																	</div>\r\n\r\n<br><p></p>', '2018-05-30 15:56:08', '2018-05-30 16:47:19'),
 (24, 'ABS', 'abs', 'abc', 1234, 0, '2009', '12', 'gearbox', 'gearbox', 0, 8, 99, 0, 45, 'gearbox', 'gearbox', 123, 45, 56.8, 'gearbox', '', '', '', '', '', 56, 88, 99, 77, 123, 5, 55, 555, 55, 66, 66, '<p>\r\ngearbox\r\n\r\n\r\ngearbox\r\n\r\n\r\ngearbox\r\n\r\n\r\ngearbox\r\n\r\n\r\ngearbox\r\n\r\n\r\ngearbox\r\n\r\n\r\ngearbox\r\n\r\n\r\ngearbox\r\n\r\n\r\ngearbox\r\n\r\n\r\ngearbox\r\n\r\n\r\ngearbox\r\n\r\n\r\ngearbox\r\n\r\n\r\ngearbox\r\n\r\n\r\ngearbox\r\n\r\n<br></p>', '2018-05-30 16:55:03', '2018-05-30 16:55:03'),
-(25, 'fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 ', 'fea_5 ', 'fea_5 fea_5 ', 123445, 0, '2010', '2', 'fea_5 ', 'fea_5 ', 0, 6, 8, 123, 33, 'fea_5 ', 'fea_5 ', 23, 23, 12.2, 'fea_5 ', 'fea_5 ', 'fea_5 ', 'fea_5 ', 'fea_5 ', 'fea_5 ', 123, 123, 123, 123, 12, 3, 32, 21, 21, 12, 2222, '<p>fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5&nbsp;</p><p>fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5&nbsp;</p><p><br></p><p>fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 <br></p>', '2018-05-30 17:10:48', '2018-05-30 17:10:48');
+(25, 'fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 ', 'fea_5 ', 'fea_5 fea_5 ', 123445, 0, '2010', '2', 'fea_5 ', 'fea_5 ', 0, 6, 8, 123, 33, 'fea_5 ', 'fea_5 ', 23, 23, 12.2, 'fea_5 ', 'fea_5 ', 'fea_5 ', 'fea_5 ', 'fea_5 ', 'fea_5 ', 123, 123, 123, 123, 12, 3, 32, 21, 21, 12, 2222, '<p>fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5&nbsp;</p><p>fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5&nbsp;</p><p><br></p><p>fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 fea_5 <br></p>', '2018-05-30 17:10:48', '2018-05-30 17:10:48'),
+(26, 'BMW 2009', 'bmw', '2009x', 122200, 0, '1234', '1', 'estate', 'blue', 1200, 6, 6, 6666, 12, 'deasial', 'automatic', 12, 33, 1.22, 'automatic', 'blue tooth', '8 piston', 'leater seats', 'high roof', 'mobile charger', 12, 123, 123, 123, 1234, 98, 123, 1234, 12345, 12, 12, 'SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` ', '2018-06-01 17:08:20', '2018-06-01 17:08:20'),
+(27, 'BMW 2009', 'bmw', '2009x', 122200, 0, '1234', '1', 'estate', 'blue', 1200, 6, 6, 6666, 12, 'deasial', 'automatic', 12, 33, 1.22, 'automatic', 'blue tooth', '8 piston', 'leater seats', 'high roof', 'mobile charger', 12, 123, 123, 123, 1234, 98, 123, 1234, 12345, 12, 12, 'SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` SELECT DISTINCT makeof, model FROM `car_table` ', '2018-06-01 17:09:07', '2018-06-01 17:09:07');
 
 -- --------------------------------------------------------
 
@@ -287,6 +289,34 @@ INSERT INTO `contact_form` (`id`, `name`, `phone`, `email`, `message`, `active`,
 (7, 'test', '00000000', 'test@test.com', 'test', 0, '2018-05-24 16:01:16', '2018-05-24 16:01:16'),
 (8, 'test', '00000000', 'test@test.com', 'test', 1, '2018-05-24 16:01:55', '2018-05-31 17:09:42'),
 (11, 'waseel', '1234567890', 'waseel@waseel.com', 'this is a test message', 0, '2018-05-31 17:10:43', '2018-05-31 17:10:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `enquiry`
+--
+
+CREATE TABLE `enquiry` (
+  `id` int(11) NOT NULL,
+  `form_type` varchar(50) NOT NULL,
+  `subject` text NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `phone` varchar(50) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  `car_id` int(11) NOT NULL,
+  `active` tinyint(4) NOT NULL DEFAULT '0',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `enquiry`
+--
+
+INSERT INTO `enquiry` (`id`, `form_type`, `subject`, `name`, `phone`, `email`, `message`, `car_id`, `active`, `created_at`) VALUES
+(2, 'reserve', 'Application to reserve vehicle: 2009 BMW X5 3.0 D M', '11', '11', 'test@test.com', '1233', 23, 0, '2018-06-03 10:12:17'),
+(4, 'reserve', 'Application to reserve vehicle: 2009 BMW X5 3.0 D M', 'hello', '00000000000000', 'test@test.com', 'test', 23, 0, '2018-06-03 11:04:33'),
+(6, 'testdrive', 'Book test drive: 2009 BMW X5 3.0 D M', 'hello', '00000000', 'test@test.com', 'test', 23, 0, '2018-06-03 16:41:14');
 
 -- --------------------------------------------------------
 
@@ -390,6 +420,33 @@ INSERT INTO `other` (`id`, `feature`, `car_id`, `created_at`, `updated_at`) VALU
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pages`
+--
+
+CREATE TABLE `pages` (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL,
+  `slug` varchar(200) NOT NULL,
+  `content` text NOT NULL,
+  `image` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pages`
+--
+
+INSERT INTO `pages` (`id`, `title`, `slug`, `content`, `image`, `created_at`, `updated_at`) VALUES
+(1, 'Dummy Page', 'dummy-page', 'loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum ', '', '2018-06-06 14:50:32', '2018-06-06 14:50:32'),
+(2, 'Dummy Page 2', 'dummy-page-2', 'loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum ', '', '2018-06-06 14:51:13', '2018-06-06 14:51:13'),
+(3, 'Dummy Page 3', 'dummy-page-3', 'loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum ', '', '2018-06-06 14:51:28', '2018-06-06 14:51:28'),
+(4, 'Dummy Page 4', 'dummy-page-4', 'loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum loreum ispum ', '', '2018-06-06 14:51:42', '2018-06-06 14:51:42'),
+(5, 'testing testing', 'testing-testing', '<p>If you are looking for great savings on quality used cars in the \r\nWalsall area , then you have reached the right place. Globe Motors are a\r\n specialist used car dealer based in West Midlands . We are proud to \r\noffer you a first class customer service and very competitive pricing, \r\nso please browse our stock list. At Globe Motors we stock a range of \r\nused cars to suit all budgets and lifestyles so we are sure to have the \r\nright car for you.</p>\r\n\r\n<p>If you are looking for a second hand car in Walsall , then don\'t \r\ndelay, call us today to book a test drive. In order to offer cars to \r\nsuit everyone we make sure that we update our stocklist regularly. It is\r\n therefore always worth giving us a call, even if you don\'t see what you\r\n are looking for on our website.</p>\r\n\r\n<p>We realise that buying a car can be a daunting experience, but don\'t \r\nworry, we are well established within the Walsall area and come with a \r\ngreat reputation. Furthermore we offer excellent advice and experience \r\non vehicles and vehicle maintenance. Our friendly staff will go the \r\nextra mile to guarantee that you receive the advice you need. This is \r\nthe reason why many of our customers keep coming back to us.</p>\r\n\r\n<p>At Globe Motors we don\'t just sell cars, we do everything possible to\r\n get you driving your perfect car. Why not come along to our dealership \r\nin Walsall? We look forward to meeting you!</p>', '143803021.jpg', '2018-06-06 17:15:12', '2018-06-06 19:31:07');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `safety`
 --
 
@@ -453,7 +510,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'app', 'tester', 'apptester', 'apptester@app.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', '2018-05-22 18:17:41', '2018-05-22 18:17:41');
+(1, 'app', 'tester', 'apptester', 'apptester@app.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', '2018-05-22 18:17:41', '2018-06-04 18:30:31');
 
 --
 -- Indexes for dumped tables
@@ -502,6 +559,12 @@ ALTER TABLE `contact_form`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `enquiry`
+--
+ALTER TABLE `enquiry`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `exterior`
 --
 ALTER TABLE `exterior`
@@ -520,6 +583,13 @@ ALTER TABLE `other`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `pages`
+--
+ALTER TABLE `pages`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `slug` (`slug`);
+
+--
 -- Indexes for table `safety`
 --
 ALTER TABLE `safety`
@@ -529,7 +599,8 @@ ALTER TABLE `safety`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -557,7 +628,7 @@ ALTER TABLE `car_locator`
 -- AUTO_INCREMENT for table `car_table`
 --
 ALTER TABLE `car_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `car_valuation`
@@ -578,6 +649,12 @@ ALTER TABLE `contact_form`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT for table `enquiry`
+--
+ALTER TABLE `enquiry`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `exterior`
 --
 ALTER TABLE `exterior`
@@ -594,6 +671,12 @@ ALTER TABLE `interior`
 --
 ALTER TABLE `other`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `pages`
+--
+ALTER TABLE `pages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `safety`

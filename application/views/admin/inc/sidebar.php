@@ -27,7 +27,19 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="treeview">
+        <li>
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Pages</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?= site_url('admin/dashboard/page') ?>"><i class="fa fa-circle-o"></i>Pages</a></li>
+            <li><a href="<?= site_url('admin/dashboard/page/add') ?>"><i class="fa fa-circle-o"></i>Add Pages</a></li>
+          </ul>
+        </li>
+         <li class="treeview">
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Car Manager</span>
             <span class="pull-right-container">
@@ -39,7 +51,7 @@
             <li><a href="<?= site_url('admin/dashboard/car/add') ?>"><i class="fa fa-circle-o"></i>Add New Car</a></li>
           </ul>
         </li>
-        <li>
+         <li>
           <a href="#">
             <i class="fa fa-dashboard"></i> <span>Messages</span>
             <span class="pull-right-container">

@@ -366,7 +366,7 @@
         <div class="box-footer">
           <div class="pull-right">
             <button type="submit" class="btn btn-primary" name="save">Save</button>
-            <button type="button" class="btn btn-danger" name="cancel">Cancel</button>
+            <a class="btn btn-danger" href="<?= site_url('admin/dashboard/car') ?>">Cancel</a>
           </div>
         </div>
         <!-- /.box-footer-->

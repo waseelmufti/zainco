@@ -74,19 +74,19 @@
 						            </ul>
 						          </div>
 
-						          <div class="fourcol mobile-half-col">
+						          <!--<div class="fourcol mobile-half-col">
 						          	<ul>
 						              <li><span aria-hidden="true" class="icon icon-upload"></span> <?= $car[0]->co_emission ?> CO² (g/km)</li>
 						              <li><span aria-hidden="true" class="icon icon-tax12"></span> - 12m Tax</li>
 						              <li><span aria-hidden="true" class="icon icon-tax6"></span> - 6m Tax</li>
 						            </ul>
 						          </div>
-
+-->
 						          <div class="fourcol last mobile-border-top mobile-hidden">
 						            <ul>
 						              <li><span aria-hidden="true" class="icon icon-capacity"></span> <?= $car[0]->engine_capacity ?> L</li>
-						              <li><span aria-hidden="true" class="icon icon-road"></span> <?= $car[0]->mpg ?> Avg. MPG</li>
-						              <li><span aria-hidden="true" class="icon icon-insurance"></span> Group <?= $car[0]->ins_grp ?> Ins.</li>
+						              <!--<li><span aria-hidden="true" class="icon icon-road"></span> <?= $car[0]->mpg ?> Avg. MPG</li>
+						              <li><span aria-hidden="true" class="icon icon-insurance"></span> Group <?= $car[0]->ins_grp ?> Ins.</li>-->
 						            </ul>
 						          </div>
 
@@ -119,16 +119,16 @@
 	<!-- Mobile Only CTA -->
 		<li class="desktop-hidden"><a href="tel:01215262220" class=""><span aria-hidden="true" class="icon icon-phone-2"></span> 0121 5262220</a></li>
 	<!-- // END Mobile Only CTA -->
-    <li id="reserve" class=""><a href="<?= site_url('buy-it-now/').$car[0]->id ?>" class=""><span aria-hidden="true" class="icon icon-medal"></span>Reserve Vehicle</a></li>
+    <!--<li id="reserve" class=""><a href="<?= site_url('buy-it-now/').$car[0]->id ?>" class=""><span aria-hidden="true" class="icon icon-medal"></span>Reserve Vehicle</a></li>-->
     
     <li id="test" class=""><a href="<?= site_url('book-test-drive/').$car[0]->id ?>" class=""><span aria-hidden="true" class="icon icon-steering-wheel"></span>Book Test Drive</a></li>
     
     <li id="enquire" class=""><a href="<?= site_url('enquiry/').$car[0]->id ?>" class=""><span aria-hidden="true" class="icon icon-comments-2"></span>Send An Enquiry</a></li>
     
     <li id="print" class="mobile-hidden">
-    <a href="" title="Print" target="_blank"><span aria-hidden="true" class="icon icon-printer"></span>Print This Page</a></li>
+    <a href="" title="Send Your Offer"><span aria-hidden="true" class="icon icon-printer"></span>Send Your Offer</a></li>
     <li id="pex" class="mobile-hidden"><a href="" title="Part Ex Your Car"><span aria-hidden="true" class="icon icon-spin"></span>Part Exchange</a></li>
-    <!--<li id="similar" class=""><a href="#section6" title="Similar Vehicles"><span aria-hidden="true" class="icon icon-cars"></span>Similar Vehicles</a></li>-->
+    <li id="similar" class=""><a href="#section6" title="Similar Vehicles"><span aria-hidden="true" class="icon icon-cars"></span>Location</a></li>
 </ul>
 
 
@@ -270,11 +270,11 @@
                                         </ul>
 								                      </div>
 
-								                      <h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-5" aria-controls="ui-id-6" aria-selected="false" aria-expanded="false" tabindex="-1">
+								                      <!--<h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-5" aria-controls="ui-id-6" aria-selected="false" aria-expanded="false" tabindex="-1">
                                         <span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>
                                         <span aria-hidden="true" class="icon icon-expand"></span> Dimensions
-                                      </h3>
-								                      <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;" id="ui-id-6" aria-labelledby="ui-id-5" role="tabpanel" aria-hidden="true">
+                                      </h3>-->
+								                      <!--<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;" id="ui-id-6" aria-labelledby="ui-id-5" role="tabpanel" aria-hidden="true">
 								                      	<ul class="row tablist">
                                           <li class="">
                                             <div class="list-label">Length</div>
@@ -289,7 +289,7 @@
                                             <div class="list-stat"><?= $car[0]->width ?>mm</div>
                                           </li>
                                         </ul>
-								                      </div>
+								                      </div>-->
 
 																			<h3 class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-7" aria-controls="ui-id-8" aria-selected="false" aria-expanded="false" tabindex="-1">
                                         <span class="ui-accordion-header-icon ui-icon ui-icon-plus"></span>

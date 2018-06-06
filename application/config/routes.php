@@ -81,6 +81,14 @@ $route['admin/dashboard/car/save'] = 'car/carSave';
 $route['admin/dashboard/car/edit/(:num)'] = 'car/carEdit/$1';
 $route['admin/dashboard/car/delete/(:num)'] = 'car/carDelete/$1';
 
+$route['admin/dashboard/page'] = 'page';
+$route['admin/dashboard/page/add'] = 'page/add/$1';
+$route['admin/dashboard/page/edit/(:num)'] = 'page/edit/$1';
+$route['admin/dashboard/page/update'] = 'page/update';
+$route['admin/dashboard/page/store'] = 'page/store/$1';
+$route['admin/dashboard/page/show/(:num)'] = 'page/show/$1';
+$route['admin/dashboard/page/delete/(:num)'] = 'page/delete/$1';
+
 $route['admin/dashboard/contact'] = 'inquiry/contact';
 $route['admin/dashboard/contact/show/(:num)'] = 'inquiry/contact_show/$1';
 $route['admin/dashboard/contact/delete/(:num)'] = 'inquiry/contact_delete/$1';
@@ -101,11 +109,19 @@ $route['admin/dashboard/enquiry'] = 'inquiry/enquiry';
 $route['admin/dashboard/enquiry/show/(:num)'] = 'inquiry/enquiry_show/$1';
 $route['admin/dashboard/enquiry/delete/(:num)'] = 'inquiry/enquiry_delete/$1';
 
-
-
-
 /* Form Submission Routes*/
 $route['contact-form'] = 'form/contact';
 $route['sell-form'] = 'form/sellCar';
 $route['carlocator'] = 'form/carLocator';
 $route['enquiry'] = 'form/enquiry';
+
+require_once(BASEPATH.'database/DB.php');
+$db = & DB();
+$db->select('slug');
+$result = $db->get('pages');
+$pages = $result->result();
+
+foreach($pages as $page){
+    /* Gernal Pages */
+$route[$page->slug] = 'frontend/page/$1';
+}

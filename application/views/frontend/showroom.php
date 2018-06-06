@@ -272,14 +272,14 @@
                                   $img = isset($imgs[0]) ? $imgs[0]->image : '';
                                 ?>
                                 <img src="<?= site_url('/uploads/images/').$img ?>" alt="View our <?= $car->makeof .' '.$car->model ?>"></a>
-                              <div class="button-block">
+                              <div class="button-block ">
                                 <a href="" class="" title="View Gallery"><span aria-hidden="true" class="icon icon-picture"></span> <?= count($imgs) ?> Images</a>
                                 <a href="" class="youtube" title="View Video"><span aria-hidden="true" class="icon icon-youtube"></span> View Video</a>
                               </div>
                               <div class="clear"></div>
                               <div class="row">
                                 <div class="twelvecol mobile-hidden dt-partners">
-                                  <div class="row">
+                                  <!--<div class="row">
                                     <div class="fourcol center">
                                       <img src="" alt="Partner" class="responsive-img">
                                     </div>
@@ -289,7 +289,7 @@
                                     <div class="fourcol last center">
                                       <img src="" alt="Partner" class="responsive-img">
                                     </div>
-                                  </div>
+                                  </div>-->
                                 </div>
                               </div>
                             </div>

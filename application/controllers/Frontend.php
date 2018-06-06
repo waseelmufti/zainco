@@ -100,5 +100,17 @@ public function buy_now($id){
     $this->load->view('frontend/inc/footer');
 }
 
-
+public function page(){
+    $slug = $this->uri->segment(1) ;
+    $this->load->model('page/page_model', 'page_model');
+    $data['page'] = $this->page_model->get_front_page($slug);
+    
+    if(!$data['page']){
+         //redirect('/');   
+    }
+     $this->load->view('frontend/inc/header');
+    $this->load->view('frontend/single', $data);
+    $this->load->view('frontend/inc/footer');
+}
+    
 }

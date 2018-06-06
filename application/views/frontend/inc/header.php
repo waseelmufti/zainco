@@ -285,19 +285,19 @@
                   <span class="icon-bar three"></span>
                 </a>
                                     <ul id="dropdown-nav" class="nav">
-                                        <li class="n1 current"><a class="n1 current " href="<?= site_url() ?>" title="Home">Used Cars <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
+                                        <li class="n1 current"><a class="n1 current " href="<?= site_url('showroom') ?>" title="Home">Used Cars <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
                                         </li>
-                                        <li class="n2 "><a class="n2  " href="<?= site_url('showroom') ?>" title="Showroom">Car Servicing <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
+                                        <li class="n2 "><a class="n2  " href="<?= site_url('services') ?>" title="Showroom">Car Servicing <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
                                         </li>
 
                                         <li class="n4 "><a class="n4  parent" href="#" onclick="return false;" title="Vehicle Valuation">Vehicle Health <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
-                                            <ul>
+                                            <!--<ul>
                                                 <li class="n2 "><a class="n1 " href="<?= site_url('sellcar') ?>" title="Looking to sell?">Check </a></li>
 
                                                 <li class="n2 "><a class="n2 " href="<?= site_url('sellcar') ?>" title="Looking to sell?">Car Dignose </a></li>
-                                            </ul>
+                                            </ul>-->
                                         </li>
-                                        <li class="n5 "><a class="n5  parent" href="#" onclick="return false;" title="Our Services">Sell Your Car <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
+                                        <li class="n5 "><a class="n5  parent" href="<?= site_url('sellcar') ?>" onclick="return false;" title="Our Services">Sell Your Car <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
                                             <!--<ul>
                                                 <li class="n1 "><a class="n1 " href="<?= site_url('car-locator') ?>" title="Vehicle Sourcing">Vehicle Sourcing</a></li>
                                                 <li class="n2 "><a class="n2 " href="<?= site_url('services') ?>" title="Servicing">Servicing</a></li>
@@ -309,9 +309,9 @@
                                                 <li class="n2 "><a class="n2 " href="<?= site_url('testimonials') ?>" title="Testimonials">Testimonials</a></li>
                                             </ul>-->
                                         </li>
-                                        <li class="n7 "><a class="n7  " href="<?= site_url('contact') ?>" title="Contact">Break Down Recovery <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
+                                        <li class="n7 "><a class="n7  " href="<?= site_url('') ?>" title="Contact">Break Down Recovery <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
                                         </li>
-                                        <li class="n7 "><a class="n7  " href="<?= site_url('contact') ?>" title="Contact">Part Exchange <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
+                                        <li class="n7 "><a class="n7  " href="<?= site_url('') ?>" title="Contact">Part Exchange <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
                                         </li>
                                         <li class="n7 "><a class="n7  " href="<?= site_url('contact') ?>" title="Contact">Contact <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
                                         </li>
