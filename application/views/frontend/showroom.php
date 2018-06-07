@@ -77,20 +77,6 @@
     <div class="wrapper">
         <div class="container">
 
-            <ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
-                <li class="breadcrumb__listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-    <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="/">
-        <span itemprop="name">Home</span>
-    </a>
-    <meta itemprop="position" content="1" />
-</li><li class="breadcrumb__listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-    <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="javascript:void(0)">
-        <span itemprop="name">Used Cars</span>
-    </a>
-    <meta itemprop="position" content="2" />
-</li>
-            </ol>
-
         </div>
     </div>
 
@@ -106,7 +92,7 @@
 
                         <div id="search-advanced" class="widget">
                             <form action="" method="get">
-    <div class="row">
+    <!--<div class="row">
         <div class="threecol">
             <select name="make" id="make" onchange="loadSearch(0,1);  ">
                 <option value="" selected="selected">Any Make</option>
@@ -127,7 +113,7 @@
                 <span aria-hidden="true" class="icon-search"></span> Reset selections
             </button>
         </div>
-    </div>
+    </div>-->
     <div class="row">
 
         <div class="threecol">
