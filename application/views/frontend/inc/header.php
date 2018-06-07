@@ -252,7 +252,7 @@
                 </div>
             </div>
 
-            <div class="header-main">
+            <!--<div class="header-main">
                 <div class="wrapper">
                     <div class="container">
                         <div class="row header-content">
@@ -269,7 +269,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
 
             <!-- Navigation premier -->
             <div id="dropdown-navwrap">
@@ -283,37 +283,58 @@
                   <span class="icon-bar one"></span>
                   <span class="icon-bar two"></span>
                   <span class="icon-bar three"></span>
+                  
                 </a>
-                                    <ul id="dropdown-nav" class="nav">
-                                        <li class="n1 current"><a class="n1 current " href="<?= site_url('showroom') ?>" title="Home">Used Cars <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
+               
+                                    <ul id="dropdown-nav" class="nav" >
+                                     <a href="index.php" title="Best Motors"><img src="<?= site_url('assets/img/')?>logo.jpg" class="responsive-img" alt="best motors" height="80" width="150"></a>
+                                        <li class="n1 "><a class="n1" href="<?= site_url('showroom') ?>" title="Showroom"><strong>Used Cars </strong> <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
                                         </li>
-                                        <li class="n2 "><a class="n2  " href="<?= site_url('services') ?>" title="Showroom">Car Servicing <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
+                                        <li class="n2 "><a class="n2  " href="<?= site_url('services') ?>" title="Car Servicing"><strong>Car Servicing</strong> <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
                                         </li>
 
-                                        <li class="n4 "><a class="n4  parent" href="#" onclick="return false;" title="Vehicle Valuation">Vehicle Health <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
-                                            <!--<ul>
+                                        <li class="n4 ">
+                                          <a class="n4  parent" href="<?= site_url('vehicle-health') ?>" title="Vehicle Health">
+                                              <strong>Vehicle Health</strong></a> 
+                                          <br>
+                                          <a class="n4 " href="<?= site_url('car-dignose') ?>" title="Car Dignose">
+                                          <small>Car Dignose</small> </a>
+                                           <!-- <ul>
                                                 <li class="n2 "><a class="n1 " href="<?= site_url('sellcar') ?>" title="Looking to sell?">Check </a></li>
 
                                                 <li class="n2 "><a class="n2 " href="<?= site_url('sellcar') ?>" title="Looking to sell?">Car Dignose </a></li>
                                             </ul>-->
                                         </li>
-                                        <li class="n5 "><a class="n5  parent" href="<?= site_url('sellcar') ?>" onclick="return false;" title="Our Services">Sell Your Car <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
+                                        <li class="n5">
+                                          <a class="n5  parent" href="<?= site_url('sellcar') ?>" title="Sell Your Car"><strong>Sell Your Car</strong></a>
+                                           <br>
+                                           <a class="n5" href="<?= site_url('part-exchange') ?>" title="Part Exchange"><small>Part Exchange</small> </a>
                                             <!--<ul>
                                                 <li class="n1 "><a class="n1 " href="<?= site_url('car-locator') ?>" title="Vehicle Sourcing">Vehicle Sourcing</a></li>
-                                                <li class="n2 "><a class="n2 " href="<?= site_url('services') ?>" title="Servicing">Servicing</a></li>
+                                                <li class="n2 "><a class="n2 " href="<?= site_url() ?>" title="Servicing">Servicing</a></li>
                                             </ul>-->
                                         </li>
-                                        <li class="n6 "><a class="n6  parent" href="#" onclick="return false;" title="About Us">Warrenty <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
+                                        <li class="n6 "><a class="n6" href="<?= site_url('warranty') ?>" onclick="return false;" title="Warrenty"><strong>Warrenty</strong> </a>
                                             <!--<ul>
-                                                <li class="n1 "><a class="n1 " href="<?= site_url('about-us') ?>" title="About Us">About Us</a></li>
+                                                <li class="n1 "><a class="n1 " href="<?= site_url('about-us') ?><span aria-hidden="true" class="icon icon-arrow-down"></span>" title="About Us">About Us</a></li>
                                                 <li class="n2 "><a class="n2 " href="<?= site_url('testimonials') ?>" title="Testimonials">Testimonials</a></li>
                                             </ul>-->
                                         </li>
-                                        <li class="n7 "><a class="n7  " href="<?= site_url('') ?>" title="Contact">Break Down Recovery <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
+                                        <li class="n7 ">
+                                        <a class="n7 parent" href="<?= site_url('recovery') ?>" title="Break Down Recovery"><strong>Break Down Recovery </strong>
+                                        </a>
+                                        <br>
+                                        <a class="n7 " href="<?= site_url('accident-claims') ?>" title="Accident Claim">
+                                        <small>Accident Claim</small><span aria-hidden="true" class="icon icon-arrow-down"></span>
+                                        </a>
                                         </li>
-                                        <li class="n7 "><a class="n7  " href="<?= site_url('') ?>" title="Contact">Part Exchange <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
-                                        </li>
-                                        <li class="n7 "><a class="n7  " href="<?= site_url('contact') ?>" title="Contact">Contact <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
+                                        <!--<li class="n7 "><a class="n7  " href="<?= site_url('contact') ?>" title="Contact">Part Exchange <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
+                                        </li>-->
+                                        <li class="n7 ">
+                                        <a class="n7  " href="<?= site_url('contact') ?>" title="Contact"><strong>Contact </strong></a>
+                                        <br>
+                                        <a class="n7  " href="<?= site_url('get-direction') ?>" title="Get Direction">
+                                        <small>Get Direction</small><span aria-hidden="true" class="icon icon-arrow-down"></span></a>
                                         </li>
                                     </ul>
 

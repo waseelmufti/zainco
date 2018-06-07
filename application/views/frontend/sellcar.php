@@ -14,21 +14,28 @@
             <div class="row mobile-hidden">
       		<div class="twelvecol page-hdr" id="page-hdr-sellcar" style="background: url(<?= site_url('assets/img/theme/page-hdr-sellcar.jpg')?>) center top no-repeat;
 background-size: cover;">
-        	   <h1>Vehicle Valuation</h1>
+        	   <h1>Sell Your Car</h1>
       		</div>
    	    </div>
 
             <div class="clear"></div>
 
             <div class="twelvecol desktop-hidden">
-              <h2>Vehicle Valuation</h2>
+              <h2>Sell Your Car</h2>
             </div>
 
-		<p><strong>Looking to sell your car?</strong></p>
+		<p><strong>Why Sell To Best Car Trading?</strong></p>
 
-		<h2>We buy cars</h2>
-
-		<p>We take the hassle out of selling privately plus we have a network of industry contacts looking to pay good prices for your vehicle.</p>
+              <p>Reasons why we're your best option</p> 
+        
+        <p>We can optimize our inventory to get the right cars to the right place, so if we see a vehicle we like, we'll pay more to get it. 
+        </p>
+        
+        <p>Our evaluation process is free, and you're under no obligation to take our offer once we present it to you. Best of all, we won't waste your time. In other words, you have nothing to lose. Even if you plan to someone else, we're happy to give you a second opinion. </p>
+        
+        <p>We'll buy your vehicle even if you don't want to buy something new from a Best Car Trading. We're just looking for pre-owned vehicles. We're not looking to rope you into a vehicle you don't want to buy. </p>
+        
+        <p>We can often get you cash for your vehicle the very same day. If you accept our offer later in the day, then you might have to wait up to 24 hours. Either way, you get to avoid the hassle of selling your vehicle privately. </p>
 
 		<p>Complete our simple to use valuation form below to get started.</p>
 

@@ -63,6 +63,7 @@ $route['thankyou'] = 'frontend/thankyou';
 $route['buy-it-now/(:num)'] = 'frontend/buy_now/$1'; 
 $route['book-test-drive/(:num)'] = 'frontend/book_test_drive/$1'; 
 $route['enquiry/(:num)'] = 'frontend/enquiry/$1'; 
+$route['get-direction'] = 'frontend/get_direction'; 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 

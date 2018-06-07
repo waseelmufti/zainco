@@ -22,10 +22,8 @@ background-size: cover;">
       <h2>Servicing</h2>
     </div>
 
-    <p><strong>Globe Motors offer a full range of services:</strong></p>
-
     <!-- MOT -->
-    <h3 id="mot"><span aria-hidden="true" class="icon icon-signup"></span> MOT</h3>
+    <!--<h3 id="mot"><span aria-hidden="true" class="icon icon-signup"></span> MOT</h3>
     <p>We provide one of best services for MOT tests at our Garage in Walsall. By using highly experienced staff and equipment you can be assured your car is in good hands to be inspected.</p>
     <p>We offer a service that Class 4 (Cars) and Class 7 (vans) can now be tested at our garage.</p>
     <p>Contact us on Globe Motors for more information on availability.</p>
@@ -33,23 +31,18 @@ background-size: cover;">
     <p>For vehicles that come within the MOT scheme, testing is mandatory every year after the vehicle is three years old.</p>
     <p>For more information regarding the MOT test scheme visit the Direct.gov.uk website.</p>
     <a href="booking_enquiry.html" title="Book In Online" class="button bespoke large">Book In</a>
-
+-->
     <!-- Servicing -->
     <h3 id="service"><span aria-hidden="true" class="icon icon-heart-2"></span> Servicing</h3>
-    <p>A small investment in routine servicing, plus a good inspection programme, results in good return on that investment because of:</p>
+    <p>A small investment in routine servicing, plus a good inspection programme, results in good return on that investment can reduced cost of repairs over the car's coming years you will have peace of mind reducing the risk of breakdowns and less chance of accidents.</p>
+    <p>
+        The possibility of greater fuel economy and keeps the vehicle to its maximum working order. 
+    </p>
 
-    <ul class="list-ticks">
-      <li>Reduced cost of repairs over the car's coming years</li>
-      <li>Peace of mind reducing the risk of breakdowns.</li>
-      <li>Will reduce your costs for repairs in the future</li>
-      <li>Less chance of accidents</li>
-      <li>The possibility of greater fuel economy and keeps the vehicle to its maximum working order</li>
-    </ul>
-
-    <a href="booking_enquiry.html" title="Book In Online" class="button bespoke large">Book In</a>
+    <!--<a href="booking_enquiry.html" title="Book In Online" class="button bespoke large">Book In</a>-->
 
     <!-- Brakes -->
-    <h3 id="brakes"><span aria-hidden="true" class="icon icon-cars"></span> Brakes</h3>
+    <!--<h3 id="brakes"><span aria-hidden="true" class="icon icon-cars"></span> Brakes</h3>
     <p>Globe Motors have fully qualified and experienced staff that can supply and fit brakes for all makes and models at competitive prices.</p>
     <p>It is essential for your car to have the brakes in their full working order this can range from disk brakes, disk pads, brake callipers and also brake pipes.</p>
     <p>Are your brakes in working order?</p>
@@ -67,40 +60,40 @@ background-size: cover;">
       <li>A general grinding noise when driving</li>
     </ul>
     <a href="booking_enquiry.html" title="Book In Online" class="button bespoke large">Book In</a>
-
+-->
     <!-- Diagnostics -->
-    <h3 id="diagnostics"><span aria-hidden="true" class="icon icon-health"></span> Diagnostics</h3>
+    <!--<h3 id="diagnostics"><span aria-hidden="true" class="icon icon-health"></span> Diagnostics</h3>
     <p>At Globe Motors we can cure most types of diagnostics on your car.</p>
     <p>All cars are now fitted with computers and a myriad of technology to run and monitor the internal workings of the vehicle. One of the most important functions these computers provide is ensuring your car
       is operating within the manufacturers parameters; the engine, safety systems (ABS, Anti-Slip etc. etc.) are all operating correctly and safely. Most people usually only become aware of the functions of these computers when one of the fault warning
       indicators illuminates on the dashboard.</p>
     <a href="booking_enquiry.html" title="Book In Online" class="button bespoke large">Book In</a>
-
+-->
     <!-- Tyres -->
-    <h3 id="tyres"><span aria-hidden="true" class="icon icon-feed"></span> Tyres</h3>
+    <!--<h3 id="tyres"><span aria-hidden="true" class="icon icon-feed"></span> Tyres</h3>
     <p>Looking to buy tyres for your car? Globe Motors can get you driving safe and legal on the road.</p>
     <p>Look for cuts, cracks and bulges, or any other evidence of damage, from violent impact or kerbing, or excessive wear inner/outer of the tyre or middle of tread. Damaged tyres may be illegal and can be dangerous. For peace of mind, call into Globe Motors
       for some friendly expert advice and ask for your free tyre check.</p>
     <a href="booking_enquiry.html" title="Book In Online" class="button bespoke large">Book In</a>
-
+-->
     <!-- Air Con -->
-    <h3 id="air-con"><span aria-hidden="true" class="icon icon-snowflake"></span> Air Conditioning</h3>
+    <!--<h3 id="air-con"><span aria-hidden="true" class="icon icon-snowflake"></span> Air Conditioning</h3>
     <p>You may not be aware that over 10% of air con gas permeates from the air con system every year.</p>
     <p>This means that it may not work as well as it should. This service is not part of routine vehicle servicing so if your vehicle is more than 2 years old it's probably due for a recharge.</p>
     <a href="booking_enquiry.html" title="Book In Online" class="button bespoke large">Book In</a>
-
+-->
     <!-- Suspension -->
-    <h3 id="suspension"><span aria-hidden="true" class="icon icon-contract"></span> Suspension</h3>
+    <!--<h3 id="suspension"><span aria-hidden="true" class="icon icon-contract"></span> Suspension</h3>
     <p>Your car's suspension is a vital safety issue for your vehicle.</p>
     <p>Worn shock absorbers not only reduce driver comfort, but they can also dramatically affect the handling and safety of your car.</p>
     <p>Worn suspension components may also cause an irritating knocking noise.</p>
     <a href="booking_enquiry.html" title="Book In Online" class="button bespoke large">Book In</a>
-
+-->
     <!-- Batteries -->
-    <h3 id="batteries"><span aria-hidden="true" class="icon icon-power"></span> Batteries</h3>
+    <!--<h3 id="batteries"><span aria-hidden="true" class="icon icon-power"></span> Batteries</h3>
     <p>We carry an extensive range of batteries, which are available to be fitted while you wait. Ranging from a 3 year, 4 year & 5 year warranty</p>
     <a href="booking_enquiry.html" title="Book In Online" class="button bespoke large">Book In</a>
-
+-->
 
 
   </div>
