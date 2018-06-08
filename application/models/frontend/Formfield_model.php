@@ -9,18 +9,24 @@ class Formfield_model extends CI_Model{
     }
     
     public function get_makeof(){
-        $this->db->select('DISTINCT makeof');
     }
     
-    public function get_models($makeof){
+    public function get_bodystyle(){
+        $this->db->select('body_style');
+        $this->db->distinct();
+        $result = $this->db->get('car_table');
+        return $result->result();
         
     }
     
-    public function get_maxprice($model){
-        
+    public function get_gearbox(){
+        $this->db->select('gearbox');
+        $this->db->distinct();
+        $result = $this->db->get('car_table');
+        return $result->result();
     }
     
-    public function get_bodystyle($model){
+    public function get_fueltype(){
         
     }
 }

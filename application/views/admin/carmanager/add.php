@@ -157,18 +157,7 @@
               <input class="form-control" id="co_emission" placeholder="Enter CO2 emissions" name="co_emission" type="text" required>
             </div>
           </div>
-          <div class="col-xs-12 col-md-3">
-            <div class="form-group">
-              <label for="ins_grp">Insurance group*</label>
-              <input class="form-control" id="ins_grp" placeholder="Enter Insurance group" name="ins_grp" type="text" required>
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-3">
-            <div class="form-group">
-              <label for="mpg">Avg. MPG</label>
-              <input class="form-control" id="mpg" placeholder="Enter Avg. MPG" name="mpg" type="text" required>
-            </div>
-          </div>
+          
           <div class="col-xs-12 col-md-3">
             <div class="form-group">
               <label for="gearbox">Gearbox</label>
@@ -176,39 +165,7 @@
             </div>
           </div>
         </div>
-        <h3>Special Features</h3>
-        <div class="row">
-          <div class="col-xs-12 col-md-3">
-            <div class="form-group">
-              <label for="fea_1">Feature 1*</label>
-              <input class="form-control" id="fea_1" placeholder="Enter Feature 1" name="fea_1" type="text" required>
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-3">
-            <div class="form-group">
-              <label for="fea_2">Feature 2*</label>
-              <input class="form-control" id="fea_2" placeholder="Enter Feature 2" name="fea_2" type="text" required>
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-3">
-            <div class="form-group">
-              <label for="fea_3">Feature 3</label>
-              <input class="form-control" id="fea_3" placeholder="Enter Feature 3" name="fea_3" type="text">
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-3">
-            <div class="form-group">
-              <label for="fea_4">Feature 4</label>
-              <input class="form-control" id="fea_4" placeholder="Enter Feature 4" name="fea_4" type="text">
-            </div>
-          </div>
-          <div class="col-xs-12 col-md-3">
-            <div class="form-group">
-              <label for="fea_5">Feature 5</label>
-              <input class="form-control" id="fea_5" placeholder="Enter Feature 5" name="fea_5" type="text">
-            </div>
-          </div>
-        </div>
+
 
         <h3>Performance & Economy</h3>
         <div class="row">

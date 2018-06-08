@@ -16,6 +16,9 @@ class Frontend extends CI_Controller{
   }
 
   public function showroom(){
+    $this->load->model('frontend/formfield_model', 'fields_model');
+    $data['body'] = $this->fields_model->get_bodystyle();  
+    $data['gear_box'] = $this->fields_model->get_gearbox();  
     $data['cars'] = $this->car_model->get_list();
     $this->load->view('frontend/inc/header');
     $this->load->view('frontend/showroom', $data);

@@ -7,25 +7,21 @@ class Car_model extends CI_Model{
     parent::__construct();
   }
 
-  public function get_list($make = NULL, $model = NULL, $price = NULL, $body_style = NULL, $transmission = NULL, $fuel_type = NULL){
-      if($make){
-            $this->db->where('makeof', $make);
+  public function get_list($body_style = NULL, $transmission = NULL, $fuel_type = NULL){
+      
+      if($this->input->get('body')){
+          $body = $this->input->get('body');
+          $this->db->where('body_style', $body);
         }
-        if($model){
-            $this->db->where('model', $model);
+      if($this->input->get('gearbox')){
+          $gearbox = $this->input->get('gearbox');
+          $this->db->where('gearbox', $gearbox);
         }
-        if($price){
-            $this->db->where('pirce <=', $price);
+      if($this->input->get('fuel_type')){
+          $fuel = $this->input->get('fuel_type');
+          $this->db->where('fuel_type', $fuel);
         }
-        if($body_style){
-            $this->db->where('body_style', $body_style);
-        }
-        if($transmission){
-            $this->db->where('transmission', $transmission);
-        }
-        if($fuel_type){
-            $this->db->where('fuel_type', $fuel_type);
-        }
+        
     $query = $this->db->order_by('created_at', 'DESC')->get('car_table');
     return $query->result();
   }
@@ -132,5 +128,45 @@ class Car_model extends CI_Model{
       //$data['car_id'] = $id;
         $insert = $this->db->insert_batch('car_image',$data);
         return $insert ? true : false;
+    }
+
+    public function delete_car($id){
+        
+        $this->db->where('id', $id);
+        $query = $this->db->get('car_table');
+        if($query->num_rows() > 0){
+            $result = $query->result();
+            $this->db->trans_start();
+    
+            //delete Images
+            $this->db->where('id', $id);
+            $this->db->delete('car_image');
+            //Delete Interior
+            $this->db->where('id', $id);
+            $this->db->delete('interior');
+            //Delete Exterior
+            $this->db->where('id', $id);
+            $this->db->delete('exterior');
+            //Delete Comfort
+            $this->db->where('id', $id);
+            $this->db->delete('comfort');
+            //Delete Safety
+            $this->db->where('id', $id);
+            $this->db->delete('safety');
+            //Delete Other
+            $this->db->where('id', $id);
+            $this->db->delete('other');
+            //Delete Car
+            $this->db->where('id', $id);
+            $this->db->delete('car_table');
+            
+            $this->db->trans_complete();
+            
+             if($this->db->trans_status() == FALSE){
+                return FALSE;
+             }
+            
+            return TRUE;
+        }
     }
 }

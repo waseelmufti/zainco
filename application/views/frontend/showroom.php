@@ -105,35 +105,49 @@
                     <div class="wrapper">
 
                         <div id="search-advanced" class="widget">
-                            <form action="" method="get">
+                            <?= form_open('', 'method="GET"') ?>
     
     <div class="row">
 
         <div class="threecol">
-            <select name="body" id="body" onchange="loadSearch(0,1);">
+            <select name="body" id="body">
                 <option value="" selected="selected">Any Body Style</option>
+                <?php 
+    if(count($body) > 0){
+        foreach($body as $bodi){ ?>
+           
+            <option value="<?php echo $bodi->body_style ?>"><?php echo $bodi->body_style ?></option>
+        <?php }                
+                } ?>
             </select></div>
         <div class="threecol">
-            <select name="gearbox" id="gearbox" onchange="loadSearch(0,1);  ">
+            <select name="gearbox" id="gearbox">
                 <option value="" selected="selected">Any Transmission</option>
+                <?php 
+    if(count($gear_box) > 0){
+        foreach($gear_box as $gear){ ?>
+           
+            <option value="<?php echo $gear->gearbox?>"><?php echo $gear->gearbox?></option>
+        <?php }                
+                } ?>
             </select>
         </div>
         <div class="threecol">
-            <select name="fuel_type" id="fuel_type" onchange="loadSearch(0,1);  ">
+            <select name="fuel_type" id="fuel_type">
                 <option value="" selected="selected">Any Fuel type</option>
-                 <option value="8" >PETROL</option>
-                 <option value="25" >DIESEL</option>
-                 <option value="32" >HYBIRD</option>
+                 <option value="petrol" >PETROL</option>
+                 <option value="diesel" >DIESEL</option>
+                 <option value="hybird" >HYBIRD</option>
                 
             </select>
         </div>
         <div class="threecol last">
-            <button type="button" class="button green full" onclick="submit();"><span aria-hidden="true" class=" "></span> Search</button>
+            <button type="submit" class="button green full"><span aria-hidden="true" class=" "></span> Search</button>
         </div>
 
     </div>
 
-</form>
+<?= form_close() ?>
                         </div>
 
                     </div>
@@ -345,8 +359,8 @@
                   <div class="spec two">
                     <div class="pad-10-top-bottom">
                       <ul>
-                        <li><span aria-hidden="true" class=""></span> <?= $car->mpg ?> Avg. MPG</li>
-                        <li><span aria-hidden="true" class=""></span> Ins. Group: <?= $car->ins_grp ?></li>
+                        <!--<li><span aria-hidden="true" class=""></span> <?= $car->mpg ?> Avg. MPG</li>
+                        <li><span aria-hidden="true" class=""></span> Ins. Group: <?= $car->ins_grp ?></li>-->
                         <li><span aria-hidden="true" class=""></span> <?= $car->co_emission ?> CO² (g/km)</li>
                         <!-- <li><span aria-hidden="true" class="icon-tax12"></span> £315.00 12m Tax</li>
                         <li><span aria-hidden="true" class="icon-tax6"></span> £173.25 6m Tax</li> -->

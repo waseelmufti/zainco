@@ -27,6 +27,13 @@
         </div>
       </div>
       <div class="box-body table-responsive no-padding">
+             <!--  Show Success or Error Message -->
+          <?php if($this->session->flashdata('success')) {?>
+          <div class="alert alert-success"><?= $this->session->flashdata('success') ?></div>
+            <?php } ?>
+            <?php if($this->session->flashdata('error')) {?>
+            <div class="alert alert-danger"><?= $this->session->flashdata('error') ?></div>
+          <?php } ?>
               <table class="table table-hover">
                 <tr>
                   <th>Make Of</th>
@@ -44,8 +51,8 @@
                   <td><?php echo $result->body_style ?></td>
                   <td><?php echo $result->color ?></td>
                   <td>
-                    <button type="button" class="btn btn-warning" name="button">Update</button>
-                    <button type="button" class="btn btn-danger" name="button">Delete</button>
+                    <a class="btn btn-warning"  href="<?= site_url('admin/dashboard/page/edit/').$result->id ?>">Update</a>
+                    <a class="btn btn-danger" href="<?= site_url('admin/dashboard/car/delete/').$result->id ?>" onclick="return confirm('Do you want to Delete?')">Delete</a>
                   </td>
                 </tr>
               <?php }?>

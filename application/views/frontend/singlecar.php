@@ -222,10 +222,10 @@
                                           <li class="">
                                             <div class="list-label">CO2 emissions</div>
                                             <div class="list-stat"><?= $car[0]->co_emission ?> g/km</div>
-                                          </li><li class="">
+                                          </li><!--<li class="">
                                             <div class="list-label">Insurance group</div>
                                             <div class="list-stat"><?= $car[0]->ins_grp ?></div>
-                                          </li>
+                                          </li>-->
                                         </ul>
 								                      </div>
 

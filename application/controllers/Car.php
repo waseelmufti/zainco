@@ -47,14 +47,7 @@ $data = array(
   'fuel_type' => $_POST['fuel_type'],
   'transmission' => $_POST['transmission'],
   'co_emission' => $_POST['co_emission'],
-  'ins_grp' => $_POST['ins_grp'],
-  'mpg' => $_POST['mpg'],
     'gearbox' => $_POST['gearbox'],
-    'fea_1' => $_POST['fea_1'],
-    'fea_2' => $_POST['fea_2'],
-    'fea_3' => $_POST['fea_3'],
-    'fea_4' => $_POST['fea_4'],
-    'fea_5' => $_POST['fea_5'],
     
   'fuel_cons_ur' => $_POST['fuel_cons_ur'],
   'fuel_cons_ex' => $_POST['fuel_cons_ex'],
@@ -151,7 +144,17 @@ public function carEdit($id){
 }
 
 public function carDelete($id){
-  echo $id;
+  
+    $flag = $this->car_model->delete_car($id);
+    if($flag){
+              $msg = 'Record is Deleted successfully.';
+              $this->session->set_flashdata('error',$msg);
+          }else{
+            $msg = 'Some problem occurred, please try again.';
+            $this->session->set_flashdata('error',$msg);
+          }
+    
+    redirect('admin/dashboard/car');
 }
    
 }
