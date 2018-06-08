@@ -10,7 +10,7 @@
 
     <div class="twelvecol">
       <div class="pad-20 overflow-hidden">
-        <h1>Contact Globe Motors</h1>
+        <h1>Contact Best Motors</h1>
       </div>
     </div>
 
@@ -20,9 +20,9 @@
         <div class="contact-widget">
           <div class="pad-20 overflow-hidden">
 
-            <h3><span aria-hidden="true" class="icon icon-location"></span> Address</h3>
-            <p><strong>Globe Motors</strong></p>
-            <address>Darlaston Road<br>Walsall<br>West Midlands<br>WS2 9SG<br></address>
+            <h3><span aria-hidden="true" class=""></span> Address</h3>
+            <p><strong>Best Motors</strong></p>
+            <address>----- Road<br>-----<br>-------<br>-- ----<br></address>
 
           </div>
         </div>
@@ -36,20 +36,20 @@
     <div class="contact-widget">
       <div class="pad-20 overflow-hidden">
 
-        <h3><span aria-hidden="true" class="icon icon-phone"></span> Contact</h3>
+        <h3><span aria-hidden="true" class=""></span> Contact</h3>
         <p>Why not contact us directly?</p>
 
         <div class="contact-box">
           <ul id="get-in-touch">
-            <li class="mobile-hidden"><span aria-hidden="true" class="icon icon-phone-2"></span> <a href="contact.html">0121 5262220</a></li>
-<li class="desktop-hidden"><span aria-hidden="true" class="icon icon-phone-2"></span> <a href="tel:01215262220">01215262220</a></li>
+            <li class="mobile-hidden"><span aria-hidden="true" class=""></span> <a href="#">0123 456789</a></li>
+<li class="desktop-hidden"><span aria-hidden="true" class=""></span> <a href="tel:0123456789">0123456789</a></li>
 
-            <li class="mobile-hidden"><span aria-hidden="true" class="icon icon-mobile"></span> <a href="contact.html">07944 706957</a></li>
+            <li class="mobile-hidden"><span aria-hidden="true" class=""></span> <a href="#">0012 3456789</a></li>
 
-            <li class="mobile-hidden"><span aria-hidden="true" class="desktop-hidden mobile-hidden desktop-hidden"></span> <a href="contact.html"></a></li>
+            <li class="mobile-hidden"><span aria-hidden="true" class="desktop-hidden mobile-hidden desktop-hidden"></span> <a href="#"></a></li>
 <li class="desktop-hidden"><span aria-hidden="true" class="desktop-hidden mobile-hidden desktop-hidden"></span> <a href="tel:"></a></li>
 
-            <li><span aria-hidden="true" class="icon icon-mail"></span> <a href="mailto:" title="Email Us">Email Us</a></li>
+            <li><span aria-hidden="true" class=""></span> <a href="mailto:" title="Email Us">Email Us</a></li>
 
           </ul>
         </div>
@@ -105,7 +105,7 @@
   <input type="hidden" name="subject" value="contact_form">
 
   <fieldset title="Contact Form">
-    <h3><span aria-hidden="true" class="icon icon-mail"></span> Email Us</h3>
+    <h3><span aria-hidden="true" class=""></span> Email Us</h3>
 
 <!--  Show Success or Error Message -->
     <?php if($this->session->flashdata('success')) {?>
@@ -137,8 +137,7 @@
       <div>
         <div style="width: 302px; height: 422px; position: relative;">
           <div style="width: 302px; height: 422px; position: absolute;">
-            <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Le7RFsUAAAAAPXnED-n8tIogLAF30sl5YgWxrC_"
-                    frameborder="0" scrolling="no"
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11892.678581556853!2d-71.402593!3d41.824645!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e4453c442f5b9f%3A0x22d5b1cf16b79db7!2s21+Brown+St%2C+Providence%2C+RI+02906%2C+USA!5e0!3m2!1sen!2s!4v1528404802498" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>                    frameborder="0" scrolling="no"
                     style="width: 302px; height:422px; border-style: none;">
             </iframe>
           </div>
@@ -171,9 +170,9 @@
     <div class="eightcol last">
       <div class="contact-widget">
         <div class="pad-20 overflow-hidden">
-          <h3><span aria-hidden="true" class="icon icon-location"></span> Map</h3>
+          <h3><span aria-hidden="true" class=""></span> Map</h3>
           <div class="flexible-frame">
-         <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key= AIzaSyBF3J8lImwh9UH9t6d6g3XVBSJr_bJUfp4'></script><div style='overflow:hidden;height:400px;width:600px;'><div id='gmap_canvas' style='height:400px;width:600px;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='https://mapswebsite.net/'>https://mapswebsite.net</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=2b718210d2ea7e31c8ff95a33fb787cc98137044'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:20,center:new google.maps.LatLng(31.5643252,74.29862100000003),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(31.5643252,74.29862100000003)});infowindow = new google.maps.InfoWindow({content:'<strong>testing</strong><br>islampure<br>54000 lahore<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11892.678581556853!2d-71.402593!3d41.824645!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e4453c442f5b9f%3A0x22d5b1cf16b79db7!2s21+Brown+St%2C+Providence%2C+RI+02906%2C+USA!5e0!3m2!1sen!2s!4v1528404802498" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -228,14 +227,9 @@
   <meta itemprop="closes" content="By Appointment">
 </span>
 
-<meta itemprop="telephone" content="0121 5262220">
-<meta itemprop="email" content="globemotors@hotmail.co.uk">
+<meta itemprop="telephone" content="0123 4567890">
+<meta itemprop="email" content="bestmotors@hotmail.co.uk">
 
-<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-  <meta itemprop="streetAddress" content="Darlaston Road, ">
-  <meta itemprop="addressLocality" content="Walsall">
-  <meta itemprop="addressRegion" content="West Midlands">
-  <meta itemprop="postalCode" content="WS2 9SG">
-  <meta itemprop="addressCountry" content="United Kingdom">
+>
 </span>
 </div>

@@ -77,6 +77,20 @@
     <div class="wrapper">
         <div class="container">
 
+            <ol class="breadcrumb__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                <li class="breadcrumb__listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="/">
+        <span itemprop="name">Home</span>
+    </a>
+    <meta itemprop="position" content="1" />
+</li><li class="breadcrumb__listitem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+    <a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="javascript:void(0)">
+        <span itemprop="name">Used Cars</span>
+    </a>
+    <meta itemprop="position" content="2" />
+</li>
+            </ol>
+
         </div>
     </div>
 
@@ -92,28 +106,7 @@
 
                         <div id="search-advanced" class="widget">
                             <form action="" method="get">
-    <!--<div class="row">
-        <div class="threecol">
-            <select name="make" id="make" onchange="loadSearch(0,1);  ">
-                <option value="" selected="selected">Any Make</option>
-            </select>
-        </div>
-        <div class="threecol">
-            <select name="model" id="model" onchange="loadSearch(0,1);  ">
-                <option value="" selected="selected">Any Model</option>
-            </select>
-        </div>
-        <div class="threecol">
-            <select name="price" id="price" onchange="loadSearch(0,1);  ">
-                <option value="" selected="selected">Maximum Price</option>
-            </select>
-        </div>
-        <div class="threecol last">
-            <button type="reset" class="button green full mobile-hidden" onclick="resetSearch();">
-                <span aria-hidden="true" class="icon-search"></span> Reset selections
-            </button>
-        </div>
-    </div>-->
+    
     <div class="row">
 
         <div class="threecol">
@@ -128,10 +121,14 @@
         <div class="threecol">
             <select name="fuel_type" id="fuel_type" onchange="loadSearch(0,1);  ">
                 <option value="" selected="selected">Any Fuel type</option>
+                 <option value="8" >PETROL</option>
+                 <option value="25" >DIESEL</option>
+                 <option value="32" >HYBIRD</option>
+                
             </select>
         </div>
         <div class="threecol last">
-            <button type="button" class="button green full" onclick="submit();"><span aria-hidden="true" class="icon-search"></span> Search</button>
+            <button type="button" class="button green full" onclick="submit();"><span aria-hidden="true" class=" "></span> Search</button>
         </div>
 
     </div>
@@ -171,14 +168,14 @@
 
                         <!-- Showing -->
                         <div class="threecol mobile-hidden">
-                        	<span id="vehicle-search-showing-top"><span class="tablet-hidden">Showing </span><span><strong>1 - 10</strong> (of <strong>35</strong>)</span></span>
+                        	<span id="vehicle-search-showing-top"><span class="tablet-hidden">Showing </span><span><strong>1 - 10</strong> </span></span>
                         </div>
 
                         <!-- Sort -->
                         <div class="threecol" id="vehicle-search-sortform-top">
                           <form class="alpha" name="sortform" id="sortform" action="" method="GET">
                             <label class="alpha mobile-hidden tablet-hidden">Sort</label>
-                            <SELECT id="sort" class="select" onChange="doSort()" NAME="sort"><OPTION SELECTED VALUE="h">Price (high to low)<OPTION VALUE="l">Price (low to high)<OPTION VALUE="m">Make/model<OPTION VALUE="nis">Latest Arrivals<OPTION VALUE="rr">Recently Reduced</SELECT>
+                            <SELECT id="sort" class="select" onChange="doSort()" NAME="sort"><OPTION SELECTED VALUE="h">Price (high to low)<OPTION VALUE="l">Price (low to high)</SELECT>
                           </form>
                         </div>
 
@@ -186,9 +183,9 @@
                         <div class="sixcol last" id="vehicle-search-pagination-top">
                           <ol class="pagenavi">
     <li><a rel="nofollow" href="" class="next" title="Next">&raquo;</a></li>
-                    <li><a href="" >4</a></li>
+                    <!--<li><a href="" >4</a></li>
                 <li><a href="" >3</a></li>
-                <li><a href="" >2</a></li>
+                <li><a href="" >2</a></li>-->
                 <li><a href="" class="active">1</a></li>
     <li><a rel="nofollow" href="" class="next" title="Previous">&laquo;</a></li>
 
@@ -253,13 +250,13 @@
                           <div class="row section1">
                             <!-- Vehicle Image -->
                             <div class="fourcol">
-                              <a href="#" title="<?php echo $car->title; ?>" class="vehicle-image">
+                              <a href="<?php echo site_url().'showroom/'.$car->id ?>" title="<?php echo $car->title; ?>" class="vehicle-image">
                                 <?php
                                   $img = isset($imgs[0]) ? $imgs[0]->image : '';
                                 ?>
                                 <img src="<?= site_url('/uploads/images/').$img ?>" alt="View our <?= $car->makeof .' '.$car->model ?>"></a>
                               <div class="button-block ">
-                                <a href="" class="" title="View Gallery"><span aria-hidden="true" class="icon icon-picture"></span> <?= count($imgs) ?> Images</a>
+                                <a href="<?php echo site_url().'showroom/'.$car->id ?>" class="" title="View Gallery"><span aria-hidden="true" class="">Click To View</span> <?= count($imgs) ?> More Images</a>
                                 <a href="" class="youtube" title="View Video"><span aria-hidden="true" class="icon icon-youtube"></span> View Video</a>
                               </div>
                               <div class="clear"></div>
@@ -286,7 +283,7 @@
                               <!-- Title -->
                               <div class="eightcol vehicle-title">
                                 <h3>
-                                  <a href="" title="View Vehicle Details"><?= $car->title?></a>
+                                  <a href="<?php echo site_url().'showroom/'.$car->id ?>" title="View Vehicle Details"><?= $car->title?></a>
                                 </h3>
                                 <cite class="mobile-hidden"></cite>
                                 <p class="price-save"><?php echo ($car->discount) ? "<span class='price-was'>".$car->price."</span> save Rs.".$car->discount : '' ?></p>
@@ -334,11 +331,11 @@
                   <div class="spec one">
                     <div class="pad-10-top-bottom">
                       <ul>
-                        <li><span aria-hidden="true" class="icon-mileage"></span> <?= $car->mileage ?> miles</li>
-                        <li><span aria-hidden="true" class="icon-color-palette"></span> <?= $car->color ?></li>
-                        <li><span aria-hidden="true" class="icon-gas-pump-2"></span> <?= $car->fuel_type ?></li>
-                        <li><span aria-hidden="true" class="icon-transmission"></span> <?= $car->transmission ?></li>
-                        <li><span aria-hidden="true" class="icon-capacity"></span> <?= $car->engine_capacity ?> L</li>
+                        <li><span aria-hidden="true" class=""></span> <?= $car->mileage ?> miles</li>
+                        <li><span aria-hidden="true" class=""></span> <?= $car->color ?></li>
+                        <li><span aria-hidden="true" class=""></span> <?= $car->fuel_type ?></li>
+                        <li><span aria-hidden="true" class=""></span> <?= $car->transmission ?></li>
+                        <li><span aria-hidden="true" class=""></span> <?= $car->engine_capacity ?> L</li>
                       </ul>
                     </div>
                   </div>
@@ -348,9 +345,9 @@
                   <div class="spec two">
                     <div class="pad-10-top-bottom">
                       <ul>
-                        <li><span aria-hidden="true" class="icon-road"></span> <?= $car->mpg ?> Avg. MPG</li>
-                        <li><span aria-hidden="true" class="icon-insurance"></span> Ins. Group: <?= $car->ins_grp ?></li>
-                        <li><span aria-hidden="true" class="icon-upload"></span> <?= $car->co_emission ?> CO² (g/km)</li>
+                        <li><span aria-hidden="true" class=""></span> <?= $car->mpg ?> Avg. MPG</li>
+                        <li><span aria-hidden="true" class=""></span> Ins. Group: <?= $car->ins_grp ?></li>
+                        <li><span aria-hidden="true" class=""></span> <?= $car->co_emission ?> CO² (g/km)</li>
                         <!-- <li><span aria-hidden="true" class="icon-tax12"></span> £315.00 12m Tax</li>
                         <li><span aria-hidden="true" class="icon-tax6"></span> £173.25 6m Tax</li> -->
                       </ul>
@@ -361,14 +358,14 @@
                 <div class="fivecol spec-three last mobile-hidden">
                   <div class="spec ticks">
                     <div class="pad-10-top-bottom">
-                      <ul>
+                      <!--<ul>
                         <li>
                           <span aria-hidden="true" class="icon-checkmark"></span> <?= $car->fea_1 ?></li>
                           <li><span aria-hidden="true" class="icon-checkmark"></span> <?= $car->fea_2 ?></li>
                           <li><span aria-hidden="true" class="icon-checkmark"></span> <?= $car->fea_3 ?></li>
                           <li><span aria-hidden="true" class="icon-checkmark"></span> <?= $car->fea_4 ?></li>
                           <li><span aria-hidden="true" class="icon-checkmark"></span> <?= $car->fea_5 ?></li>
-                      </ul>
+                      </ul>-->
                     </div>
                   </div>
                 </div>
@@ -390,7 +387,7 @@
                   <!-- // END Mobile Only -->
                   <div class="results-btn-view fivecol last mobile-half-col">
                     <a href="<?php echo site_url().'showroom/'.$car->id ?>" class="button black full" title="View Vehicle Details">
-                      <span aria-hidden="true" class="icon icon-search"></span> View Vehicle
+                      <span aria-hidden="true" class="icon  "></span> View Vehicle
                     </a>
                   </div>
                 </div>
@@ -552,14 +549,14 @@
 
                   <!-- Showing -->
                   <div class="threecol mobile-hidden">
-                  		<span id="vehicle-search-showing-bottom"><span class="tablet-hidden">Showing </span><span><strong>1 - 10</strong> (of <strong>35</strong>)</span></span>
+                  		<span id="vehicle-search-showing-bottom"><span class="tablet-hidden">Showing </span><span><strong>1 - 10</strong> </span></span>
                   </div>
 
                   <!-- Sort -->
                   <div class="threecol" id="vehicle-search-sortform-bottom">
                     <form class="alpha" name="sortform" id="sortform" action="https://www.globemotorswalsall.co.uk/search_page.php?" method="GET">
                       <label class="alpha mobile-hidden tablet-hidden">Sort</label>
-                      <SELECT id="sort_bottom" class="select" onChange="doSortBottom()" id="sort" class="select" onChange="doSort()" NAME="sort"><OPTION SELECTED VALUE="h">Price (high to low)<OPTION VALUE="l">Price (low to high)<OPTION VALUE="m">Make/model<OPTION VALUE="nis">Latest Arrivals<OPTION VALUE="rr">Recently Reduced</SELECT>
+                      <SELECT id="sort_bottom" class="select" onChange="doSortBottom()" id="sort" class="select" onChange="doSort()" NAME="sort"><OPTION SELECTED VALUE="h">Price (high to low)<OPTION VALUE="l">Price (low to high)</SELECT>
                     </form>
                   </div>
 
@@ -567,9 +564,9 @@
                   <div class="sixcol last" id="vehicle-search-pagination-bottom">
                     <ol class="pagenavi">
     <li><a rel="nofollow" href="search_pagede11.html?sort=h&amp;p=4" class="next" title="Next">&raquo;</a></li>
-                    <li><a href="search_pagede11.html?sort=h&amp;p=4" >4</a></li>
+                  <!--  <li><a href="search_pagede11.html?sort=h&amp;p=4" >4</a></li>
                 <li><a href="search_page1f84.html?sort=h&amp;p=3" >3</a></li>
-                <li><a href="search_page3464.html?sort=h&amp;p=2" >2</a></li>
+                <li><a href="search_page3464.html?sort=h&amp;p=2" >2</a></li>-->
                 <li><a href="search_pagebf0a.html?sort=h&amp;p=1" class="active">1</a></li>
 
     <li><a rel="nofollow" href="search_pagebf0a.html?sort=h&amp;p=1" class="next" title="Previous">&laquo;</a></li>
@@ -605,15 +602,12 @@
                   </div>
                   <!-- //SEO Text -->
 
-                  <h1>Used cars for sale in Walsall</h1>
+                  <h1>Welcome to Best Car Trading.</h1>
 
-<p>Please view the latest range of quality used cars for sale from Globe Motors.</p>
-
-<p>Every effort has been made to ensure the accuracy of the above vehicles information but errors may occur. Please check with a salesperson.</p>
-<p>The representative finance examples shown above are for illustrative purposes only. Fees, rates and monthly payments may change subject to underwriting decision.</p>
-<p><strong>Representative APR See Above Examples</strong></p>
-<p><em>*Fees are already accounted for within the payments displayed and are included within the total amount payable.</em></p>
-<p><em>Finance is available to UK residents aged 18 years or older, subject to status. Terms &amp; Conditions apply. Indemnities may be required. Other finance offers may be available but cannot be used in conjunction with this offer. We work with a number of carefully selected credit providers who may be able to offer you finance for your purchase, commission may be received. We are only able to offer finance products from these providers. Postal Address: <strong>Globe Motors, Darlaston Road, Walsall, West Midlands WS2 9SG</strong>, find contact details <a href="contact.html" title="Contact Details">here.</a></em></p>
+<p>We're used car dealers based in Walsall city centre, offering a professional and relaxed service. <br /><br />
+We offer quality used cars at very affordable prices. If you are after fantastic savings on your first car or looking to upgrade, you can be sure that you will find competitive prices and the best service from Best Car Trading. <br /><br />
+We offer a wide range of services including Used Vehicle Sales, Vehicles Wanted, Part Exchange, Servicing and Repairs. 
+</p>
 
 
                 </div>

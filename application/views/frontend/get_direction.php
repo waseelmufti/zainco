@@ -24,10 +24,9 @@
 <div class="content-area">
     <div class="contact-widget">
         <div class="pad-20 overflow-hidden">
-          <h3><span aria-hidden="true" class="icon icon-location"></span> Map</h3>
+          <h3><span aria-hidden="true" class=""></span> Map</h3>
           <div class="flexible-frame">
-            <!--<iframe class="contact-map" src="google/google_map7f3a.html?id=1574&amp;api_key=AIzaSyCGuNIIRmhgIuzO76NWGpMnCMSj5nu5pm8"></iframe>-->
-            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key= AIzaSyBF3J8lImwh9UH9t6d6g3XVBSJr_bJUfp4'></script><div style='overflow:hidden;height:400px;width:600px;'><div id='gmap_canvas' style='height:400px;width:600px;'></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div> <a href='https://mapswebsite.net/'>https://mapswebsite.net</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=2b718210d2ea7e31c8ff95a33fb787cc98137044'></script><script type='text/javascript'>function init_map(){var myOptions = {zoom:20,center:new google.maps.LatLng(31.5643252,74.29862100000003),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(31.5643252,74.29862100000003)});infowindow = new google.maps.InfoWindow({content:'<strong>testing</strong><br>islampure<br>54000 lahore<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11892.678581556853!2d-71.402593!3d41.824645!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e4453c442f5b9f%3A0x22d5b1cf16b79db7!2s21+Brown+St%2C+Providence%2C+RI+02906%2C+USA!5e0!3m2!1sen!2s!4v1528404802498" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
@@ -77,32 +76,9 @@
                 <div id="sidebar-search-price">
                 <select name="price">
                 <option value="" selected="selected">Maximum price</option>
-                <option value="2000">&pound;2000</option>
-<option value="2500">&pound;2500</option>
-<option value="3000">&pound;3000</option>
-<option value="3500">&pound;3500</option>
-<option value="4000">&pound;4000</option>
-<option value="4500">&pound;4500</option>
-<option value="5000">&pound;5000</option>
-<option value="5500">&pound;5500</option>
-<option value="6000">&pound;6000</option>
-<option value="6500">&pound;6500</option>
-<option value="7000">&pound;7000</option>
-<option value="7500">&pound;7500</option>
-<option value="8000">&pound;8000</option>
-<option value="8500">&pound;8500</option>
-<option value="9000">&pound;9000</option>
-<option value="9500">&pound;9500</option>
-<option value="10000">&pound;10000</option>
-<option value="10500">&pound;10500</option>
-<option value="11000">&pound;11000</option>
-<option value="11500">&pound;11500</option>
-<option value="12000">&pound;12000</option>
-<option value="12500">&pound;12500</option>
-<option value="13000">&pound;13000</option>
-<option value="13500">&pound;13500</option>
-<option value="14000">&pound;14000</option>
-<option value="14500">&pound;14500</option>
+                <option value="" >Minimum price</option>
+               
+
 
                 </select>
             	</div>
@@ -120,7 +96,7 @@
                <div class="sidebar-widget widget contact">
 <div class="pad-20 overflow-hidden">
 
-<h3><span aria-hidden="true" class="icon icon-phone"></span> Get In Touch</h3>
+<h3><span aria-hidden="true" class=""></span> Get In Touch</h3>
 
 <p>Why not contact us directly?</p>
  <div class="elevencol contact-box">
@@ -128,15 +104,15 @@
       <!--<li><a href="tel:01215262220" title="Call Us"><span aria-hidden="true" class="icon icon-phone-2"></span> 0121 5262220</a></li>
       <li><a href="tel:07944706957" title="Ring Us"><span aria-hidden="true" class="icon icon-mobile"></span> 07944 706957</a></li>
       <li><a href="mailto:globemotors@hotmail.co.uk" title="Email Us"><span aria-hidden="true" class="icon icon-mail"></span> Email Us</a></li>-->
-      <li class="mobile-hidden"><span aria-hidden="true" class="icon icon-phone-2"></span> <a href="/contact.php">0121 5262220</a></li>
-<li class="desktop-hidden"><span aria-hidden="true" class="icon icon-phone-2"></span> <a href="tel:01215262220">01215262220</a></li> 
+      <li class="mobile-hidden"><span aria-hidden="true" class=""></span> <a href="#">0123 456789</a></li>
+<li class="desktop-hidden"><span aria-hidden="true" class=""></span> <a href="tel:0">0123456789</a></li> 
 
-      <li class="mobile-hidden"><span aria-hidden="true" class="icon icon-mobile"></span> <a href="/contact.php">07944 706957</a></li> 
+      <li class="mobile-hidden"><span aria-hidden="true" class=""></span> <a href="/contact.php">0--- -------</a></li> 
 
-      <li class="mobile-hidden"><span aria-hidden="true" class="desktop-hidden mobile-hidden desktop-hidden"></span> <a href="/contact.php"></a></li> 
+      <li class="mobile-hidden"><span aria-hidden="true" class="desktop-hidden mobile-hidden desktop-hidden"></span> <a href="#"></a></li> 
 <li class="desktop-hidden"><span aria-hidden="true" class="desktop-hidden mobile-hidden desktop-hidden"></span> <a href="tel:"></a></li>
 
-      <li><span aria-hidden="true" class="icon icon-mail"></span> <a href="mailto:globemotors@hotmail.co.uk" title="Email Us">Email Us</a></li>
+      <li><span aria-hidden="true" class=""></span> <a href="mailto:bestmotors@hotmail.co.uk" title="Email Us">Email Us</a></li>
 
     </ul>
 </div>
@@ -149,7 +125,7 @@
                <div class="sidebar-widget widget testimonials">
     <div class="pad-20 overflow-hidden">
 
-      <h3><span aria-hidden="true" class="icon icon-comments"></span> What They Say</h3>
+      <h3><span aria-hidden="true" class=""></span> What They Say</h3>
       <blockquote>
         <div class="quote"><div class="pad-15">Contact us with your comments.</div></div>
         <cite></cite>
@@ -163,11 +139,11 @@
               <!-- Widget -->
               <div class="sidebar-widget widget partners tablet-hidden">
 	<div class="pad-20 overflow-hidden">
-      <h3><span aria-hidden="true" class="icon icon-users"></span> Our Partners</h3>
-      <div class="row sidebar-partners">
+      <h3><span aria-hidden="true" class=""></span> Our Partners</h3>
+      <!--<div class="row sidebar-partners">
              
 <div class="fourcol center"><img src="/images/partners/partner-motonovo.png" alt="Partner" class="responsive-img"></div><div class="fourcol center"><img src="/images/partners/partner-close.png" alt="Partner" class="responsive-img"></div><div class="fourcol last center"><img src="/images/partners/partner-experian.png" alt="Partner" class="responsive-img"></div><div class="fourcol center"><img src="/images/partners/partner-cards.png" alt="Partner" class="responsive-img"></div>
-      </div>
+      </div>-->
 	</div>
 </div>
 

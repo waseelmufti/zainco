@@ -287,7 +287,7 @@
                 </a>
                
                                     <ul id="dropdown-nav" class="nav" >
-                                     <a href="index.php" title="Best Motors"><img src="<?= site_url('assets/img/')?>logo.jpg" class="responsive-img" alt="best motors" height="80" width="150"></a>
+                                     <a href="<?= site_url('showroom') ?>" title="Best Motors"><img src="<?= site_url('assets/img/')?>logo.jpg" class="responsive-img" alt="best motors" height="80" width="150"></a>
                                         <li class="n1 "><a class="n1" href="<?= site_url('showroom') ?>" title="Showroom"><strong>Used Cars </strong> <span aria-hidden="true" class="icon icon-arrow-down"></span></a>
                                         </li>
                                         <li class="n2 "><a class="n2  " href="<?= site_url('services') ?>" title="Car Servicing"><strong>Car Servicing</strong> <span aria-hidden="true" class="icon icon-arrow-down"></span></a>

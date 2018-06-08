@@ -1,17 +1,17 @@
 <!-- Main Content -->
 <div id="main-wrap">
     <div id="hometext" class="hideme">
-        <h1>Welcome to Globe Motors</h1>
+        <h1>Welcome to Best Motors</h1>
 
-        <p>If you are looking for great savings on quality used cars in the Walsall area , then you have reached the right place. Globe Motors are a specialist used car dealer based in West Midlands . We are proud to offer you a first class customer service and very competitive pricing, so please browse our stock list. At Globe Motors we stock a range of used cars to suit all budgets and lifestyles so we are sure to have the right car for you.</p>
+        <p>If you are looking for great savings on quality used cars in the Walsall area , then you have reached the right place.  best Motors are a specialist used car dealer based in West Midlands . We are proud to offer you a first class customer service and very competitive pricing, so please browse our stock list. At  best Motors we stock a range of used cars to suit all budgets and lifestyles so we are sure to have the right car for you.</p>
 
         <p>If you are looking for a second hand car in Walsall , then don't delay, call us today to book a test drive. In order to offer cars to suit everyone we make sure that we update our stock list regularly. It is therefore always worth giving us a call, even if you don't see what you are looking for on our website.</p>
 
         <p>We realise that buying a car can be a daunting experience, but don't worry, we are well established within the Walsall area and come with a great reputation. Furthermore we offer excellent advice and experience on vehicles and vehicle maintenance. Our friendly staff will go the extra mile to guarantee that you receive the advice you need. This is the reason why many of our customers keep coming back to us.</p>
 
-        <p>At Globe Motors we don't just sell cars, we do everything possible to get you driving your perfect car. Why not come along to our dealership in Walsall? We look forward to meeting you!</p>
+        <p>At  best Motors we don't just sell cars, we do everything possible to get you driving your perfect car. Why not come along to our dealership in Walsall? We look forward to meeting you!</p>
 
-        <p><strong>Globe Motors, Used Cars You Can Rely On, great deals on used cars in Birmingham, Walsall, Aldridge, Bloxwich, Darlaston, Bilston, Wolverhampton, Dudley, Stourbridge.</strong></p>
+        <p><strong> best Motors, Used Cars You Can Rely On, great deals on used cars in Birmingham, Walsall, Aldridge, Bloxwich, Darlaston, Bilston, Wolverhampton, Dudley, Stourbridge.</strong></p>
     </div>
 
     <div class="row">
@@ -22,13 +22,13 @@
             <div class="{v2_36_MOBILE_ON_OFF} {v2_36_TABLET_ON_OFF} {v2_36_DESKTOP_ON_OFF}">
                 <div class="row-block slider">
                     <div class="new-slider">
-                        <div class="slider-content" style="background:#404040 url(<?= site_url('assets/img/theme/slide-1.jpg') ?>)!important;background-size:cover!important;background-repeat:no-repeat!important;background-position:center center!important; width: 100%; height: 550px">
+                        <!--<div class="slider-content" style="background:#404040 url(<?= site_url('assets/img/theme/slide-1.jpg') ?>)!important;background-size:cover!important;background-repeat:no-repeat!important;background-position:center center!important; width: 100%; height: 550px">
                             <div class="content">
                                 <h2>Main heading1</h2>
                                 <em>Sub heading1</em>
                                 <a class="btn" href="">Click</a>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="slider-content" style="background:#404040 url(<?= site_url('assets/img/theme/slide-2.jpg') ?>)!important;background-size:cover!important;background-repeat:no-repeat!important;background-position:center center!important; width: 100%; height: 550px">
                             <div class="content">
                                 <h2>Main heading2</h2>
@@ -61,7 +61,7 @@
                                     <noscript><div class="noscript message_red">Please enable Javascript to use this function.</div></noscript>
                                 </div>
 
-                                <form action="https://www.globemotorswalsall.co.uk/search.php" method="get">
+                                <form action="<?= site_url('showroom') ?>" method="get">
 
                                     <div class="sixcol">
                                         <div class="row">
@@ -69,57 +69,24 @@
 
                                             <div class="fourcol">
                                                 <select name="make" id="make" onChange="fillItems(0)">
-        		              <option value="" selected="selected">Any make</option>
-        		                               <option value="6" >AUDI (2)</option>
-                 <option value="8" >BMW (15)</option>
-                 <option value="25" >FORD (3)</option>
-                 <option value="32" >HYUNDAI (1)</option>
-                 <option value="34" >JAGUAR (1)</option>
-                 <option value="224" >MERCEDES-BENZ (5)</option>
-                 <option value="51" >MINI (2)</option>
-                 <option value="55" >NISSAN (2)</option>
-                 <option value="60" >PEUGEOT (1)</option>
-                 <option value="84" >VOLKSWAGEN (2)</option>
-                 <option value="85" >VOLVO (1)</option>
-
+        		              <option value="" selected="selected">Any Body Style</option>
+        		                               
         	            	</select>
                                             </div>
 
                                             <div class="fourcol">
                                                 <select name="model" id="model">
-        		              <option selected="selected">Any model</option>
+        		              <option selected="selected">Any Transmission</option>
         		            </select>
                                             </div>
 
                                             <div class="fourcol last">
                                                 <select name="price">
-        		              <option value="" selected="selected">Maximum price</option>
-        		              <option value="2000">&pound;2000</option>
-<option value="2500">&pound;2500</option>
-<option value="3000">&pound;3000</option>
-<option value="3500">&pound;3500</option>
-<option value="4000">&pound;4000</option>
-<option value="4500">&pound;4500</option>
-<option value="5000">&pound;5000</option>
-<option value="5500">&pound;5500</option>
-<option value="6000">&pound;6000</option>
-<option value="6500">&pound;6500</option>
-<option value="7000">&pound;7000</option>
-<option value="7500">&pound;7500</option>
-<option value="8000">&pound;8000</option>
-<option value="8500">&pound;8500</option>
-<option value="9000">&pound;9000</option>
-<option value="9500">&pound;9500</option>
-<option value="10000">&pound;10000</option>
-<option value="10500">&pound;10500</option>
-<option value="11000">&pound;11000</option>
-<option value="11500">&pound;11500</option>
-<option value="12000">&pound;12000</option>
-<option value="12500">&pound;12500</option>
-<option value="13000">&pound;13000</option>
-<option value="13500">&pound;13500</option>
-<option value="14000">&pound;14000</option>
-<option value="14500">&pound;14500</option>
+        		              <option value="" selected="selected">Any Fuel Type</option>
+        		              <option value="2000">Petrol</option>
+<option value="2500">Diesel</option>
+<option value="3000">Hybird</option>
+
 
         		            </select>
                                             </div>
@@ -172,129 +139,7 @@
                     </div>
                 </div>
             </div>
-            <!-- // Homepage Search Brands -->
-            <!-- Homepage Search Finance -->
-            <div class="{v2_4_MOBILE_ON_OFF} {v2_4_TABLET_ON_OFF} {v2_4_DESKTOP_ON_OFF}">
-                <div class="row-block finance">
-
-                    <div class="wrapper">
-                        <div class="container">
-                            <div class="row flex">
-
-                                <div class="sixcol">
-                                    <img src="<?= site_url('assets/img/theme/')?>finance-car.png" class="responsive-img" alt="">
-                                </div>
-
-                                <div class="sixcol  last alignvcenter text">
-
-                                    <div class="" id="budget-slider">
-
-                                        <div id="finance-budget-range-min" class="clear-fix">
-                                            <div class="row">
-
-                                                <div class="twelvecol">
-                                                    <h3>Our finance team can help you get the best <span>finance deal based on your budget</span></h3>
-                                                    <div class="form-group">
-                                                        <label for="amount-budget-range-min">Monthly Budget:</label>
-                                                        <input type="text" id="amount-budget-range-min" />
-                                                    </div>
-                                                    <div class="slider-group">
-                                                        <div id="slider-range-min"></div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="eightcolx left">
-                                                </div>
-
-                                                <div class="fourcolx">
-                                                    <a id="button-budget-range-min" class="button" href="search_page9e10.html?budget=200" title="Used car finance in Walsall: search">Search</a>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!-- // Homepage Search Finance -->
-            <!-- Homepage HTML Panel 4 -->
-            <div class="{v2_23_MOBILE_ON_OFF} {v2_23_TABLET_ON_OFF} {v2_23_DESKTOP_ON_OFF}">
-                <div class="row-block promo-full">
-                    <div class="wrapper">
-                        <div class="container">
-                            <h3>We offer a Peace of Mind package on all out cars:</h3>
-                            <ul class="list-ticks">
-                                <li>12 Months Warranty</li>
-                                <li>12 Month Breakdown Cover</li>
-                                <!-- <li>82 Point RAC Inspection</li> -->
-                                <li>New 12 Months MOT and Service
-                                    <cite>(if required)</cite>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- // END Homepage HTML Panel 4 -->
-            <!-- Homepage HTML Panel 1 -->
-            <div class="{v2_1_MOBILE_ON_OFF} {v2_1_TABLET_ON_OFF} {v2_1_DESKTOP_ON_OFF}">
-                <div class="row-block html1">
-
-                    <div class="wrapper">
-                        <div class="container">
-
-                            <!-- Pop Up Promo (4)-->
-                            <div class="promo-pop-up">
-
-                                <div class="promo-pop-up__item promo-pop-up__item--1" style="background:url(<?= site_url('assets/img/theme/');?>promo-1.jpg) center center no-repeat; background-size: cover;">
-                                    <a href="sellcar.html" class="promo-pop-up__link" title="Used car finance in Walsall">
-                                        <div class="promo-pop-up__icon">
-                                            <i>
-									<img src="<?= site_url('assets/img/theme/');?>icon-valuation.svg" alt="">
-								</i>
-                                        </div>
-                                        <div class="promo-pop-up__heading">Vehicle Valuation</div>
-                                        <div class="promo-pop-up__text">Get a quote for your old vehicle</div>
-                                    </a>
-                                </div>
-
-                                <div class="promo-pop-up__item promo-pop-up__item--2" style="background:url(<?= site_url('assets/img/theme/');?>promo-2.jpg) center center no-repeat; background-size: cover;">
-                                    <a href="car_locator.html" class="promo-pop-up__link" title="Used car warranty in Walsall">
-                                        <div class="promo-pop-up__icon">
-                                            <i>
-									<img src="<?= site_url('assets/img/theme/');?>icon-sourcing.svg" alt="">
-								</i>
-                                        </div>
-                                        <div class="promo-pop-up__heading">Vehicle Sourcing</div>
-                                        <div class="promo-pop-up__text">Let us find you the perfect vehicle</div>
-                                    </a>
-                                </div>
-
-                                <!-- <div class="promo-pop-up__item promo-pop-up__item--3">
-	      	<a href="/rac-approved-dealer.php" class="promo-pop-up__link" title="Used car vehicle valuation in Walsall">
-						<div class="promo-pop-up__icon"><i><img src="/img-src/_themev2-globemotors-1372/theme/icon-rac.svg" alt=""></i></div>
-	      		<div class="promo-pop-up__heading">RAC Approved</div>
-	      		<div class="promo-pop-up__text">82 point vehicle preperation</div>
-	      	</a>
-	      </div> -->
-
-                            </div>
-                            <!-- // Pop Up Promo -->
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!-- // END Homepage HTML Panel 1 -->
+           
             <!-- Homepage Car Carousel -->
             <div class="{v2_7_MOBILE_ON_OFF} {v2_7_TABLET_ON_OFF} {v2_7_DESKTOP_ON_OFF}">
                 <div class="row-block car-carousel">
@@ -347,15 +192,15 @@
                                         <div id="cloned-hometext" class="about-text">
                                             <h1>Welcome to Best Motors</h1>
 
-                                            <p>If you are looking for great savings on quality used cars in the main area , then you have reached the right place. Globe Motors are a specialist used car dealer based in West Midlands . We are proud to offer you a first class customer service and very competitive pricing, so please browse our stock list. At Globe Motors we stock a range of used cars to suit all budgets and lifestyles so we are sure to have the right car for you.</p>
+                                            <p>If you are looking for great savings on quality used cars in the main area , then you have reached the right place.  best Motors are a specialist used car dealer based in West Midlands . We are proud to offer you a first class customer service and very competitive pricing, so please browse our stock list. At  best Motors we stock a range of used cars to suit all budgets and lifestyles so we are sure to have the right car for you.</p>
 
                                             <p>If you are looking for a second hand car in main , then don't delay, call us today to book a test drive. In order to offer cars to suit everyone we make sure that we update our stock list regularly. It is therefore always worth giving us a call, even if you don't see what you are looking for on our website.</p>
 
                                             <p>We realise that buying a car can be a daunting experience, but don't worry, we are well established within the Walsall area and come with a great reputation. Furthermore we offer excellent advice and experience on vehicles and vehicle maintenance. Our friendly staff will go the extra mile to guarantee that you receive the advice you need. This is the reason why many of our customers keep coming back to us.</p>
 
-                                            <p>At Globe Motors we don't just sell cars, we do everything possible to get you driving your perfect car. Why not come along to our dealership in Walsall? We look forward to meeting you!</p>
+                                            <p>At  best Motors we don't just sell cars, we do everything possible to get you driving your perfect car. Why not come along to our dealership in Walsall? We look forward to meeting you!</p>
 
-                                            <p><strong>Globe Motors, Used Cars You Can Rely On, great deals on used cars in Birmingham, Walsall, Aldridge, Bloxwich, Darlaston, Bilston, Wolverhampton, Dudley, Stourbridge.</strong></p>
+                                            <p><strong> best Motors, Used Cars You Can Rely On, great deals on used cars in Birmingham, Walsall, Aldridge, Bloxwich, Darlaston, Bilston, Wolverhampton, Dudley, Stourbridge.</strong></p>
                                         </div>
                                     </div>
 
@@ -381,7 +226,7 @@
                                                                 <li class="mobile-hidden"><span aria-hidden="true" class="desktop-hidden mobile-hidden desktop-hidden"></span> <a href="contact.html"></a></li>
                                                                 <li class="desktop-hidden"><span aria-hidden="true" class="desktop-hidden mobile-hidden desktop-hidden"></span> <a href="tel:"></a></li>
 
-                                                                <li><span aria-hidden="true" class="icon icon-mail"></span> <a href="mailto:globemotors@hotmail.co.uk" title="Email Us">Email Us</a></li>
+                                                                <li><span aria-hidden="true" class="icon icon-mail"></span> <a href="mailto: bestmotors@hotmail.co.uk" title="Email Us">Email Us</a></li>
 
                                                             </ul>
                                                         </div>
@@ -461,7 +306,7 @@
 </span>
 
 <meta itemprop="telephone" content="0121 5262220">
-<meta itemprop="email" content="globemotors@hotmail.co.uk">
+<meta itemprop="email" content=" bestmotors@hotmail.co.uk">
 
 <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
   <meta itemprop="streetAddress" content="Darlaston Road, ">

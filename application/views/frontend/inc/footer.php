@@ -18,9 +18,9 @@
                     <div class="foot-contact">
                         <p>Why not talk to us directly by giving us a call or sending us an email.</p>
                         <ul>
-                            <li><span class="fa fa-phone"></span> <a href="contact.html" title="Contact us">0123 4567890</a></li>
-                            <li><span class="fa fa-phone"></span> <a href="contact.html" title="Contact us">0123 4567890</a></li>
-                            <li><span class="fa fa-envelope"></span> <a href="mailto:globemotors@hotmail.co.uk" title="Contact us">Email us</a></li>
+                            <li><span class="fa fa-phone"></span> <a href="#" title="Contact us">0123 4567890</a></li>
+                            <li><span class="fa fa-phone"></span> <a href="#" title="Contact us">0123 4567890</a></li>
+                            <li><span class="fa fa-envelope"></span> <a href="mailto:bestmotors@hotmail.co.uk" title="Contact us">Email us</a></li>
                         </ul>
 
                     </div>
