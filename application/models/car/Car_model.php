@@ -92,7 +92,8 @@ class Car_model extends CI_Model{
     }
   }
 public function updateCar($car){
-    print_r($car);
+ $update = $this->db->update('car_table', $car);
+    return $update;
 }
   public function saveInterior($inter, $id){
     $data = array(
@@ -140,7 +141,6 @@ public function updateCar($car){
   }
 
   public function saveImg($data = array()){
-      //$data['car_id'] = $id;
         $insert = $this->db->insert_batch('car_image',$data);
         return $insert ? true : false;
     }

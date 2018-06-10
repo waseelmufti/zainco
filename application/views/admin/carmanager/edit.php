@@ -388,7 +388,7 @@
                   <hr>
                   <div id="msg"></div>
                   <div class="row">
-                      
+                      <input class="car_id" type="hidden" name="car_id" value="<?php echo $car[0]->id; ?>">
                       <?php
                       $i = 1;
                       foreach($car_image as $img){ ?>
