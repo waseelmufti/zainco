@@ -26,9 +26,22 @@ class Car_model extends CI_Model{
     return $query->result();
   }
 
-  public function get_imgs($id){
-    $query = $this->db->where('car_id', $id)->get('car_image');
+  public function get_imgs($car_id){
+    $query = $this->db->where('car_id', $car_id)->get('car_image');
     return $query->result();
+  }
+    
+    public function del_imgs($car_id, $img_id = NULL, $img_name = NULL){
+      if($img_id){
+          $this->db->where('id', $img_id);
+      }
+        if($img_name){
+          $this->db->where('image', $img_name);
+      }
+    $this->db->where('car_id', $car_id);
+        $path = FCPATH.'uploads/images/'.$img_name; 
+        unlink($path);
+    return $this->db->delete('car_image');
   }
 
   public function get_car($id){
@@ -44,7 +57,7 @@ class Car_model extends CI_Model{
       $safety = $this->db->where('car_id', $id)->get('safety')->result();
       $this->db->select('feature');
       $other = $this->db->where('car_id', $id)->get('other')->result();
-      $this->db->select('image');
+      $this->db->select('id,image');
       $car_image = $this->db->where('car_id', $id)->get('car_image')->result();
 
       $data = array(
@@ -78,7 +91,9 @@ class Car_model extends CI_Model{
       return $this->db->insert_id();
     }
   }
-
+public function updateCar($car){
+    print_r($car);
+}
   public function saveInterior($inter, $id){
     $data = array(
       'feature' => $inter,

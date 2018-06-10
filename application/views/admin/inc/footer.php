@@ -57,6 +57,32 @@ $(document).ready(function(){
   $('#other').addfield('div.other', 'other');
   //bootstrap WYSIHTML5 - text editor
   $(".textarea").wysihtml5();
+    
+    $(".img_rmv").on('click', function(e){
+        e.preventDefault();
+ 
+        var parent = $(this).parent(); 
+        var super_parent = parent.parent();
+        $.ajax({
+            url: "<?php echo site_url('admin/dashboard/car/img-delete'); ?>",
+            data:{
+              "car_id": $(this).parent().find('input.car_id').val(),
+              "img_id": $(this).parent().find('input.img_id').val(),
+              "img_name": $(this).parent().find('input.img_name').val(),
+            },
+               
+            success: function(result){
+                $('#msg').html('<div class="alert alert-danger">Photo is deleted Successfuly</div>');
+            super_parent.remove();
+                console.log(result);
+                
+        },
+            error: function(result){
+                $('#msg').html('<div class="alert alert-danger">Photo is not deleted, there is some error</div>');
+                console.log(result);
+            }
+        });
+    });
 });
 
 </script>

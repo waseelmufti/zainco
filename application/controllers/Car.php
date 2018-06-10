@@ -31,64 +31,63 @@ public function carAdd(){
 public function carSave(){
 //Seperating single Values for car
 $data = array(
-  'title' => $_POST['title'],
-  'makeof' => $_POST['makeof'],
-  'model' => $_POST['model'],
-  'price' => $_POST['price'],
-  'discount' => $_POST['discount'],
-    'registered' => $_POST['register'],
-    'owners' => $_POST['owners'],
-  'body_style' => $_POST['body_style'],
-  'color' => $_POST['color'],
-  'no_doors' => $_POST['no_doors'],
-  'no_seats' => $_POST['no_seats'],
-  'engine_size' => $_POST['engine_size'],
-  'engine_capacity' => $_POST['engine_capacity'],
-  'fuel_type' => $_POST['fuel_type'],
-  'transmission' => $_POST['transmission'],
-  'co_emission' => $_POST['co_emission'],
-    'gearbox' => $_POST['gearbox'],
+  'title' => $this->input->post('title'),
+  'makeof' => $this->input->post('makeof'),
+  'model' => $this->input->post('model'),
+  'price' => $this->input->post('price'),
+  'discount' => $this->input->post('discount'),
+    'registered' => $this->input->post('register'),
+    'owners' => $this->input->post('owners'),
+  'body_style' => $this->input->post('body_style'),
+  'color' => $this->input->post('color'),
+  'no_doors' => $this->input->post('no_doors'),
+  'no_seats' => $this->input->post('no_seats'),
+  'engine_size' => $this->input->post('engine_size'),
+  'engine_capacity' => $this->input->post('engine_capacity'),
+  'fuel_type' => $this->input->post('fuel_type'),
+  'transmission' => $this->input->post('transmission'),
+  'co_emission' => $this->input->post('co_emission'),
+    'gearbox' => $this->input->post('gearbox'),
     
-  'fuel_cons_ur' => $_POST['fuel_cons_ur'],
-  'fuel_cons_ex' => $_POST['fuel_cons_ex'],
-  'fuel_cons_com' => $_POST['fuel_cons_com'],
-  'z_s_mph' => $_POST['z_s_mph'] ,
-  'top_speed' => $_POST['top_speed'],
-  'cylinders' => $_POST['cylinders'],
-  'engine_pow' => $_POST['engine_pow'],
-  'engine_tor' => $_POST['engine_tor'],
-  'length' => $_POST['length'],
-  'wheelbase' => $_POST['wheelbase'],
-  'width' => $_POST['width'],
-  'description' => $_POST['description'],
-);
+  'fuel_cons_ur' => $this->input->post('fuel_cons_ur'),
+  'fuel_cons_ex' => $this->input->post('fuel_cons_ex'),
+  'fuel_cons_com' => $this->input->post('fuel_cons_com'),
+  'z_s_mph' => $this->input->post('z_s_mph') ,
+  'top_speed' => $this->input->post('top_speed'),
+  'cylinders' => $this->input->post('cylinders'),
+  'engine_pow' => $this->input->post('engine_pow'),
+  'engine_tor' => $this->input->post('engine_tor'),
+  'length' => $this->input->post('length'),
+  'wheelbase' => $this->input->post('wheelbase'),
+  'width' => $this->input->post('width'),
+  'description' => $this->input->post('description'),
+);    
 
 $c_id = $this->car_model->saveCar($data);
-echo 'data is inserted in database';
 if($c_id){
   //Seperating Multiple Values for car
-  $interiors = $_POST['interior'];
+  $interiors = $this->input->post('interior');
 
   foreach($interiors as $inter ){
     $this->car_model->saveInterior($inter, $c_id);
   }
 
-  $comforts = $_POST['comfort'];
+  $comforts = $this->input->post('comfort');
   foreach($comforts as $comfort ){
     $this->car_model->saveComfort($comfort, $c_id);
   }
 
-  $exteriors = $_POST['exterior'];
+  $exteriors = $this->input->post('exterior');
   foreach($exteriors as $exterior ){
     $this->car_model->saveExterior($exterior, $c_id);
   }
 
-  $safetys = $_POST['safety'];
+  $safetys = $this->input->post('safety');
   foreach($safetys as $safety ){
     $this->car_model->saveSafety($safety, $c_id);
   }
 
-  $others = $_POST['other'];
+  $others = $this->input->post('other');
   foreach($others as $other ){
     $this->car_model->saveOther($other, $c_id);
   }
@@ -140,8 +139,82 @@ if($c_id){
 redirect('admin/dashboard/car/add');
 }
 public function carEdit($id){
-  echo $id;
+    $data = $this->car_model->get_car($id);
+    
+    if(!$data){ redirect('404');}
+    
+  $this->load->view('admin/inc/header');
+  $this->load->view('admin/inc/sidebar');
+  $this->load->view('admin/carmanager/edit', $data);
+  $this->load->view('admin/inc/footer');
+    
 }
+    public function carUpdate(){
+        //print_r($this->input->post());exit;
+        $data = array(
+  'title' => $this->input->post('title'),
+  'makeof' => $this->input->post('makeof'),
+  'model' => $this->input->post('model'),
+  'price' => $this->input->post('price'),
+  'discount' => $this->input->post('discount'),
+    'registered' => $this->input->post('register'),
+    'owners' => $this->input->post('owners'),
+  'body_style' => $this->input->post('body_style'),
+  'color' => $this->input->post('color'),
+  'no_doors' => $this->input->post('no_doors'),
+  'no_seats' => $this->input->post('no_seats'),
+  'engine_size' => $this->input->post('engine_size'),
+  'engine_capacity' => $this->input->post('engine_capacity'),
+  'fuel_type' => $this->input->post('fuel_type'),
+  'transmission' => $this->input->post('transmission'),
+  'co_emission' => $this->input->post('co_emission'),
+    'gearbox' => $this->input->post('gearbox'),
+    
+  'fuel_cons_ur' => $this->input->post('fuel_cons_ur'),
+  'fuel_cons_ex' => $this->input->post('fuel_cons_ex'),
+  'fuel_cons_com' => $this->input->post('fuel_cons_com'),
+  'z_s_mph' => $this->input->post('z_s_mph') ,
+  'top_speed' => $this->input->post('top_speed'),
+  'cylinders' => $this->input->post('cylinders'),
+  'engine_pow' => $this->input->post('engine_pow'),
+  'engine_tor' => $this->input->post('engine_tor'),
+  'length' => $this->input->post('length'),
+  'wheelbase' => $this->input->post('wheelbase'),
+  'width' => $this->input->post('width'),
+  'description' => $this->input->post('description'),
+);
+
+        print_r($data);
+        $this->car_model->updateCar($data);
+        if($this->input->post('car_id')){
+  //Seperating Multiple Values for car
+  $interiors = $this->input->post('interior');
+print_r($interiors); exit;
+  /*foreach($interiors as $inter ){
+    $this->car_model->saveInterior($inter, $c_id);
+  }*/
+
+  $comforts = $this->input->post('comfort');
+  foreach($comforts as $comfort ){
+    $this->car_model->saveComfort($comfort, $c_id);
+  }
+
+  $exteriors = $this->input->post('exterior');
+  foreach($exteriors as $exterior ){
+    $this->car_model->saveExterior($exterior, $c_id);
+  }
+
+  $safetys = $this->input->post('safety');
+  foreach($safetys as $safety ){
+    $this->car_model->saveSafety($safety, $c_id);
+  }
+
+  $others = $this->input->post('other');
+  foreach($others as $other ){
+    $this->car_model->saveOther($other, $c_id);
+  }
+        }
+    }
 
 public function carDelete($id){
   
@@ -156,5 +229,19 @@ public function carDelete($id){
     
     redirect('admin/dashboard/car');
 }
+public function imgDelete(){
+    $car_id = $this->input->get('car_id');
+    $img_id = $this->input->get('img_id');
+    $img_name = $this->input->get('img_name'); 
+    if($car_id && $img_id && $img_name){
+    $flag = $this->car_model->del_imgs($car_id, $img_id, $img_name);
+    if($flag){
+        return 'success';
+    }else{
+        header('HTTP/1.1 500 Error');
+        return 'error';
+    }
+        }
+}    
    
 }

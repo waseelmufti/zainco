@@ -80,7 +80,9 @@ $route['admin/dashboard/car'] = 'car/carList';
 $route['admin/dashboard/car/add'] = 'car/carAdd';
 $route['admin/dashboard/car/save'] = 'car/carSave';
 $route['admin/dashboard/car/edit/(:num)'] = 'car/carEdit/$1';
+$route['admin/dashboard/car/update'] = 'car/carUpdate';
 $route['admin/dashboard/car/delete/(:num)'] = 'car/carDelete/$1';
+$route['admin/dashboard/car/img-delete'] = 'car/imgDelete';
 
 $route['admin/dashboard/page'] = 'page';
 $route['admin/dashboard/page/add'] = 'page/add/$1';

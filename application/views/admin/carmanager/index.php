@@ -14,6 +14,13 @@
 
   <!-- Main content -->
   <section class="content">
+   <!--  Show Success or Error Message -->
+          <?php if($this->session->flashdata('success')) {?>
+          <div class="alert alert-success"><?= $this->session->flashdata('success') ?></div>
+        <?php } ?>
+        <?php if($this->session->flashdata('error')) {?>
+        <div class="alert alert-danger"><?= $this->session->flashdata('error') ?></div>
+      <?php } ?>
     <!-- Default box -->
     <div class="box">
       <div class="box-header with-border">
@@ -51,7 +58,7 @@
                   <td><?php echo $result->body_style ?></td>
                   <td><?php echo $result->color ?></td>
                   <td>
-                    <a class="btn btn-warning"  href="<?= site_url('admin/dashboard/page/edit/').$result->id ?>">Update</a>
+                    <a class="btn btn-warning"  href="<?= site_url('admin/dashboard/car/edit/').$result->id ?>">Update</a>
                     <a class="btn btn-danger" href="<?= site_url('admin/dashboard/car/delete/').$result->id ?>" onclick="return confirm('Do you want to Delete?')">Delete</a>
                   </td>
                 </tr>
