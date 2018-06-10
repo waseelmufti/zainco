@@ -185,8 +185,8 @@ public function carUpdate(){
       'width' => $this->input->post('width'),
       'description' => $this->input->post('description'),
     );
-        
-        $result = $this->car_model->updateCar($data);
+        $c_id = $this->input->post('car_id');
+        $result = $this->car_model->updateCar($data, $c_id);
         $c_id = $this->input->post('car_id');
         if($c_id){
             

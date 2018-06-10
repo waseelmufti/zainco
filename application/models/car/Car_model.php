@@ -91,7 +91,8 @@ class Car_model extends CI_Model{
       return $this->db->insert_id();
     }
   }
-public function updateCar($car){
+public function updateCar($car, $car_id){
+    $this->db->where('id', $car_id);
  $update = $this->db->update('car_table', $car);
     return $update;
 }
