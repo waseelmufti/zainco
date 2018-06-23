@@ -161,22 +161,19 @@
             centerMode: true,
             focusOnSelect: true
         });
-        
+        $( ".datepicker" ).datepicker();
         $('._form').captcha();
     });
 
 </script>
-<script defer type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.plugins-min.js"></script>
-<script defer type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.custom-config-min.js"></script>
+<script type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.plugins-min.js"></script>
+<script type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.custom-config-min.js"></script>
+<script type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.config-min.js"></script>
+<script type="text/javascript" src="<?= site_url('assets/js/') ?>premier-nav.js"></script>
+<script src="<?= site_url('assets/js/') ?>jquery-ui.min.js"></script>
+<script src="<?= site_url('assets/js/') ?>jquery.ui.touch-punch.min.js" type="text/javascript"></script>
 
-<script defer type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.config-min.js"></script>
-<script defer type="text/javascript" src="<?= site_url('assets/js/') ?>premier-nav.js"></script>
-
-<script defer src="<?= site_url('assets/js/') ?>jquery-ui.min.js"></script>
-<script defer src="<?= site_url('assets/js/') ?>jquery.ui.touch-punch.min.js" type="text/javascript"></script>
-
-<script defer type="text/javascript" src="<?= site_url('assets/js/') ?>addthis_widget.js#pubid=ra-56efd8ffeb6fa71f"></script>
-
+<script type="text/javascript" src="<?= site_url('assets/js/') ?>addthis_widget.js#pubid=ra-56efd8ffeb6fa71f"></script>
 
 
 <div id="wz-overlay">

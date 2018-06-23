@@ -75,6 +75,9 @@ class Inquiry extends CI_Controller{
                 case 'test-drive'; 
                 $form_type = 'testdrive';
                 break;
+                case 'send-offer'; 
+                $form_type = 'sendoffer';
+                break;
                 case 'enquiry'; 
                 $form_type = 'enquiry';
                 break;
@@ -100,6 +103,9 @@ class Inquiry extends CI_Controller{
                 break;
                 case 'enquiry'; 
                 $form_type = 'enquiry';
+                break;
+                case 'send-offer'; 
+                $form_type = 'sendoffer';
                 break;
                 default: $form_type = 'reserve';
         }
@@ -128,6 +134,9 @@ class Inquiry extends CI_Controller{
                 break;
                 case 'enquiry'; 
                 $form_type = 'enquiry';
+                break;
+                case 'send-offer'; 
+                $form_type = 'sendoffer';
                 break;
                 default: $form_type = 'reserve';
         }

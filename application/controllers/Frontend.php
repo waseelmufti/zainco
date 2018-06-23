@@ -93,6 +93,16 @@ public function buy_now($id){
     $this->load->view('frontend/inc/footer');
 }
     
+    public function send_offer($id){
+        $car = $this->car_model->get_car($id);
+    if(!$car){
+        redirect('404');
+    }
+    $this->load->view('frontend/inc/header');
+    $this->load->view('frontend/send_offer', $car);
+    $this->load->view('frontend/inc/footer');
+    }
+    
     public function enquiry($id){
     $car = $this->car_model->get_car($id);
     if(!$car){
@@ -102,6 +112,17 @@ public function buy_now($id){
     $this->load->view('frontend/enquiry', $car);
     $this->load->view('frontend/inc/footer');
 }
+    
+    public function part_exchange(){
+        $cars = $this->car_model->get_distinct_car_model();
+        $data = array(
+        'cars' => $cars,
+        );
+    
+        $this->load->view('frontend/inc/header');
+        $this->load->view('frontend/part_exchange', $data);
+        $this->load->view('frontend/inc/footer');
+    }
 
     public function get_direction(){
         $this->load->view('frontend/inc/header');

@@ -18,6 +18,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/'); ?>style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/'); ?>jquery_ui.css">
     <link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/'); ?>custom.css">
     <link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/'); ?>slick.css">
     <link rel="stylesheet" type="text/css" href="<?php echo site_url('assets/css/'); ?>slick-theme.css">

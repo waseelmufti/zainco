@@ -164,6 +164,12 @@
               <input class="form-control" id="gearbox" placeholder="Enter Gearbox" name="gearbox" type="text">
             </div>
           </div>
+          <div class="col-xs-12 col-md-3">
+            <div class="form-group">
+              <label for="gearbox">Mileage</label>
+              <input class="form-control" id="gearbox" placeholder="Enter Mileage" name="mileage" type="number" step="any" required>
+            </div>
+          </div>
         </div>
 
 

@@ -62,6 +62,8 @@ $route['contact'] = 'frontend/contact';
 $route['thankyou'] = 'frontend/thankyou';
 $route['buy-it-now/(:num)'] = 'frontend/buy_now/$1'; 
 $route['book-test-drive/(:num)'] = 'frontend/book_test_drive/$1'; 
+$route['send-offer/(:num)'] = 'frontend/send_offer/$1'; 
+$route['part-exchange'] = 'frontend/part_exchange'; 
 $route['enquiry/(:num)'] = 'frontend/enquiry/$1'; 
 $route['get-direction'] = 'frontend/get_direction'; 
 $route['404_override'] = '';
@@ -108,15 +110,24 @@ $route['admin/dashboard/test-drive'] = 'inquiry/enquiry';
 $route['admin/dashboard/test-drive/show/(:num)'] = 'inquiry/enquiry_show/$1';
 $route['admin/dashboard/test-drive/delete/(:num)'] = 'inquiry/enquiry_delete/$1';
 
+$route['admin/dashboard/send-offer'] = 'inquiry/enquiry';
+$route['admin/dashboard/send-offer/show/(:num)'] = 'inquiry/enquiry_show/$1';
+$route['admin/dashboard/send-offer/delete/(:num)'] = 'inquiry/enquiry_delete/$1';
+
 $route['admin/dashboard/enquiry'] = 'inquiry/enquiry';
 $route['admin/dashboard/enquiry/show/(:num)'] = 'inquiry/enquiry_show/$1';
 $route['admin/dashboard/enquiry/delete/(:num)'] = 'inquiry/enquiry_delete/$1';
+
+$route['admin/dashboard/part-exchange'] = 'part_exchange/index';
+$route['admin/dashboard/part-exchange/show/(:num)'] = 'part_exchange/show/$1';
+$route['admin/dashboard/part-exchange/delete/(:num)'] = 'part_exchange/delete/$1';
 
 /* Form Submission Routes*/
 $route['contact-form'] = 'form/contact';
 $route['sell-form'] = 'form/sellCar';
 $route['carlocator'] = 'form/carLocator';
 $route['enquiry'] = 'form/enquiry';
+$route['save_parts'] = 'form/save_part_exch';
 
 require_once(BASEPATH.'database/DB.php');
 $db = & DB();

@@ -57,4 +57,40 @@ class Form_model extends CI_Model{
         
         return FALSE;
     }
+    
+    public function save_part_exch($data){
+        $part_exc = array(
+'form_type' => $data['form_type'],            
+'vehicle' => $data['vehicle'],
+'fname' =>$data['fname'],
+'lname' =>$data['lname'],
+'phone' =>$data['phone'],
+'postcode' =>$data['postcode'],
+'vehicle_model' =>$data['vehicle_model'],
+'engine_size' =>$data['engine_size'],
+'color' =>$data['color'],
+'vehicle_mileage' =>$data['vehicle_mileage'],
+'no_owners' =>$data['no_owners'],
+'first_reg' =>$data['first_reg'],
+'mot_exp' =>$data['mot_exp'],
+'last_service' =>$data['last_service'],
+'service_his' =>$data['service_his'],
+'last_service_mileage' =>$data['last_service_mileage'],
+'general_condition' =>$data['general_condition'],
+'message' => $data['message'],
+  
+  
+);    
+
+     $insert = $this->db->insert('general_forms', $part_exc);
+
+    if($insert){
+      return $this->db->insert_id();
+    }   
+    }
+    
+    public function saveImg($data = array()){
+        $insert = $this->db->insert_batch('general_form_images',$data);
+        return $insert ? true : false;
+    }
 }

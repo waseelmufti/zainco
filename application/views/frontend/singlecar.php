@@ -126,9 +126,9 @@
     <li id="enquire" class=""><a href="<?= site_url('enquiry/').$car[0]->id ?>" class=""><span aria-hidden="true" class="icon icon-comments-2"></span>Send An Enquiry</a></li>
     
     <li id="print" class="mobile-hidden">
-    <a href="" title="Send Your Offer"><span aria-hidden="true" class="icon icon-printer"></span>Send Your Offer</a></li>
-    <li id="pex" class="mobile-hidden"><a href="" title="Part Ex Your Car"><span aria-hidden="true" class="icon icon-spin"></span>Part Exchange</a></li>
-    <li id="similar" class=""><a href="#section6" title="Similar Vehicles"><span aria-hidden="true" class="icon icon-cars"></span>Location</a></li>
+    <a href="<?= site_url('send-offer/').$car[0]->id ?>" title="Send Your Offer"><span aria-hidden="true" class="icon icon-printer"></span>Send Your Offer</a></li>
+    <li id="pex" class="mobile-hidden"><a href="<?= site_url('part-exchange/').$car[0]->id ?>" title="Part Ex Your Car"><span aria-hidden="true" class="icon icon-spin"></span>Part Exchange</a></li>
+    <li id="similar" class=""><a href="<?= site_url('get-direction') ?>" title="Location"><span aria-hidden="true" class="icon icon-cars"></span>Location</a></li>
 </ul>
 
 

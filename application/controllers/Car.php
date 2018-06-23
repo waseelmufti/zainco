@@ -48,7 +48,7 @@ $data = array(
   'transmission' => $this->input->post('transmission'),
   'co_emission' => $this->input->post('co_emission'),
     'gearbox' => $this->input->post('gearbox'),
-    
+    'mileage' => $this->input->post('mileage'),
   'fuel_cons_ur' => $this->input->post('fuel_cons_ur'),
   'fuel_cons_ex' => $this->input->post('fuel_cons_ex'),
   'fuel_cons_com' => $this->input->post('fuel_cons_com'),
@@ -170,7 +170,8 @@ public function carUpdate(){
       'fuel_type' => $this->input->post('fuel_type'),
       'transmission' => $this->input->post('transmission'),
       'co_emission' => $this->input->post('co_emission'),
-        'gearbox' => $this->input->post('gearbox'),
+      'gearbox' => $this->input->post('gearbox'),
+      'mileage' => $this->input->post('mileage'),
 
       'fuel_cons_ur' => $this->input->post('fuel_cons_ur'),
       'fuel_cons_ex' => $this->input->post('fuel_cons_ex'),

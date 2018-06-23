@@ -157,6 +157,12 @@
               <input class="form-control" id="gearbox" placeholder="Enter Gearbox" name="gearbox" type="text" value="<?php echo $car[0]->gearbox;?>" >
             </div>
           </div>
+          <div class="col-xs-12 col-md-3">
+            <div class="form-group">
+              <label for="gearbox">Mileage</label>
+              <input class="form-control" id="gearbox" placeholder="Enter Mileage" name="mileage" type="number" step="any" value="<?php echo $car[0]->mileage;?>" required>
+            </div>
+          </div>
         </div>
         
         <h3>Performance & Economy</h3>

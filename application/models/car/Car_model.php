@@ -185,4 +185,12 @@ public function updateCar($car, $car_id){
             return TRUE;
         }
     }
+    
+    public function get_distinct_car_model(){
+        $this->db->select('makeof, model');
+        $this->db->distinct();
+        $car = $this->db->get('car_table');
+        $result = $car->result();
+        return $result;
+    }
 }

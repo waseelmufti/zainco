@@ -71,10 +71,19 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?= site_url('admin/dashboard/reserve-car') ?>"><i class="fa fa-circle-o"></i>Reserve Vehical</a></li>
+            <!--<li><a href="<?= site_url('admin/dashboard/reserve-car') ?>"><i class="fa fa-circle-o"></i>Reserve Vehical</a></li>-->
             <li><a href="<?= site_url('admin/dashboard/test-drive') ?>"><i class="fa fa-circle-o"></i>Test Drive</a></li>
+            <li><a href="<?= site_url('admin/dashboard/send-offer') ?>"><i class="fa fa-circle-o"></i>Send Offer</a></li>
             <li><a href="<?= site_url('admin/dashboard/enquiry') ?>"><i class="fa fa-circle-o"></i>General Enquiries</a></li>
           </ul>
+        </li>
+        <li>
+          <a href="<?= site_url('admin/dashboard/part-exchange') ?>">
+            <i class="fa fa-dashboard"></i> <span>Part Exchange Form</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
         </li>
       </ul>
     </section>
