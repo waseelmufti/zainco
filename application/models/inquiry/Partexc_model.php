@@ -7,7 +7,21 @@ class Partexc_model extends CI_Model{
         parent:: __construct();
     }
     
-    public function get_part($id, $form_type){
+    public function get_part($id, $form_type = 'general'){
+        $this->db->where('id', $id);
+        $this->db->where('form_type', $form_type);
+        $query = $this->db->get('general_forms');
+        $result['form'] = $query->result();
+        
+        if($result['form']){
+            $this->db->where('form_id', $id);
+            $this->db->where('form_type', $form_type);
+            $query = $this->db->get('general_form_images');
+            $result['images'] = $query->result();
+            
+            return $result;
+        }
+        return false;
         
     }
     
