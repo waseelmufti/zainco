@@ -12,14 +12,17 @@ class Part_exchange extends CI_Controller{
     
     public function index(){
         $data['results'] = $this->part_model->get_quries('partexchange');
-        print_r($data);
         $this->load->view('admin/inc/header');
         $this->load->view('admin/inc/sidebar');
         $this->load->view('admin/inquiry/exchange_part/index', $data);
         $this->load->view('admin/inc/footer');
     }
     public function show($id){
-        
+        $result = $this->part_model->get_part($id, 'partexchange');
+        $this->load->view('admin/inc/header');
+        $this->load->view('admin/inc/sidebar');
+        $this->load->view('admin/inquiry/exchange_part/show', $result);
+        $this->load->view('admin/inc/footer');
     }
     public function delete($id){
        $flag = $this->part_model->delete_part($id, 'partexchange');
@@ -31,6 +34,6 @@ class Part_exchange extends CI_Controller{
             $this->session->set_flashdata('error',$msg);
           }
     
-    redirect('admin/dashboard/car'); 
+    redirect('admin/dashboard/part-exchange'); 
     }
 }

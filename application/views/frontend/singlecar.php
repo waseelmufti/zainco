@@ -127,7 +127,7 @@
     
     <li id="print" class="mobile-hidden">
     <a href="<?= site_url('send-offer/').$car[0]->id ?>" title="Send Your Offer"><span aria-hidden="true" class="icon icon-printer"></span>Send Your Offer</a></li>
-    <li id="pex" class="mobile-hidden"><a href="<?= site_url('part-exchange/').$car[0]->id ?>" title="Part Ex Your Car"><span aria-hidden="true" class="icon icon-spin"></span>Part Exchange</a></li>
+    <li id="pex" class="mobile-hidden"><a href="<?= site_url('part-exchange') ?>" title="Part Ex Your Car"><span aria-hidden="true" class="icon icon-spin"></span>Part Exchange</a></li>
     <li id="similar" class=""><a href="<?= site_url('get-direction') ?>" title="Location"><span aria-hidden="true" class="icon icon-cars"></span>Location</a></li>
 </ul>
 

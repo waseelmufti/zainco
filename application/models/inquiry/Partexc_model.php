@@ -7,13 +7,16 @@ class Partexc_model extends CI_Model{
         parent:: __construct();
     }
     
+    public function get_part($id, $form_type){
+        
+    }
+    
     public function get_quries($form_type = 'general'){
      $result = $this->db->get('general_forms');
         return $result->result();
     }
     
     public function delete_part($id, $form_type = 'general'){
-     
 
             $this->db->trans_start();
     
