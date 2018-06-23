@@ -22,6 +22,15 @@ class Part_exchange extends CI_Controller{
         
     }
     public function delete($id){
-        
+       $flag = $this->part_model->delete_part($id, 'partexchange');
+    if($flag){
+              $msg = 'Record is Deleted successfully.';
+              $this->session->set_flashdata('error',$msg);
+          }else{
+            $msg = 'Some problem occurred, please try again.';
+            $this->session->set_flashdata('error',$msg);
+          }
+    
+    redirect('admin/dashboard/car'); 
     }
 }

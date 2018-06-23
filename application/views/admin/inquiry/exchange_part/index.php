@@ -36,21 +36,23 @@
                 <tr>
                   <th style="width: 10%;">Vehicle</th>
                   <th style="width: 15%;">Name</th>
-                  <th style="width: 15%;">Email</th>
+                  <th style="width: 5%;">Phone</th>
+                  <th style="width: 15%;">Vehicle Model</th>
                   <th style="width: 15%;">Message</th>
                   <th style="width: 15%;">Date</th>
                   <th style="width: 30%;">Options</th>
                 </tr>
-                <?php foreach($contacts as $contact){ ?>
-                <tr <?= ($contact->active) ? '' :"class = 'read'" ?>>
-                  <td><?php echo $contact->name ?></td>
-                  <td><?php echo $contact->phone ?></td>
-                  <td><?php echo $contact->email ?></td>
-                  <td><?php echo $contact->message ?></td>
-                  <td><?php echo $contact->created_at ?></td>
+                <?php foreach($results as $result){ ?>
+                <tr <?= ($result->active) ? '' :"class = 'read'" ?>>
+                  <td><?php echo $result->vehicle ?></td>
+                  <td><?php echo $result->fname." ".$result->lname ?></td>
+                  <td><?php echo $result->phone ?></td>
+                  <td><?php echo $result->vehicle_model ?></td>
+                  <td><?php echo $result->message ?></td>
+                  <td><?php echo $result->created_at ?></td>
                   <td>
-                    <a href="<?= site_url('admin/dashboard/contact/show/').$contact->id ?>" class="btn btn-warning">Read</a>
-                    <a class="btn btn-danger" href="<?= site_url('admin/dashboard/contact/delete/').$contact->id ?>" onclick="return confirm('Do you want to Delete?')">Delete</a>
+                    <a href="<?= site_url('admin/dashboard/part-exchange/show/').$result->id ?>" class="btn btn-warning">Show</a>
+                    <a class="btn btn-danger" href="<?= site_url('admin/dashboard/part-exchange/delete/').$result->id ?>" onclick="return confirm('Do you want to Delete?')">Delete</a>
                   </td>
                 </tr>
               <?php }?>
