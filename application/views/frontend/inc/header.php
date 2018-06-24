@@ -307,7 +307,7 @@
                                             </ul>-->
                                         </li>
                                         <li class="n5">
-                                          <a class="n5  parent" href="<?= site_url('sellcar') ?>" title="Sell Your Car"><strong>Sell Your Car</strong></a>
+                                          <a class="n5  parent" href="<?= site_url('sell-your-car') ?>" title="Sell Your Car"><strong>Sell Your Car</strong></a>
                                            <br>
                                            <a class="n5" href="<?= site_url('part-exchange') ?>" title="Part Exchange"><small>Part Exchange</small> </a>
                                             <!--<ul>

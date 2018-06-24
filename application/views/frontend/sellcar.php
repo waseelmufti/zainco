@@ -39,7 +39,7 @@ background-size: cover;">
 
 		<p>Complete our simple to use valuation form below to get started.</p>
 
-<?php echo form_open('sell-form'); ?>
+<?php echo form_open_multipart('sell-form'); ?>
   <h3>Car Valuation</h3>
 
   <!--  Show Success or Error Message -->
@@ -49,52 +49,139 @@ background-size: cover;">
     <?php if($this->session->flashdata('error')) {?>
     <div class="twelvecol" style="padding: 5px; background: rgba(242, 36, 36, 0.7); color: #fff;"><?= $this->session->flashdata('error') ?></div>
   <?php } ?>
+  
+<!--  <input type="hidden" name="form_type" value="sellcar">-->
 
   <div class="row">
-    <div class="sixcol"><label>Reg number <span class="required">*</span></label></div>
-    <div class="sixcol last"><input type="text" size=10 name="registration" value="" required/></div>
-  </div>
-  <div class="row">
-    <div class="sixcol"><label>Make of car <span class="required">*</span></label></div>
-    <div class="sixcol last"><input type="text" size=40 name="make" value="" required/></div>
-  </div>
-  <div class="row">
-    <div class="sixcol"><label>Model <span class="required">*</span></label></div>
-    <div class="sixcol last"><input type="text" size=40 name="model" value="" required/></div>
-  </div>
-  <div class="row">
-    <div class="sixcol"><label>Year <span class="required">*</span></label></div>
-    <div class="sixcol last"><input type="text" size=10 name="year" value="" required/></div>
-  </div>
-  <div class="row">
-    <div class="sixcol"><label>Mileage </label></div>
-    <div class="sixcol last"><input type="text" size=10 name="mileage" value="" /></div>
-  </div>
-  <div class="row">
-    <div class="sixcol"><label>Name <span class="required">*</span></label></div>
-    <div class="sixcol last"><input type="text" size=40 name="name" value="" required/></div>
-  </div>
-  <div class="row">
-    <div class="sixcol"><label>Email <span class="required">*</span></label></div>
-    <div class="sixcol last"><input type="text" size=40 name="email" value="" required/></div>
-  </div>
-  <div class="row">
-    <div class="sixcol"><label>Telephone <span class="required">*</span></label></div>
-    <div class="sixcol last"><input type="text" size=40 name="phone" value="" required/></div>
-  </div>
+    <div class="threecol"><label>You filling this form for <span class="required"></span></label></div>
+    <div class="ninecol last">
+    <label for="form_for">
+    <input type="radio" id="form_for" name="form_type" value="sellcar" checked/> Sell Your Car</label>
+    <label><input type="radio" name="form_type" value="carvaluation" /> Your Car Valuation</label></div>
+</div>
 
-  <div class="row">
-    <div class="sixcol"></div>
-    <div id="sellcar-submit" class="sixcol last"><input type="submit" value="Submit" class="button green" /></div>
-  </div>
+    <div class="row">
+    <div class="threecol"><label>First Name<span class="required">*</span></label></div>
+    <div class="ninecol last"><input size=40 name="fname" value="" placeholder="First Name (Required)" type="text" required></div>
+    </div>
 
+    <div class="row">
+    <div class="threecol"><label>Last Name<span class="required">*</span></label></div>
+    <div class="ninecol last"><input size=40 name="lname" value="" placeholder="Last Name (Required)" type="text" required></div>
+    </div>
+
+    <div class="row">
+    <div class="threecol"><label>Best Phone Number<span class="required">*</span></label></div>
+    <div class="ninecol last"><input size=40 name="phone" value="" placeholder="Phone Number (Required)" type="text" required></div>
+    </div>
+
+    <div class="row">
+    <div class="threecol"><label>Postcode<span class="required">*</span></label></div>
+    <div class="ninecol last"><input size=40 name="postcode" value="" placeholder="Postcode (Required)" type="text" required></div>
+    </div>
+
+    <div class="row">
+    <div class="threecol"><label>Vehicle Model<span class="required">*</span></label></div>
+    <div class="ninecol last"><input size=40 name="vehicle_model" value="" placeholder="Vehicle Model (Required)" type="text" required></div>
+    </div>
+
+    <div class="row">
+    <div class="threecol"><label>Engine Size<span class="required">*</span></label></div>
+    <div class="ninecol last"><input size=40 name="engine_size" value="" placeholder="Engine Size  (Required)" type="text" required></div>
+    </div>
+
+    <div class="row">
+    <div class="threecol"><label>Colour<span class="required">*</span></label></div>
+    <div class="ninecol last"><input size=40 name="color" value="" placeholder="Colour (Required)" type="text" required></div>
+    </div>
+
+    <div class="row">
+    <div class="threecol"><label>Vehicle Mileage<span class="required">*</span></label></div>
+    <div class="ninecol last"><input size=40 name="vehicle_mileage" value="" placeholder="Vehicle Mileage (Required)" type="text" required></div>
+    </div>
+
+    <div class="row">
+    <div class="threecol"><label>Number of owners<span class="required">*</span></label></div>
+    <div class="ninecol last"><input name="no_owners" value="" placeholder="Number of owners (Required)" type="text" required></div>
+    </div>
+
+    <div class="row">
+    <div class="threecol"><label>First registered<span class="required">*</span></label></div>
+    <div class="ninecol last"><input class="datepicker" name="first_reg" value="" placeholder="First registered (Required)" type="datetime" required></div>
+    </div>
+
+    <div class="row">
+    <div class="threecol"><label>MOT expires<span class="required">*</span></label></div>
+    <div class="ninecol last"><input class="datepicker" name="mot_exp" value="" placeholder="MOT expires  (Required)" type="datetime" required></div>
+    </div>
+
+    <div class="row">
+    <div class="threecol"><label>Last service<span class="required">*</span></label></div>
+    <div class="ninecol last"><input class="datepicker" name="last_service" value="" placeholder="Last service  (Required)" type="datetime" required></div>
+    </div>
+
+    <div class="row">
+    <div class="threecol">
+    <label for="vehicle">Service History<span class="required">*</span></label></div>
+    <div class="ninecol last">
+        <select name="service_his" class="form-field" id="service_his" required>
+            <option value="full" selected>Full</option>
+            <option value="part">Part</option>
+            <option value="non">Non</option>
+        </select>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="threecol"><label>Last Service Mileage<span class="required">*</span></label></div>
+    <div class="ninecol last"><input name="last_service_mileage" value="" placeholder="Last Service Mileage (Required)" type="text" required></div>
+    </div>
+
+    <div class="row">
+    <div class="threecol">
+    <label for="vehicle">General condition<span class="required">*</span></label></div>
+    <div class="ninecol last">
+        <select name="general_condition" class="form-field" id="general_condition" required>
+            <option value="full" selected>Excelent</option>
+            <option value="part">Good</option>
+            <option value="non">Poor</option>
+            <option value="non">Non Runner</option>
+        </select>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="threecol"><label>Describe your vehicle in your words <span class="required"></span></label></div>
+    <div class="ninecol last"><textarea rows=5 cols=40 name="message" placeholder="Description"></textarea></div>
+    </div>
+
+    <div class="row">
+    <div class="threecol"><label>Upload Photos<span class="required"></span></label></div>
+    <div class="ninecol last">
+        <input type="file" name="car_photos[]" multiple>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="threecol"><label>Security</label></div>
+    <div class="ninecol last">
+
+        <div id="recaptcha_widget">
+
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Submit Enquiry" class="button black full">
+        </div>
+    </div>
+    </div>
 <?php echo form_close(); ?>
 
 
           </div>
         </div>
         <!-- // END Valuation Content -->
-
+              </div>
   		<!-- Vehicle Locator Sidebar -->
         <div class="fourcol last mobile-hidden" id="sidebar">
           <div class="row sidebar">
@@ -297,4 +384,3 @@ background-size: cover;">
   <meta itemprop="postalCode" content="WS2 9SG">
   <meta itemprop="addressCountry" content="United Kingdom">
 </span>
-</div>

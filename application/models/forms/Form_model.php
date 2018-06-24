@@ -61,7 +61,6 @@ class Form_model extends CI_Model{
     public function save_part_exch($data){
         $part_exc = array(
 'form_type' => $data['form_type'],            
-'vehicle' => $data['vehicle'],
 'fname' =>$data['fname'],
 'lname' =>$data['lname'],
 'phone' =>$data['phone'],

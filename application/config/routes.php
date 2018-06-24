@@ -53,7 +53,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'frontend';
 $route['showroom'] = 'frontend/showroom';
 $route['showroom/(:any)'] = 'frontend/showcar/$1';
-$route['sellcar'] = 'frontend/sellCar';
+$route['sell-your-car'] = 'frontend/sellCar';
 $route['car-locator'] = 'frontend/carLocator';
 $route['services'] = 'frontend/services';
 $route['about-us'] = 'frontend/aboutUs';

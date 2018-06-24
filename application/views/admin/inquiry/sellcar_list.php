@@ -3,13 +3,12 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Contact
-      <small>Inquires</small>
+      Part Exchange
+      <small>Form</small>
     </h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li><a href="#">Inquires</a></li>
-      <li class="active">Contact</li>
+      <li class="active"><a href="#">Partexchange</a></li>
     </ol>
   </section>
 
@@ -19,7 +18,7 @@
     <!-- Default box -->
     <div class="box">
       <div class="box-header with-border">
-        <h3 class="box-title">Sell Cars Inquires</h3>
+        <h3 class="box-title">Part Exchange Form</h3>
         <div class="box-tools pull-right">
           <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
             <i class="fa fa-minus"></i></button>
@@ -35,31 +34,25 @@
              <?php } ?>
               <table class="table table-hover">
                 <tr>
-                  <th style="width: 10%;">Reg_no</th>
-                  <th style="width: 10%;">Make of</th>
-                  <th style="width: 10%;">Model</th>
-                  <th style="width: 10%;">Year</th>
-                  <th style="width: 10%;">Mileage</th>
-                  <th style="width: 10%;">Name</th>
-                  <th style="width: 10%;">Email</th>
-                  <th style="width: 10%;">Phone</th>
-                  <th style="width: 5%;">Date</th>
+                  <th style="width: 10%;">Vehicle</th>
+                  <th style="width: 15%;">Name</th>
+                  <th style="width: 5%;">Phone</th>
+                  <th style="width: 15%;">Vehicle Model</th>
+                  <th style="width: 15%;">Message</th>
+                  <th style="width: 15%;">Date</th>
                   <th style="width: 30%;">Options</th>
                 </tr>
-                <?php foreach($sellcars as $sellcar){ ?>
-                <tr <?= ($sellcar->active) ? '' :"class = 'read'" ?>>
-                 <td><?php echo $sellcar->reg_no ?></td>
-                 <td><?php echo $sellcar->make_of_car ?></td>
-                 <td><?php echo $sellcar->model ?></td>
-                 <td><?php echo $sellcar->year ?></td>
-                 <td><?php echo $sellcar->milage ?></td>
-                  <td><?php echo $sellcar->name ?></td>
-                  <td><?php echo $sellcar->phone ?></td>
-                  <td><?php echo $sellcar->email ?></td>
-                  <td><?php echo $sellcar->created_at ?></td>
+                <?php foreach($results as $result){ ?>
+                <tr <?= ($result->active) ? '' :"class = 'read'" ?>>
+                  <td><?php echo $result->vehicle ?></td>
+                  <td><?php echo $result->fname." ".$result->lname ?></td>
+                  <td><?php echo $result->phone ?></td>
+                  <td><?php echo $result->vehicle_model ?></td>
+                  <td><?php echo $result->message ?></td>
+                  <td><?php echo $result->created_at ?></td>
                   <td>
-                    <a href="<?= site_url('admin/dashboard/sell-car/show/').$sellcar->id ?>" class="btn btn-warning">Read</a>
-                    <a class="btn btn-danger" href="<?= site_url('admin/dashboard/sell-car/delete/').$sellcar->id ?>" onclick="return confirm('Do you want to Delete?')">Delete</a>
+                    <a href="<?= site_url('admin/dashboard/sell-car/show/').$result->id ?>" class="btn btn-warning">Show</a>
+                    <a class="btn btn-danger" href="<?= site_url('admin/dashboard/sell-car/delete/').$result->id ?>" onclick="return confirm('Do you want to Delete?')">Delete</a>
                   </td>
                 </tr>
               <?php }?>

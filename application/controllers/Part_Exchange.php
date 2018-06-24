@@ -18,6 +18,7 @@ class Part_exchange extends CI_Controller{
         $this->load->view('admin/inc/footer');
     }
     public function show($id){
+        $this->part_model->update_read('general_forms', $id);
         $result = $this->part_model->get_part($id, 'partexchange');
         $this->load->view('admin/inc/header');
         $this->load->view('admin/inc/sidebar');

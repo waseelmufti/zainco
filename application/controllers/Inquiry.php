@@ -11,6 +11,7 @@ class Inquiry extends CI_Controller{
         
         $this->load->library('pagination');
         $this->load->model('inquiry/inquiry_model', 'inquiry_model');
+        $this->load->model('inquiry/partexc_model', 'part_model');
     }
     
     /* Contact Form Methods*/
@@ -41,24 +42,24 @@ class Inquiry extends CI_Controller{
     
     /* Sell Car Form Methods*/
     public function sellcar(){
-        $data['sellcars'] = $this->inquiry_model->get_sellcar();
+        $data['results'] = $this->part_model->get_quries('sellcar');
         $this->load->view('admin/inc/header');
-          $this->load->view('admin/inc/sidebar');
-          $this->load->view('admin/inquiry/sellcar_list', $data);
-          $this->load->view('admin/inc/footer');
+        $this->load->view('admin/inc/sidebar');
+        $this->load->view('admin/inquiry/sellcar_list', $data);
+        $this->load->view('admin/inc/footer');
     }
     
     public function sellcar_show($id){
-        $this->inquiry_model->update_read('car_valuation', $id);
-        $data['sellcar'] = $this->inquiry_model->sellcar_content($id);
+        $this->inquiry_model->update_read('general_forms', $id);
+        $result = $this->part_model->get_part($id, 'sellcar');
         $this->load->view('admin/inc/header');
         $this->load->view('admin/inc/sidebar');
-        $this->load->view('admin/inquiry/single_sellcar', $data);
+        $this->load->view('admin/inquiry/single_sellcar', $result);
         $this->load->view('admin/inc/footer');
     }
     
     public function sellcar_delete($id){
-        $result = $this->inquiry_model->inquiry_delete('car_valuation', $id);
+        $result = $this->part_model->delete_part($id, $form_type = 'sellcar');
         if($result){
             $this->session->set_flashdata('error', 'The Record is Deleted!');
         }
