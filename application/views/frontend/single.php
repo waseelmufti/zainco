@@ -5,7 +5,7 @@
 	  <div class="container">
 	    <div class="wrapper">
 	      <div class="row">
-			<!-- About Content -->
+<!-- About Content -->
         <div class="eightcol block">
           <div class="pad-20 overflow-hidden">
              <div class="row mobile-hidden">
@@ -20,12 +20,12 @@
                   <h2><?= $page[0]->title ?></h2>
                 </div>
                 
-<p><!--<strong>Quality car retailer of Walsall</strong>--></p>
-<div class="content-area">
-    <?= $page[0]->content ?>
+    <p><!--<strong>Quality car retailer of Walsall</strong>--></p>
+        <div class="content-area">
+            <?= $page[0]->content ?>
+        </div>
+    </div>
 </div>
-      		</div>
-    		</div>
     	<!-- // END About Content -->
             
  		<!-- Vehicle Locator Sidebar -->

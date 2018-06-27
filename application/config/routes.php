@@ -128,7 +128,7 @@ $route['sell-form'] = 'form/sellCar';
 $route['carlocator'] = 'form/carLocator';
 $route['enquiry'] = 'form/enquiry';
 $route['save_parts'] = 'form/save_part_exch';
-
+$route['servicing'] = 'form/save_car_services';
 require_once(BASEPATH.'database/DB.php');
 $db = & DB();
 $db->select('slug');

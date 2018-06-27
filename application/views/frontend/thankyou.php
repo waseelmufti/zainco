@@ -21,6 +21,12 @@
               <h1><span aria-hidden="true" class="icon icon-checkbox"></span> Success!</h1>
 
               <p class="message_green">Your enquiry has been successfully sent!</p>
+              
+              <p>
+                  <?php if($this->session->flashdata('success')){ 
+                echo $this->session->flashdata('success');
+                    } ?>
+              </p>
 
               <p>Thank you for sending us your enquiry, we will get back to you as soon as we can.</p>
 

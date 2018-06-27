@@ -38,7 +38,14 @@ background-size: cover;">
     <p>
         The possibility of greater fuel economy and keeps the vehicle to its maximum working order. 
     </p>
+    
+    <div class="form">
+    <?php 
+    $data['form_type'] = 'cardignose2'; /*cardignose-servicing*/
+    $this->load->view('frontend/forms/service_form', $data);?>
+    </div>
 
+   
     <!--<a href="booking_enquiry.html" title="Book In Online" class="button bespoke large">Book In</a>-->
 
     <!-- Brakes -->

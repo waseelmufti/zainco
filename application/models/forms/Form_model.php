@@ -92,4 +92,17 @@ class Form_model extends CI_Model{
         $insert = $this->db->insert_batch('general_form_images',$data);
         return $insert ? true : false;
     }
+    
+    public function save_car_service($data){
+     $insert = $this->db->insert('car_service_form', $data);
+
+    if($insert){
+      return $this->db->insert_id();
+    }   
+    }
+    public function save_car_ser($data = array()){
+        $insert = $this->db->insert_batch('car_services',$data);
+        var_dump($insert);
+        return $insert ? true : false;
+    }
 }

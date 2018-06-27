@@ -231,5 +231,81 @@ public function save_part_exch(){
     
     redirect('thankyou');   
 }    
-
+/*
+*Save the frontend forms in the database
+**Car Servicing
+**Vehichle Health
+**Car Dignose
+*/
+public function save_car_services(){
+    echo '<pre>';
+    /* Setting rules for part exchange form */
+    $this->form_validation->set_rules('form_type', 'Form Type', 'required');
+    $this->form_validation->set_rules('reg_num', 'Registration Number', 'required');
+    $this->form_validation->set_rules('make_of_car', 'Make Of Car', 'required');
+    $this->form_validation->set_rules('model', 'Model', 'required');
+    $this->form_validation->set_rules('year', 'Year', 'required');
+    $this->form_validation->set_rules('name', 'Name', 'required');
+    $this->form_validation->set_rules('email', 'Email', 'required');
+    $this->form_validation->set_rules('phone', 'phone', 'required');
+    
+    /* Service options are Required*/
+    if($this->input->post('form_type') == 'servicing'){
+        $this->form_validation->set_rules('want_service[]', 'Atleast One Service', 'required');
+    }elseif($this->input->post('form_type') == 'cardignose'){
+        $this->form_validation->set_rules('daignose_opt[]', 'Atleast One Option', 'required');
+    }
+    
+    /* Run validation*/
+    if($this->form_validation->run() != FALSE){
+    
+    $data = array(
+    'form_type' => $this->input->post('form_type'),
+    'reg_no' => $this->input->post('reg_num'),
+    'make_of_car' => $this->input->post('make_of_car'),
+    'model' => $this->input->post('model'),
+    'year' => $this->input->post('year'),
+    'mileage' => $this->input->post('mileage'),
+    'name' => $this->input->post('name'),
+    'email' => $this->input->post('email'),
+    'phone' => $this->input->post('phone'),
+    );
+    
+    $cr_id = $this->form_model->save_car_service($data);
+    /*If inserted last value exists*/
+    if($cr_id){
+        /*check form type*/
+        if($this->input->post('form_type') == 'servicing'){
+            $services = $this->input->post('want_service');
+        }elseif($this->input->post('form_type') == 'cardignose'){
+            $services = $this->input->post('daignose_opt');
+        }
+        
+        if(isset($services)){
+            $c = count($services);
+            $form_img = array();
+            for($i=0; $i<$c; $i++){
+                $form_services[$i]['service'] = $services[$i]; 
+                $form_services[$i]['car_ser_id'] = $cr_id; 
+                $form_services[$i]['form_type'] = $this->input->post('form_type'); 
+            }
+                print_r($form_services);
+            $flag = $this->form_model->save_car_ser($form_services);
+            if(!$flag){
+                $msg = 'Some Error Occured Please Try Again';
+                $this->session->set_flashdata('error', $msg);
+                redirect($_SERVER['HTTP_REFERER']);
+            }
+            }
+        }
+    }else{
+        /*If Validation is not successful*/
+        $err = validation_errors('<div style="color: #fff;">', '</div>');
+        $this->session->set_flashdata('error', $err);
+        redirect($_SERVER['HTTP_REFERER']);
+    }
+    $msg = "Thanks for your book service with us our member of staff will contact you with in 24 hour or call us for immediate booking.";
+    $this->session->set_flashdata('success', $msg);
+    redirect('thankyou');
+}/* End Function */    
 }

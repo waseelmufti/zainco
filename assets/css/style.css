@@ -16898,6 +16898,11 @@ only screen and (max-width:739px) {
     overflow: visible;
     clip: auto
 }
-
+.label{
+    margin-right: 10px;
+    font-size: 16px;
+    line-height: 0px;
+    color: #696969;
+}
 </style >
 /* CSS Document */

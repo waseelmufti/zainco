@@ -37,7 +37,9 @@ background-size: cover;">
         
         <p>We can often get you cash for your vehicle the very same day. If you accept our offer later in the day, then you might have to wait up to 24 hours. Either way, you get to avoid the hassle of selling your vehicle privately. </p>
 
-		<p>Complete our simple to use valuation form below to get started.</p>
+		<p>Our online application is quick, simple and secure. <br>
+Once completed, one of our team will contact you straight back.
+</p>
 
 <?php echo form_open_multipart('sell-form'); ?>
   <h3>Car Valuation</h3>
