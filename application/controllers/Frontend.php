@@ -48,7 +48,18 @@ public function showcar($id){
     $this->load->view('frontend/services');
     $this->load->view('frontend/inc/footer');
   }
-
+    
+  public function vehicle_health(){
+    $this->load->view('frontend/inc/header');
+    $this->load->view('frontend/vehicle_health');
+    $this->load->view('frontend/inc/footer');      
+    }
+    
+    public function car_dignose(){
+    $this->load->view('frontend/inc/header');
+    $this->load->view('frontend/car_dignose');
+    $this->load->view('frontend/inc/footer');      
+    }
   public function aboutUs(){
     $this->load->view('frontend/inc/header');
     $this->load->view('frontend/about');

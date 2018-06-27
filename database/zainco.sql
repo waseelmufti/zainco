@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 23, 2018 at 08:15 AM
+-- Generation Time: Jun 27, 2018 at 10:18 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -130,6 +130,73 @@ CREATE TABLE `car_locator` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `car_services`
+--
+
+CREATE TABLE `car_services` (
+  `id` int(11) NOT NULL,
+  `service` varchar(200) NOT NULL,
+  `car_ser_id` int(11) NOT NULL,
+  `form_type` varchar(200) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `car_services`
+--
+
+INSERT INTO `car_services` (`id`, `service`, `car_ser_id`, `form_type`, `created_at`) VALUES
+(20, 'Engine Service', 21, 'servicing', '2018-06-27 19:42:19'),
+(21, 'Breaks', 21, 'servicing', '2018-06-27 19:42:19'),
+(22, 'Tyers', 21, 'servicing', '2018-06-27 19:42:19'),
+(23, 'Suspension', 21, 'servicing', '2018-06-27 19:42:19'),
+(24, 'Batteries', 21, 'servicing', '2018-06-27 19:42:19'),
+(25, 'Engine Service', 22, 'servicing', '2018-06-27 19:43:13'),
+(26, 'Tyers', 22, 'servicing', '2018-06-27 19:43:13'),
+(27, 'Batteries', 22, 'servicing', '2018-06-27 19:43:13'),
+(28, 'Mobile Car Dignose', 23, 'cardignose', '2018-06-27 19:44:44'),
+(29, 'Book in our Garage', 23, 'cardignose', '2018-06-27 19:44:44'),
+(30, 'Book in our Garage', 24, 'cardignose', '2018-06-27 19:45:49'),
+(31, 'Mobile Car Dignose', 27, 'cardignose', '2018-06-27 20:17:28'),
+(32, 'Book in our Garage', 27, 'cardignose', '2018-06-27 20:17:28');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `car_service_form`
+--
+
+CREATE TABLE `car_service_form` (
+  `id` int(11) NOT NULL,
+  `reg_no` varchar(50) NOT NULL,
+  `make_of_car` varchar(200) NOT NULL,
+  `model` varchar(200) NOT NULL,
+  `year` varchar(50) NOT NULL,
+  `mileage` varchar(50) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `phone` varchar(50) NOT NULL,
+  `active` int(11) NOT NULL DEFAULT '0',
+  `form_type` varchar(50) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `car_service_form`
+--
+
+INSERT INTO `car_service_form` (`id`, `reg_no`, `make_of_car`, `model`, `year`, `mileage`, `name`, `email`, `phone`, `active`, `form_type`, `created_at`) VALUES
+(21, 'ff', 'ff', 'ff', '123', '12', 'ff', 'fff@fff.com', '00000000000000', 0, 'servicing', '2018-06-27 19:42:19'),
+(22, 'eee', 'ffvvv', 'X5 3.0 D M M', 'dd', '12', 'ff', 'fff@fff.com', '1234567890', 0, 'servicing', '2018-06-27 19:43:13'),
+(23, 'eeen', 'ffvvvj', 'abc', '123', '12666', 'test', 'test@test.com', '123', 0, 'cardignose', '2018-06-27 19:44:43'),
+(24, 'eeendd', 'ffvvvjdd', 'ABSdd', '123', '126666666', 'abccdd', 'blah@blah.com', '00000000000000', 0, 'cardignose', '2018-06-27 19:45:49'),
+(25, 'eeengg', 'ffvvvggg', 'abcgg', '1233', '543', 'test', 'test@test.com', '00000000', 0, 'cardignose2', '2018-06-27 19:46:30'),
+(26, 'eee', 'ffvvv', 'abc', 'dd', '12', 'test', 'fff@fff.com', '00000000000000', 0, 'vehiclehealth', '2018-06-27 20:10:59'),
+(27, 'eeendd', 'ffvvvggg', 'abc', '1233', '', 'dd', 'blah@blah.com', '00000000000000', 0, 'cardignose', '2018-06-27 20:17:28');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `car_table`
 --
 
@@ -174,10 +241,8 @@ CREATE TABLE `car_table` (
 --
 
 INSERT INTO `car_table` (`id`, `title`, `makeof`, `model`, `price`, `discount`, `registered`, `owners`, `body_style`, `color`, `mileage`, `no_doors`, `no_seats`, `engine_size`, `engine_capacity`, `fuel_type`, `transmission`, `co_emission`, `gearbox`, `fuel_cons_ur`, `fuel_cons_ex`, `fuel_cons_com`, `z_s_mph`, `top_speed`, `cylinders`, `engine_pow`, `engine_tor`, `length`, `wheelbase`, `width`, `description`, `created_at`, `updated_at`) VALUES
-(23, '2009 09 BMW X5 3.0 D M SPORT 5d AUTO 232 BHP', 'BMW', 'X5 3.0 D M', 14495, 0, '2009', '1', 'Estate', 'Silver', 98000, 5, 7, 2993, 3, 'Diesel', 'Automatic', 214, 'Automatic', 27.7, 40.9, 34.9, 8.1, 134, 6, 232, 384, 4851, 2933, 1994, '<p>\r\n</p><h2></h2>\r\n                 <div>\r\n                  <ul></ul>\r\n                 </div>\r\n                 <div><b>For more info on this vehicle call our showroom on 0121 5262220</b>\r\n\r\n                             \r\n                  <p>STAR SILVER STUNNING\r\nEXAMPLE, UPTO DATE SERVICE HISTORY, PRO SAT NAV + DAKOTA LEATHER + BUY\r\nWITH CONFIDENCE PACKAGE + 12 MONTHS RAC WARRANTY + 12 MONTHS RAC\r\nBREAKDOWN + 12 MONTHS NEW MOT + RAC 82 POINT APPROVED INSPECTION  + LOW\r\nRATE FINANCE ARRANGED + 2 MONTHS PAUSE PLAN FINANCE DEAL +</p>\r\n                  <p></p>\r\n\r\n                             <p>Every effort has been made to ensure the\r\n accuracy of the above information but errors may occur. Please check\r\nwith a salesperson.</p>\r\n                 </div>\r\n\r\n<br><p></p>', '2018-05-30 15:56:08', '2018-06-10 12:15:24'),
 (25, '2009 09 BMW X5 3.0 D M SPORT 5d AUTO 232 BHP', 'BMW', 'X5 3.0 D M', 14495, 0, '2009', '1', 'Estate', 'Silver', 0, 5, 7, 2993, 3, 'Diesel', 'Automatic', 214, 'Automatic', 27.7, 40.9, 34.9, 8.1, 134, 6, 232, 384, 4851, 2933, 1994, '<p>\r\n</p><h2></h2>\r\n                 <div>\r\n                  <ul></ul>\r\n                 </div>\r\n                 <div><b>For more info on this vehicle call our showroom on 0121 5262220</b>\r\n\r\n                             \r\n                  <p>STAR SILVER STUNNING\r\nEXAMPLE, UPTO DATE SERVICE HISTORY, PRO SAT NAV + DAKOTA LEATHER + BUY\r\nWITH CONFIDENCE PACKAGE + 12 MONTHS RAC WARRANTY + 12 MONTHS RAC\r\nBREAKDOWN + 12 MONTHS NEW MOT + RAC 82 POINT APPROVED INSPECTION  + LOW\r\nRATE FINANCE ARRANGED + 2 MONTHS PAUSE PLAN FINANCE DEAL +</p>\r\n                  <p></p>\r\n\r\n                             <p>Every effort has been made to ensure the\r\n accuracy of the above information but errors may occur. Please check\r\nwith a salesperson.</p>\r\n                 </div>\r\n\r\n<br><p></p>', '2018-05-30 17:10:48', '2018-06-22 17:12:48'),
-(26, '2009 09 BMW X5 3.0 D M SPORT 5d AUTO 232 BHP', 'Mercidce', 'X5 3.0 D M', 14495, 0, '2009', '1', 'Estate', 'Silver', 1200, 5, 7, 2993, 3, 'Diesel', 'Automatic', 214, 'Automatic', 27.7, 40.9, 34.9, 8.1, 134, 6, 232, 384, 4851, 2933, 1994, '<p>\r\n</p><h2></h2>\r\n                 <div>\r\n                  <ul></ul>\r\n                 </div>\r\n                 <div><b>For more info on this vehicle call our showroom on 0121 5262220</b>\r\n\r\n                             \r\n                  <p>STAR SILVER STUNNING\r\nEXAMPLE, UPTO DATE SERVICE HISTORY, PRO SAT NAV + DAKOTA LEATHER + BUY\r\nWITH CONFIDENCE PACKAGE + 12 MONTHS RAC WARRANTY + 12 MONTHS RAC\r\nBREAKDOWN + 12 MONTHS NEW MOT + RAC 82 POINT APPROVED INSPECTION  + LOW\r\nRATE FINANCE ARRANGED + 2 MONTHS PAUSE PLAN FINANCE DEAL +</p>\r\n                  <p></p>\r\n\r\n                             <p>Every effort has been made to ensure the\r\n accuracy of the above information but errors may occur. Please check\r\nwith a salesperson.</p>\r\n                 </div>\r\n\r\n<br><p></p>', '2018-06-01 17:08:20', '2018-06-22 17:00:06'),
-(27, '2009 09 BMW X5 3.0 D M SPORT 5d AUTO 232 BHP', 'BMW2', 'X5 3.0 D M M', 144955, 10000, '2019', '1', 'Estate', 'Silver', 1200, 5, 7, 2993, 3, 'Diesel', 'Automatic', 214, 'Automatic', 27.7, 40.9, 34.9, 8.1, 134, 6, 232, 384, 4851, 2933, 1994, '<p>\r\n</p><h2></h2>\r\n                 <div>\r\n                  <ul></ul>\r\n                 </div>\r\n                 <div><b>For more info on this vehicle call our showroom on 0121 5262220</b>\r\n\r\n                             \r\n                  <p>STAR SILVER STUNNING\r\nEXAMPLE, UPTO DATE SERVICE HISTORY, PRO SAT NAV + DAKOTA LEATHER + BUY\r\nWITH CONFIDENCE PACKAGE + 12 MONTHS RAC WARRANTY + 12 MONTHS RAC\r\nBREAKDOWN + 12 MONTHS NEW MOT + RAC 82 POINT APPROVED INSPECTION  + LOW\r\nRATE FINANCE ARRANGED + 2 MONTHS PAUSE PLAN FINANCE DEAL +</p>\r\n                  <p></p>\r\n\r\n                             <p>Every effort has been made to ensure the\r\n accuracy of the above information but errors may occur. Please check\r\nwith a salesperson.</p>\r\n                 </div>\r\n\r\n<br><p></p>', '2018-06-01 17:09:07', '2018-06-10 18:56:18');
+(26, '2009 09 BMW X5 3.0 D M SPORT 5d AUTO 232 BHP', 'Mercidce', 'X5 3.0 D M', 14495, 0, '2009', '1', 'Estate', 'Silver', 1200, 5, 7, 2993, 3, 'Diesel', 'Automatic', 214, 'Automatic', 27.7, 40.9, 34.9, 8.1, 134, 6, 232, 384, 4851, 2933, 1994, '<p>\r\n</p><h2></h2>\r\n                 <div>\r\n                  <ul></ul>\r\n                 </div>\r\n                 <div><b>For more info on this vehicle call our showroom on 0121 5262220</b>\r\n\r\n                             \r\n                  <p>STAR SILVER STUNNING\r\nEXAMPLE, UPTO DATE SERVICE HISTORY, PRO SAT NAV + DAKOTA LEATHER + BUY\r\nWITH CONFIDENCE PACKAGE + 12 MONTHS RAC WARRANTY + 12 MONTHS RAC\r\nBREAKDOWN + 12 MONTHS NEW MOT + RAC 82 POINT APPROVED INSPECTION  + LOW\r\nRATE FINANCE ARRANGED + 2 MONTHS PAUSE PLAN FINANCE DEAL +</p>\r\n                  <p></p>\r\n\r\n                             <p>Every effort has been made to ensure the\r\n accuracy of the above information but errors may occur. Please check\r\nwith a salesperson.</p>\r\n                 </div>\r\n\r\n<br><p></p>', '2018-06-01 17:08:20', '2018-06-22 17:00:06');
 
 -- --------------------------------------------------------
 
@@ -227,7 +292,6 @@ CREATE TABLE `comfort` (
 
 INSERT INTO `comfort` (`id`, `feature`, `car_id`, `created_at`, `updated_at`) VALUES
 (21, 'gearbox', 24, '2018-05-30 16:55:03', '2018-05-30 16:55:03'),
-(23, 'abc', 28, '2018-06-08 17:19:34', '2018-06-08 17:19:34'),
 (69, 'Bluetooth Telephone Preparation', 23, '2018-06-10 12:15:25', '2018-06-10 12:15:25'),
 (70, 'Heated Front Seats', 23, '2018-06-10 12:15:25', '2018-06-10 12:15:25'),
 (71, 'Professional Navigation System', 23, '2018-06-10 12:15:25', '2018-06-10 12:15:25'),
@@ -265,7 +329,7 @@ INSERT INTO `contact_form` (`id`, `name`, `phone`, `email`, `message`, `active`,
 (6, 'test', '00000000', 'test@test.com', 'test', 0, '2018-05-24 15:59:22', '2018-05-24 15:59:22'),
 (7, 'test', '00000000', 'test@test.com', 'test', 0, '2018-05-24 16:01:16', '2018-05-24 16:01:16'),
 (8, 'test', '00000000', 'test@test.com', 'test', 1, '2018-05-24 16:01:55', '2018-05-31 17:09:42'),
-(11, 'waseel', '1234567890', 'waseel@waseel.com', 'this is a test message', 0, '2018-05-31 17:10:43', '2018-05-31 17:10:43');
+(11, 'waseel', '1234567890', 'waseel@waseel.com', 'this is a test message', 1, '2018-05-31 17:10:43', '2018-06-23 17:03:56');
 
 -- --------------------------------------------------------
 
@@ -361,11 +425,10 @@ CREATE TABLE `general_forms` (
 --
 
 INSERT INTO `general_forms` (`id`, `vehicle`, `fname`, `lname`, `phone`, `postcode`, `vehicle_model`, `engine_size`, `color`, `vehicle_mileage`, `no_owners`, `first_reg`, `mot_exp`, `last_service`, `service_his`, `last_service_mileage`, `general_condition`, `message`, `form_type`, `active`, `created_at`) VALUES
-(1, '1', 'abc', 'abc', '00000000', '45000', 'app', '123', 'app', '1234', 12, '06/22/2018', '06/22/2018', '06/22/2018', 'full', '1234', 'full', ' vvvvvvvvvvvvvvv', 'partexchange', 0, '2018-06-22 16:40:45'),
-(2, '1', 'abc', 'abc', '00000000', '45000', 'app', '123', 'app', '1234', 12, '06/22/2018', '06/22/2018', '06/22/2018', 'full', '1234', 'full', ' vvvvvvvvvvvvvvv', 'partexchange', 0, '2018-06-22 16:49:38'),
-(3, 'BMW-X5 3.0 D M', 'ff', 'ff', '00000000000000', '45000', 'abc', '123', 'ff', '123454', 12, '06/22/2018', '06/14/2018', '06/21/2018', 'part', '111', 'non', 'hhhhhhhhhhhhhhhhhhhh', 'partexchange', 0, '2018-06-22 17:23:31'),
-(4, 'BMW-X5 3.0 D M', 'app2', 'app', '00000000000000', '45000', 'app', '12', 'ff', '1234', 12, '06/26/2018', '06/26/2018', '06/21/2018', 'full', '123', 'full', 'jdj;dlkgmnag;\'agja', 'partexchange', 0, '2018-06-23 04:57:26'),
-(5, 'Mercidce-X5 3.0 D M', 'abc', 'abc', '00000000', '45000', 'abc', '33', 'ff', '1234', 12, '06/11/2018', '06/04/2018', '06/05/2018', 'full', '123', 'full', 'kljaf dsf jlkfja dfda fkljafa;f', 'partexchange', 0, '2018-06-23 05:00:00');
+(3, 'BMW-X5 3.0 D M', 'ff', 'ff', '00000000000000', '45000', 'abc', '123', 'ff', '123454', 12, '06/22/2018', '06/14/2018', '06/21/2018', 'part', '111', 'non', 'hhhhhhhhhhhhhhhhhhhh', 'partexchange', 1, '2018-06-22 17:23:31'),
+(5, 'Mercidce-X5 3.0 D M', 'abc', 'abc', '00000000', '45000', 'abc', '33', 'ff', '1234', 12, '06/11/2018', '06/04/2018', '06/05/2018', 'full', '123', 'full', 'kljaf dsf jlkfja dfda fkljafa;f', 'partexchange', 1, '2018-06-23 05:00:00'),
+(6, '', 'ff', 'app', '00000000000000', '45000', 'app', '33', 'app', '00', 1, '06/06/2018', '06/12/2018', '06/16/2018', 'full', '111', 'full', ',mcna', 'sellcar', 1, '2018-06-24 10:00:27'),
+(10, '', 'ff', 'app', '00000000', '45000', 'app', '123', 'app', '1234', 12, '06/13/2018', '06/20/2018', '06/19/2018', 'part', '123', 'non', 'kfjalfja\'jfa\'       la;kfjjjjjjjjjjjjjjjjjjj', 'sellcar', 1, '2018-06-24 16:46:20');
 
 -- --------------------------------------------------------
 
@@ -385,22 +448,6 @@ CREATE TABLE `general_form_images` (
 --
 
 INSERT INTO `general_form_images` (`id`, `image`, `form_id`, `form_type`) VALUES
-(1, '1084452910.jpg', 1, 'partexchange'),
-(2, '109080243.jpg', 1, 'partexchange'),
-(3, '1263825013.jpg', 1, 'partexchange'),
-(4, '1300699614.jpg', 1, 'partexchange'),
-(5, '131052175.jpg', 1, 'partexchange'),
-(6, '133033733.jpg', 1, 'partexchange'),
-(7, '135996145.jpg', 1, 'partexchange'),
-(8, '139443575.jpg', 1, 'partexchange'),
-(9, '1084452911.jpg', 2, 'partexchange'),
-(10, '109080244.jpg', 2, 'partexchange'),
-(11, '1263825014.jpg', 2, 'partexchange'),
-(12, '1300699615.jpg', 2, 'partexchange'),
-(13, '131052176.jpg', 2, 'partexchange'),
-(14, '133033734.jpg', 2, 'partexchange'),
-(15, '135996146.jpg', 2, 'partexchange'),
-(16, '139443576.jpg', 2, 'partexchange'),
 (17, '1084452912.jpg', 3, 'partexchange'),
 (18, '109080245.jpg', 3, 'partexchange'),
 (19, '1263825015.jpg', 3, 'partexchange'),
@@ -409,16 +456,15 @@ INSERT INTO `general_form_images` (`id`, `image`, `form_id`, `form_type`) VALUES
 (22, '133033735.jpg', 3, 'partexchange'),
 (23, '135996147.jpg', 3, 'partexchange'),
 (24, '139443577.jpg', 3, 'partexchange'),
-(25, '131052178.jpg', 4, 'partexchange'),
-(26, '133033736.jpg', 4, 'partexchange'),
-(27, '135996148.jpg', 4, 'partexchange'),
-(28, '139443578.jpg', 4, 'partexchange'),
-(29, '140132092.jpg', 4, 'partexchange'),
-(30, '143803022.jpg', 4, 'partexchange'),
 (31, '1300699617.jpg', 5, 'partexchange'),
 (32, '131052179.jpg', 5, 'partexchange'),
 (33, '133033737.jpg', 5, 'partexchange'),
-(34, '135996149.jpg', 5, 'partexchange');
+(34, '135996149.jpg', 5, 'partexchange'),
+(43, '1310521711.jpg', 10, 'sellcar'),
+(44, '133033739.jpg', 10, 'sellcar'),
+(45, '1359961411.jpg', 10, 'sellcar'),
+(46, '1394435710.jpg', 10, 'sellcar'),
+(47, '140132094.jpg', 10, 'sellcar');
 
 -- --------------------------------------------------------
 
@@ -508,12 +554,12 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `title`, `slug`, `content`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Car Dignose', 'car-dignose', '<p></p><div>All modern cars rely on a range of on-board electronic management systems, often referred to as car diagnostics. Car diagnostics and engine diagnostics are a form of technology that uses sensors to read the parameters of the main components in your vehicle.</div><div><br></div><div>The majority of car owners will never know that there are any problems with these systems until an amber or red light appears on the car’s instrument display. If your car is displaying a red warning light while you are driving it this means you need to stop. In the event of this happening it’s very important that you get the car checked as soon as possible by a Team at Best Car Trading diagnostics specialist.</div><div><br></div><div>An amber light serves as more of a warning, but it still means that you should have your car checked at your earliest convenience. These warning lights can indicate a range of problems from engine warning lights to emissions errors, it all depends on the sophistication of the car diagnostics and engine diagnostics in your vehicle. <br></div><p></p>', '160568631.jpg', '2018-06-06 14:50:32', '2018-06-07 17:49:18'),
+(1, 'Car Dignose', 'car-dignose2', '<p></p><div>All modern cars rely on a range of on-board electronic management systems, often referred to as car diagnostics. Car diagnostics and engine diagnostics are a form of technology that uses sensors to read the parameters of the main components in your vehicle.</div><div><br></div><div>The majority of car owners will never know that there are any problems with these systems until an amber or red light appears on the car’s instrument display. If your car is displaying a red warning light while you are driving it this means you need to stop. In the event of this happening it’s very important that you get the car checked as soon as possible by a Team at Best Car Trading diagnostics specialist.</div><div><br></div><div>An amber light serves as more of a warning, but it still means that you should have your car checked at your earliest convenience. These warning lights can indicate a range of problems from engine warning lights to emissions errors, it all depends on the sophistication of the car diagnostics and engine diagnostics in your vehicle. <br></div><p></p>', '160568631.jpg', '2018-06-06 14:50:32', '2018-06-27 20:17:03'),
 (2, 'Part Exchange Your  Vehicle Today', 'part-exchange-2', 'If you already have a vehicle you may consider opting for a part exchange. A part exchange allows you to put the value of your old vehicle towards the cost of your new one and if you\'re thinking of purchasing your next vehicle, a part exchange could cover your payments. <br>', '16056869_0021.jpg', '2018-06-06 14:51:13', '2018-06-22 17:10:29'),
 (4, 'Warranty', 'warranty', '<h3>GOLD</h3>Designed to help with the cost of repairs, our Gold Warranty benefits include: <br>All Mechanical and Electrical parts cover <br>Parts, labour and VAT <br>National repair network <br>3 months to 1 year options available <br>Fast payment of valid claims <br>Optional Recovery <br>Unlimited claims <br>Claim limit of £1000 per claim <br><div><br></div><h3>BRONZE PLUS <br></h3><div>Designed to help with the cost of repairs, our Bronze Plus Warranty benefits include:</div><div>Listed parts cover </div>Optional cover - turbo charger <br>Parts, labour and VAT <br>National repair network <br>3 months to 1 year options available <br>Fast payment of valid claims <br>Optional Recovery <br>Unlimited claims <br>Claim limit of £500 per claim<br><br><br><br><br><br><br><br><br><br><br>', '16056857_0021.jpg', '2018-06-06 14:51:42', '2018-06-07 18:08:40'),
 (5, 'Accident Claims', 'accident-claims', '<p></p><p>If you’ve been injured in an accident, you’ll want to file an insurance claim with either your insurer or the insurer of the responsible party as soon as possible (but after seeking medical attention). The claim is the first step toward being compensated for medical expenses, lost wages, or other damages resulting from the accident.</p><p></p><p></p><p>Best Car Trading promise to work with experienced personal injury solicitors so that you receive the best service possible ensuring a swift claims process with many claims settled in 3-4 months. Best Car Trading work very closely with our panel of experienced personal injury solicitors to ensure you receive the highest level of service as well as maximum compensation for personal injury, vehicle damages and all other out of pocket expenses. As part of our ongoing pledge to our clients; new and existing, we promise to act in good faith for everyone who wishes to pursue a personal injury claim arising from a car accident.</p><br><p></p>', '143803021.jpg', '2018-06-06 17:15:12', '2018-06-07 18:17:20'),
 (6, 'Break Down Recovery', 'recovery', '<p>A vehicle breakdown can be a stressful situation. Often mechanical failures can mean that a car needs to be taken off the road to a nearby garage for extensive repairs. </p><p>Best Car Trading recovery specialists goal is to ensure that your vehicle is safely relocated for further examination and that whatever repairs are required are carried out in the quickest possible time .<br></p>', '16056872_0021.jpg', '2018-06-07 18:34:05', '2018-06-07 18:34:05'),
-(7, 'Vehicle Health', 'vehicle-health', '<p>No Data<br></p>', 'wwww1.jpg', '2018-06-07 19:09:34', '2018-06-07 19:09:34');
+(7, 'Vehicle Health', 'vehicle-health2', '<p>No Data<br></p>', 'wwww1.jpg', '2018-06-07 19:09:34', '2018-06-27 20:00:39');
 
 -- --------------------------------------------------------
 
@@ -602,6 +648,18 @@ ALTER TABLE `car_image`
 -- Indexes for table `car_locator`
 --
 ALTER TABLE `car_locator`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `car_services`
+--
+ALTER TABLE `car_services`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `car_service_form`
+--
+ALTER TABLE `car_service_form`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -707,10 +765,22 @@ ALTER TABLE `car_locator`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `car_services`
+--
+ALTER TABLE `car_services`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+
+--
+-- AUTO_INCREMENT for table `car_service_form`
+--
+ALTER TABLE `car_service_form`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
 -- AUTO_INCREMENT for table `car_table`
 --
 ALTER TABLE `car_table`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `car_valuation`
@@ -746,13 +816,13 @@ ALTER TABLE `exterior`
 -- AUTO_INCREMENT for table `general_forms`
 --
 ALTER TABLE `general_forms`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `general_form_images`
 --
 ALTER TABLE `general_form_images`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `interior`
