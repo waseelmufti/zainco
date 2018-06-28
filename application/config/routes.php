@@ -124,6 +124,18 @@ $route['admin/dashboard/part-exchange'] = 'part_exchange/index';
 $route['admin/dashboard/part-exchange/show/(:num)'] = 'part_exchange/show/$1';
 $route['admin/dashboard/part-exchange/delete/(:num)'] = 'part_exchange/delete/$1';
 
+$route['admin/dashboard/services'] = 'service/index';
+$route['admin/dashboard/services/show/(:num)'] = 'service/show/$1';
+$route['admin/dashboard/services/delete/(:num)'] = 'service/delete/$1';
+
+$route['admin/dashboard/vehicle-health'] = 'service/index';
+$route['admin/dashboard/vehicle-health/show/(:num)'] = 'service/show/$1';
+$route['admin/dashboard/vehicle-health/delete/(:num)'] = 'service/delete/$1';
+
+$route['admin/dashboard/car-dignose'] = 'service/index';
+$route['admin/dashboard/car-dignose/show/(:num)'] = 'service/show/$1';
+$route['admin/dashboard/car-dignose/delete/(:num)'] = 'service/delete/$1';
+
 /* Form Submission Routes*/
 $route['contact-form'] = 'form/contact';
 $route['sell-form'] = 'form/sellCar';

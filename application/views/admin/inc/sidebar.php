@@ -85,6 +85,30 @@
             </span>
           </a>
         </li>
+         <li>
+          <a href="<?= site_url('admin/dashboard/services') ?>">
+            <i class="fa fa-dashboard"></i> <span>Servicing Form</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="<?= site_url('admin/dashboard/vehicle-health') ?>">
+            <i class="fa fa-dashboard"></i> <span>Vehicle Health Form</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="<?= site_url('admin/dashboard/car-dignose') ?>">
+            <i class="fa fa-dashboard"></i> <span>Car Dignose Form</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->
