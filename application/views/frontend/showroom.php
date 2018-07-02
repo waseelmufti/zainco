@@ -182,7 +182,7 @@
 
                         <!-- Showing -->
                         <div class="threecol mobile-hidden">
-                        	<span id="vehicle-search-showing-top"><span class="tablet-hidden">Showing </span><span><strong>1 - 10</strong> </span></span>
+                        	<span id="vehicle-search-showing-top"><span class="tablet-hidden">Showing </span><span><strong><?php echo $start_data.' - '. $end_data; ?></strong> </span></span>
                         </div>
 
                         <!-- Sort -->
@@ -195,15 +195,7 @@
 
                         <!-- Pagination -->
                         <div class="sixcol last" id="vehicle-search-pagination-top">
-                          <ol class="pagenavi">
-    <li><a rel="nofollow" href="" class="next" title="Next">&raquo;</a></li>
-                    <!--<li><a href="" >4</a></li>
-                <li><a href="" >3</a></li>
-                <li><a href="" >2</a></li>-->
-                <li><a href="" class="active">1</a></li>
-    <li><a rel="nofollow" href="" class="next" title="Previous">&laquo;</a></li>
-
-</ol>
+                            <?php echo $links; ?>
                         </div>
 
                       </div>
@@ -400,7 +392,7 @@
                   </div> -->
                   <!-- // END Mobile Only -->
                   <div class="results-btn-view fivecol last mobile-half-col">
-                    <a href="<?php echo site_url().'showroom/'.$car->id ?>" class="button black full" title="View Vehicle Details">
+                    <a href="<?php echo site_url().'showroom/v/'.$car->id ?>" class="button black full" title="View Vehicle Details">
                       <span aria-hidden="true" class="icon  "></span> View Vehicle
                     </a>
                   </div>
@@ -563,29 +555,22 @@
 
                   <!-- Showing -->
                   <div class="threecol mobile-hidden">
-                  		<span id="vehicle-search-showing-bottom"><span class="tablet-hidden">Showing </span><span><strong>1 - 10</strong> </span></span>
+                  		<span id="vehicle-search-showing-bottom"><span class="tablet-hidden">Showing </span><span><strong><?php echo $start_data.' - '. $end_data; ?></strong> </span></span>
                   </div>
 
                   <!-- Sort -->
                   <div class="threecol" id="vehicle-search-sortform-bottom">
+<!--
                     <form class="alpha" name="sortform" id="sortform" action="https://www.globemotorswalsall.co.uk/search_page.php?" method="GET">
                       <label class="alpha mobile-hidden tablet-hidden">Sort</label>
                       <SELECT id="sort_bottom" class="select" onChange="doSortBottom()" id="sort" class="select" onChange="doSort()" NAME="sort"><OPTION SELECTED VALUE="h">Price (high to low)<OPTION VALUE="l">Price (low to high)</SELECT>
                     </form>
+-->
                   </div>
 
                   <!-- Pagination -->
                   <div class="sixcol last" id="vehicle-search-pagination-bottom">
-                    <ol class="pagenavi">
-    <li><a rel="nofollow" href="search_pagede11.html?sort=h&amp;p=4" class="next" title="Next">&raquo;</a></li>
-                  <!--  <li><a href="search_pagede11.html?sort=h&amp;p=4" >4</a></li>
-                <li><a href="search_page1f84.html?sort=h&amp;p=3" >3</a></li>
-                <li><a href="search_page3464.html?sort=h&amp;p=2" >2</a></li>-->
-                <li><a href="search_pagebf0a.html?sort=h&amp;p=1" class="active">1</a></li>
-
-    <li><a rel="nofollow" href="search_pagebf0a.html?sort=h&amp;p=1" class="next" title="Previous">&laquo;</a></li>
-
-</ol>
+                       <?php echo $links; ?>
                   </div>
 
                 </div>

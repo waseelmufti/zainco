@@ -6,6 +6,7 @@ class Frontend extends CI_Controller{
     parent::__construct();
     $this->load->library('session');
     $this->load->model('car/car_model', 'car_model');
+      $this->load->library('pagination');
   }
 
   public function index(){
@@ -17,9 +18,45 @@ class Frontend extends CI_Controller{
 
   public function showroom(){
     $this->load->model('frontend/formfield_model', 'fields_model');
-    $data['body'] = $this->fields_model->get_bodystyle();  
-    $data['gear_box'] = $this->fields_model->get_gearbox();  
-    $data['cars'] = $this->car_model->get_list();
+    
+    /*Configure Pagination*/
+    $config = array();
+    $config['base_url'] = site_url('showroom');
+
+    $total_rows = $this->car_model->records_count('car_table');
+    $config['total_rows'] = $total_rows;
+    $config['per_page'] = 2;
+    //$config['use_page_numbers'] = TRUE;
+    $num_links = round($config['total_rows']/$config['per_page']);
+    $config['num_links'] = $num_links;
+    $config['uri_segment'] = 2;
+    $config['full_tag_open'] = '<ol class="pagenavi">';
+    $config['full_tag_close'] = '</ol>';
+    $config['first_link'] = 'First';
+    $config['first_tag_open'] = '<li>';
+    $config['first_tag_close'] = '</li>';
+    $config['last_link'] = 'Last';
+    $config['last_tag_open'] = '<li>';
+    $config['last_tag_close'] = '</li>';
+    $config['next_link'] = '&raquo;';
+    $config['next_tag_open'] = '<li>';
+    $config['next_tag_close'] = '</li>';
+    $config['prev_link'] = '&laquo;';
+    $config['prev_tag_open'] = '<li>';
+    $config['prev_tag_close'] = '</li>';
+    $config['cur_tag_open'] = '<li><a href="" class="active">';
+    $config['cur_tag_close'] = '</a></li>';
+    $config['num_tag_open'] = '<li>';
+    $config['num_tag_close'] = '</li>';  
+
+    $this->pagination->initialize($config);
+    $page_off = $this->uri->segment(2); 
+      
+    $data['cars'] = $this->car_model->get_list($config['per_page'], $page_off);
+    $c = count($data['cars']);
+    $data['links'] = $this->pagination->create_links();
+    $data['start_data'] = $page_off+1;  
+    $data['end_data'] = $page_off+$c;  
     $this->load->view('frontend/inc/header');
     $this->load->view('frontend/showroom', $data);
     $this->load->view('frontend/inc/footer');

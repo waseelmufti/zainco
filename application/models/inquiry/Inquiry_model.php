@@ -7,6 +7,13 @@ class Inquiry_model extends CI_Model{
         parent:: __construct();
     }
     
+    public function records_count($table, $form_type = NULL){
+        if($form_type){
+            $this->db->where('form_type', $form_type);
+        }
+        return $this->db->count_all_results($table);
+    }
+    
     public function update_read($table, $id){
         $this->db->set('active', 1);
         $this->db->where('id', $id);
@@ -19,8 +26,8 @@ class Inquiry_model extends CI_Model{
     }
     
     /* Contact form models */
-    public function get_contact(){
-        $contact = $this->db->order_by('created_at', 'DESC')->get('contact_form');
+    public function get_contact($limit = 5, $offset = 5){
+        $contact = $this->db->limit($limit, $offset)->order_by('created_at', 'DESC')->get('contact_form');
         return $contact->result();
     }
     
@@ -40,8 +47,8 @@ class Inquiry_model extends CI_Model{
         return $result->result();
     }
     
-    public function get_enquiries($form_type){
-        $result = $this->db->where('form_type', $form_type)->get('enquiry');
+    public function get_enquiries($form_type, $limit = 5, $offset = 5){
+        $result = $this->db->limit($limit, $offset)->order_by('created_at', 'DESC')->where('form_type', $form_type)->get('enquiry');
         return $result->result();
     }
     

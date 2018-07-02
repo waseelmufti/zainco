@@ -9,12 +9,46 @@ public function __construct(){
   if(!$this->session->has_userdata('username')){
     redirect('usr/login');
   }
-
-  $this->load->model('car/car_model', 'car_model');
+    $this->load->library('pagination');
+    $this->load->model('car/car_model', 'car_model');
 }
 
 public function carList(){
-  $data['results'] = $this->car_model->get_list();
+  /*Configure Pagination*/
+        $config = array();
+        $config['base_url'] = site_url('admin/dashboard/car');
+        
+        $total_rows = $this->car_model->records_count('car_table');
+        $config['total_rows'] = $total_rows;
+        $config['per_page'] = 10;
+        //$config['use_page_numbers'] = TRUE;
+        $num_links = round($config['total_rows']/$config['per_page']);
+        $config['num_links'] = $num_links;
+        $config['uri_segment'] = 4;
+        $config['full_tag_open'] = '<ul class="pagination pagination-sm no-margin pull-right">';
+        $config['full_tag_close'] = '</ul>';
+        $config['first_link'] = 'First';
+        $config['first_tag_open'] = '<li>';
+        $config['first_tag_close'] = '</li>';
+        $config['last_link'] = 'Last';
+        $config['last_tag_open'] = '<li>';
+        $config['last_tag_close'] = '</li>';
+        $config['next_link'] = '&gt;';
+        $config['next_tag_open'] = '<li>';
+        $config['next_tag_close'] = '</li>';
+        $config['prev_link'] = '&lt;';
+        $config['prev_tag_open'] = '<li>';
+        $config['prev_tag_close'] = '</li>';
+        $config['cur_tag_open'] = '<li class="active"><a href="">';
+        $config['cur_tag_close'] = '</a></li>';
+        $config['num_tag_open'] = '<li>';
+        $config['num_tag_close'] = '</li>';  
+
+        $this->pagination->initialize($config);
+        $page_off = $this->uri->segment(4);
+    
+  $data['results'] = $this->car_model->get_list($config['per_page'], $page_off);
+    $data['links'] = $this->pagination->create_links();  
   $this->load->view('admin/inc/header');
   $this->load->view('admin/inc/sidebar');
   $this->load->view('admin/carmanager/index', $data);

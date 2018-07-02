@@ -67,7 +67,9 @@
       </div>
       <!-- /.box-body -->
       <div class="box-footer">
-    
+          <div class="box-tools">
+           <?php echo $links; ?>
+          </div>
       </div>
       <!-- /.box-footer-->
     </div>

@@ -7,6 +7,13 @@ class Partexc_model extends CI_Model{
         parent:: __construct();
     }
     
+    public function records_count($table, $form_type = NULL){
+        if($form_type){
+            $this->db->where('form_type', $form_type);
+        }
+        return $this->db->count_all_results($table);
+    }
+    
     public function update_read($table, $id){
         $this->db->set('active', 1);
         $this->db->where('id', $id);
@@ -31,9 +38,9 @@ class Partexc_model extends CI_Model{
         
     }
     
-    public function get_quries($form_type = 'general'){
+    public function get_quries($form_type = 'general', $limit = 5, $offset = 5){
         $this->db->where('form_type', $form_type);
-        $result = $this->db->order_by('created_at', 'DESC')->get('general_forms');
+        $result = $this->db->limit($limit, $offset)->order_by('created_at', 'DESC')->get('general_forms');
         return $result->result();
     }
     

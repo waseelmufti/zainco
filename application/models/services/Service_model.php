@@ -6,20 +6,24 @@ class Service_model extends CI_Model{
     public function __construct(){
         parent::__construct();
     }
-    
+    public function records_count($table, $form_type = NULL){
+        if($form_type){
+            $this->db->where('form_type', $form_type);
+        }
+        return $this->db->count_all_results($table);
+    }
     public function update_read($table, $id){
         $this->db->set('active', 1);
         $this->db->where('id', $id);
         $this->db->update($table);
     }
     
-    public function get_list($table, $form_type = ""){
+    public function get_list($table, $form_type = "", $limit = 5, $offset = 5){
         if($form_type){
             $this->db->where('form_type', $form_type);
         }
-        
-        $query = $this->db->get($table);
-        return $query->result();
+        $query = $this->db->limit($limit, $offset)->order_by('created_at', 'DESC')->get($table);
+         return $query->result();
     }
     
     public function get_single($table, $form_type = "", $id = NULL){

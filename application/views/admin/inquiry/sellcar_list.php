@@ -3,12 +3,12 @@
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
-      Part Exchange
+      Sell Car
       <small>Form</small>
     </h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li class="active"><a href="#">Partexchange</a></li>
+      <li class="active"><a href="#">Sell Car</a></li>
     </ol>
   </section>
 
@@ -18,7 +18,7 @@
     <!-- Default box -->
     <div class="box">
       <div class="box-header with-border">
-        <h3 class="box-title">Part Exchange Form</h3>
+        <h3 class="box-title"></h3>
         <div class="box-tools pull-right">
           <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
             <i class="fa fa-minus"></i></button>
@@ -34,7 +34,7 @@
              <?php } ?>
               <table class="table table-hover">
                 <tr>
-                  <th style="width: 10%;">Vehicle</th>
+                  <th style="width: 10%;">Form Type</th>
                   <th style="width: 15%;">Name</th>
                   <th style="width: 5%;">Phone</th>
                   <th style="width: 15%;">Vehicle Model</th>
@@ -44,7 +44,7 @@
                 </tr>
                 <?php foreach($results as $result){ ?>
                 <tr <?= ($result->active) ? '' :"class = 'read'" ?>>
-                  <td><?php echo $result->vehicle ?></td>
+                  <td><?php echo $result->form_type ?></td>
                   <td><?php echo $result->fname." ".$result->lname ?></td>
                   <td><?php echo $result->phone ?></td>
                   <td><?php echo $result->vehicle_model ?></td>
@@ -60,7 +60,9 @@
       </div>
       <!-- /.box-body -->
       <div class="box-footer">
-    
+          <div class="box-tools">
+           <?php echo $links; ?>
+          </div>
       </div>
       <!-- /.box-footer-->
     </div>

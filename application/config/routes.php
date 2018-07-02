@@ -52,7 +52,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 /*Front end Routes*/
 $route['default_controller'] = 'frontend';
 $route['showroom'] = 'frontend/showroom';
-$route['showroom/(:any)'] = 'frontend/showcar/$1';
+$route['showroom/(:num)'] = 'frontend/showroom';
+$route['showroom/v/(:any)'] = 'frontend/showcar/$1';
 $route['sell-your-car'] = 'frontend/sellCar';
 $route['car-locator'] = 'frontend/carLocator';
 $route['services'] = 'frontend/services';
@@ -80,7 +81,7 @@ $route['usr/logout'] = 'auth/logout';
 $route['admin/dashboard'] = 'admin';
 $route['admin/dashboard/edit/profile/(:any)'] = 'admin/admin_profile/$1';
 $route['profile/update'] = 'admin/update_profile';
-$route['admin/dashboard/car'] = 'car/carList';
+$route['admin/dashboard/car(/:num)?'] = 'car/carList';
 $route['admin/dashboard/car/add'] = 'car/carAdd';
 $route['admin/dashboard/car/save'] = 'car/carSave';
 $route['admin/dashboard/car/edit/(:num)'] = 'car/carEdit/$1';
@@ -88,7 +89,7 @@ $route['admin/dashboard/car/update'] = 'car/carUpdate';
 $route['admin/dashboard/car/delete/(:num)'] = 'car/carDelete/$1';
 $route['admin/dashboard/car/img-delete'] = 'car/imgDelete';
 
-$route['admin/dashboard/page'] = 'page';
+$route['admin/dashboard/page(/:num)?'] = 'page';
 $route['admin/dashboard/page/add'] = 'page/add/$1';
 $route['admin/dashboard/page/edit/(:num)'] = 'page/edit/$1';
 $route['admin/dashboard/page/update'] = 'page/update';
@@ -96,43 +97,43 @@ $route['admin/dashboard/page/store'] = 'page/store/$1';
 $route['admin/dashboard/page/show/(:num)'] = 'page/show/$1';
 $route['admin/dashboard/page/delete/(:num)'] = 'page/delete/$1';
 
-$route['admin/dashboard/contact'] = 'inquiry/contact';
+$route['admin/dashboard/contact(/:num)?'] = 'inquiry/contact';
 $route['admin/dashboard/contact/show/(:num)'] = 'inquiry/contact_show/$1';
 $route['admin/dashboard/contact/delete/(:num)'] = 'inquiry/contact_delete/$1';
 
-$route['admin/dashboard/sell-car'] = 'inquiry/sellcar';
+$route['admin/dashboard/sell-car(/:num)?'] = 'inquiry/sellcar';
 $route['admin/dashboard/sell-car/show/(:num)'] = 'inquiry/sellcar_show/$1';
 $route['admin/dashboard/sell-car/delete/(:num)'] = 'inquiry/sellcar_delete/$1';
 
-$route['admin/dashboard/reserve-car'] = 'inquiry/enquiry';
+$route['admin/dashboard/reserve-car(/:num)?'] = 'inquiry/enquiry';
 $route['admin/dashboard/reserve-car/show/(:num)'] = 'inquiry/enquiry_show/$1';
 $route['admin/dashboard/reserve-car/delete/(:num)'] = 'inquiry/enquiry_delete/$1';
 
-$route['admin/dashboard/test-drive'] = 'inquiry/enquiry';
+$route['admin/dashboard/test-drive(/:num)?'] = 'inquiry/enquiry';
 $route['admin/dashboard/test-drive/show/(:num)'] = 'inquiry/enquiry_show/$1';
 $route['admin/dashboard/test-drive/delete/(:num)'] = 'inquiry/enquiry_delete/$1';
 
-$route['admin/dashboard/send-offer'] = 'inquiry/enquiry';
+$route['admin/dashboard/send-offer(/:num)?'] = 'inquiry/enquiry';
 $route['admin/dashboard/send-offer/show/(:num)'] = 'inquiry/enquiry_show/$1';
 $route['admin/dashboard/send-offer/delete/(:num)'] = 'inquiry/enquiry_delete/$1';
 
-$route['admin/dashboard/enquiry'] = 'inquiry/enquiry';
+$route['admin/dashboard/enquiry(/:num)?'] = 'inquiry/enquiry';
 $route['admin/dashboard/enquiry/show/(:num)'] = 'inquiry/enquiry_show/$1';
 $route['admin/dashboard/enquiry/delete/(:num)'] = 'inquiry/enquiry_delete/$1';
 
-$route['admin/dashboard/part-exchange'] = 'part_exchange/index';
+$route['admin/dashboard/part-exchange(/:num)?'] = 'part_exchange/index';
 $route['admin/dashboard/part-exchange/show/(:num)'] = 'part_exchange/show/$1';
 $route['admin/dashboard/part-exchange/delete/(:num)'] = 'part_exchange/delete/$1';
 
-$route['admin/dashboard/services'] = 'service/index';
+$route['admin/dashboard/services(/:num)?'] = 'service/index';
 $route['admin/dashboard/services/show/(:num)'] = 'service/show/$1';
 $route['admin/dashboard/services/delete/(:num)'] = 'service/delete/$1';
 
-$route['admin/dashboard/vehicle-health'] = 'service/index';
+$route['admin/dashboard/vehicle-health(/:num)?'] = 'service/index';
 $route['admin/dashboard/vehicle-health/show/(:num)'] = 'service/show/$1';
 $route['admin/dashboard/vehicle-health/delete/(:num)'] = 'service/delete/$1';
 
-$route['admin/dashboard/car-dignose'] = 'service/index';
+$route['admin/dashboard/car-dignose(/:num)?'] = 'service/index';
 $route['admin/dashboard/car-dignose/show/(:num)'] = 'service/show/$1';
 $route['admin/dashboard/car-dignose/delete/(:num)'] = 'service/delete/$1';
 

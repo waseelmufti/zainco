@@ -7,8 +7,13 @@ class Page_model extends CI_Model{
         parent::__construct();
     }
     
-    public function get_pages(){
-        $result = $this->db->get('pages');
+    public function records_count($table){
+        
+        return $this->db->count_all($table);
+    }
+    
+    public function get_pages($limit = 5, $offset = 5){
+        $result = $this->db->limit($limit, $offset)->order_by('created_at', 'DESC')->get('pages');
         return $result->result();
     }
     

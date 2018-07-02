@@ -10,12 +10,48 @@ class Page extends CI_Controller{
           redirect('usr/login');
         }
         $this->load->library('form_validation');
+        $this->load->library('pagination');
         $this->load->model('page/page_model', 'page_model');
     }
     
     public function index(){
         $this->load->helper('text');
-        $data['pages'] = $this->page_model->get_pages();
+        
+        /*Configure Pagination*/
+        $config = array();
+        $config['base_url'] = site_url('admin/dashboard/page');
+        
+        $total_rows = $this->page_model->records_count('pages');
+        $config['total_rows'] = $total_rows;
+        $config['per_page'] = 10;
+        //$config['use_page_numbers'] = TRUE;
+        $num_links = round($config['total_rows']/$config['per_page']);
+        $config['num_links'] = $num_links;
+        $config['uri_segment'] = 4;
+        $config['full_tag_open'] = '<ul class="pagination pagination-sm no-margin pull-right">';
+        $config['full_tag_close'] = '</ul>';
+        $config['first_link'] = 'First';
+        $config['first_tag_open'] = '<li>';
+        $config['first_tag_close'] = '</li>';
+        $config['last_link'] = 'Last';
+        $config['last_tag_open'] = '<li>';
+        $config['last_tag_close'] = '</li>';
+        $config['next_link'] = '&gt;';
+        $config['next_tag_open'] = '<li>';
+        $config['next_tag_close'] = '</li>';
+        $config['prev_link'] = '&lt;';
+        $config['prev_tag_open'] = '<li>';
+        $config['prev_tag_close'] = '</li>';
+        $config['cur_tag_open'] = '<li class="active"><a href="">';
+        $config['cur_tag_close'] = '</a></li>';
+        $config['num_tag_open'] = '<li>';
+        $config['num_tag_close'] = '</li>';  
+
+        $this->pagination->initialize($config);
+        $page_off = $this->uri->segment(4);
+        
+        $data['pages'] = $this->page_model->get_pages($config['per_page'], $page_off);
+        $data['links'] = $this->pagination->create_links();  
         $this->load->view('admin/inc/header');
         $this->load->view('admin/inc/sidebar');
         $this->load->view('admin/page/index', $data);

@@ -6,9 +6,11 @@ class Car_model extends CI_Model{
   public function __construct(){
     parent::__construct();
   }
-
-  public function get_list($body_style = NULL, $transmission = NULL, $fuel_type = NULL){
-      
+    public function records_count($table){
+        return $this->db->count_all($table);
+    }
+  public function get_list($limit, $start, $body_style = NULL, $transmission = NULL, $fuel_type = NULL){
+      /* if body or transmission and fuel type is not null */
       if($this->input->get('body')){
           $body = $this->input->get('body');
           $this->db->where('body_style', $body);
@@ -21,7 +23,8 @@ class Car_model extends CI_Model{
           $fuel = $this->input->get('fuel_type');
           $this->db->where('fuel_type', $fuel);
         }
-        
+      /* Limit query */
+    $this->db->limit($limit, $start);    
     $query = $this->db->order_by('created_at', 'DESC')->get('car_table');
     return $query->result();
   }

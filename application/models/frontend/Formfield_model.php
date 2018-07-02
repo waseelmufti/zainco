@@ -8,7 +8,8 @@ class Formfield_model extends CI_Model{
         parent::__construct();
     }
     
-    public function get_makeof(){
+    public function records_count($table){
+        return $this->db->count_all($table);
     }
     
     public function get_bodystyle(){
