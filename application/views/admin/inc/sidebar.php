@@ -117,6 +117,14 @@
             </span>
           </a>
         </li>
+        <li>
+          <a href="<?= site_url('admin/dashboard/recovery') ?>">
+            <i class="fa fa-dashboard"></i> <span>Recovery and Breakdown</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->

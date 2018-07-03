@@ -196,5 +196,11 @@ public function page(){
     $this->load->view('frontend/accident_claim', $data);
     $this->load->view('frontend/inc/footer');
     }
+    public function recovery(){
+    $data = array();
+    $this->load->view('frontend/inc/header');
+    $this->load->view('frontend/recovery', $data);
+    $this->load->view('frontend/inc/footer');
+    }
     
 }

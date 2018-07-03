@@ -310,8 +310,7 @@ public function save_car_services(){
 }/* End Function */    
     
     public function accident_claims(){
-        echo '<pre>';
-        $this->load->model('inquiry/accident/accident_model', 'accident_model');
+    $this->load->model('inquiry/accident/accident_model', 'accident_model');
     /* Setting rules for part exchange form */
     $this->form_validation->set_rules('name', 'Name', 'required');
     $this->form_validation->set_rules('ph_no', 'Phone Number', 'required');
@@ -343,4 +342,41 @@ public function save_car_services(){
     }
         
     }
+    
+    public function recovery(){
+    $this->load->model('inquiry/recovery/recovery_model', 'recovery_model');
+    /* Setting rules for part exchange form */
+    $this->form_validation->set_rules('recovery_type', 'Recovery Type', 'required');
+    $this->form_validation->set_rules('name', 'Name', 'required');
+    $this->form_validation->set_rules('contact_no', 'Contact Number', 'required');
+    $this->form_validation->set_rules('v_reg_no', 'Vehicle Registration Number', 'required');
+    
+    /* Run validation*/
+    if($this->form_validation->run() != FALSE){
+        $data = array(
+        'form_type' => $this->input->post('form_type'),
+        'recovery_type' => $this->input->post('recovery_type'),
+        'name' => $this->input->post('name'),
+        'contact_no' => $this->input->post('contact_no'),
+        'v_reg_no' => $this->input->post('v_reg_no'),
+        'location' => $this->input->post('location'),
+        'drop_location' => $this->input->post('drop_location'),
+        );
+        $flag = $this->recovery_model->save_record($data);
+        if($flag){
+            $msg = "Thanks for Message us our member of staff will contact you with in 24 hour or call us";
+        $this->session->set_flashdata('success', $msg);
+        redirect('thankyou');
+        }else{
+            $this->session->set_flashdata('error', 'There is a problem, Please Try Again.');
+            redirect($_SERVER['HTTP_REFERER']);
+        }
+    }else{
+        /*If Validation is not successful*/
+        $err = validation_errors('<div style="color: #fff;">', '</div>');
+        $this->session->set_flashdata('error', $err);
+        redirect($_SERVER['HTTP_REFERER']);
+    }   
+}
+
 }
