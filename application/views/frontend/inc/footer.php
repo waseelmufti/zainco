@@ -132,7 +132,7 @@
 
 <!-- Google Libraries API -->
 <script defer type="text/javascript" src="<?= site_url('assets/js/') ?>slick.min.js"></script>
-<!--<script type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.captcha.basic.min"></script>-->
+<script type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.captcha.min.js"></script>
 <script>
     $('document').ready(function() {
 
@@ -162,13 +162,15 @@
             focusOnSelect: true
         });
         $( ".datepicker" ).datepicker();
-        $('._form').captcha();
+        $('.site_form').captcha();
     });
 
 </script>
-<script type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.plugins-min.js"></script>
-<script type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.custom-config-min.js"></script>
-<script type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.config-min.js"></script>
+<script>
+</script>
+<!--<script type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.plugins-min.js"></script>-->
+<!--<script type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.custom-config-min.js"></script>-->
+<!--<script type="text/javascript" src="<?= site_url('assets/js/') ?>jquery.config-min.js"></script>-->
 <script type="text/javascript" src="<?= site_url('assets/js/') ?>premier-nav.js"></script>
 <script src="<?= site_url('assets/js/') ?>jquery-ui.min.js"></script>
 <script src="<?= site_url('assets/js/') ?>jquery.ui.touch-punch.min.js" type="text/javascript"></script>

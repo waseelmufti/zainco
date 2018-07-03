@@ -21,7 +21,7 @@
                                     Once completed, one of our team will contact you straight back.
                                     </p>
 
-                                <?= form_open_multipart('save_parts') ?>
+                                <?= form_open_multipart('save_parts', array('class' => 'site_form')) ?>
                                     <fieldset>
                                        <input type="hidden" name="form_type" value="partexchange">
                                         <!--input type="hidden" name="vehicle_id" value="<?= $car[0]->id ?>"-->

@@ -101,7 +101,7 @@
       <div class="contact-widget">
         <div class="pad-20 overflow-hidden">
           <a id="email-us"></a>
-<?php echo form_open('contact-form', array('class' => '_form')); ?>
+<?php echo form_open('contact-form', array('class' => 'site_form')); ?>
   <input type="hidden" name="subject" value="contact_form">
 
   <fieldset title="Contact Form">
@@ -126,38 +126,20 @@
     <div class="row">
       <div class="twelvecol"><textarea rows=5 cols=40 name="message" placeholder="Enter your enquiry">Enter your enquiry</textarea></div>
     </div>
-
-
-    <!-- CAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    
     <div class="row">
-    <div class="twelvecol">
-      <div class="g-recaptcha" data-sitekey="6Le7RFsUAAAAAPXnED-n8tIogLAF30sl5YgWxrC_"></div>
-      <noscript>
-      <div>
-        <div style="width: 302px; height: 422px; position: relative;">
-          <div style="width: 302px; height: 422px; position: absolute;">
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11892.678581556853!2d-71.402593!3d41.824645!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e4453c442f5b9f%3A0x22d5b1cf16b79db7!2s21+Brown+St%2C+Providence%2C+RI+02906%2C+USA!5e0!3m2!1sen!2s!4v1528404802498" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>                    frameborder="0" scrolling="no"
-                    style="width: 302px; height:422px; border-style: none;">
-            </iframe>
-          </div>
-        </div>
-        <div style="width: 300px; height: 60px; border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
-          <textarea id="g-recaptcha-response" name="g-recaptcha-response"
-                       class="g-recaptcha-response"
-                       style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;" >
-          </textarea>
-        </div>
-      </div>
-      </noscript>
-    </div>
-    </div>
-    <!-- //CAPTCHA -->
+            <div class="threecol"><label>Security</label></div>
+            <div class="ninecol last">
 
+                <div id="recaptcha_widget">
 
-    <div class="row">
-      <div class="twelvecol"><input type="submit" value="Send"></div>
-    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit Enquiry" class="button black full">
+        </div>
+    
   </fieldset>
 
 <?php echo form_close(); ?>

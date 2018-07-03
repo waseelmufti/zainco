@@ -41,7 +41,7 @@ background-size: cover;">
 Once completed, one of our team will contact you straight back.
 </p>
 
-<?php echo form_open_multipart('sell-form'); ?>
+<?php echo form_open_multipart('sell-form', array('class' => 'site_form')); ?>
   <h3>Car Valuation</h3>
 
   <!--  Show Success or Error Message -->

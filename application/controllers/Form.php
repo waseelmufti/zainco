@@ -20,14 +20,16 @@ class Form extends CI_Controller{
         $flag = $this->form_model->saveContact($this->input->post());
         if($flag){
           $this->session->set_flashdata('success', 'Your Message has been sent successfully');
+            redirect('thankyou');
         }else{
           $this->session->set_flashdata('error', 'There is an error, Please try again');
+            redirect($_SERVER['HTTP_REFERER']);
         }
       }else{
         $err = validation_errors('<div style="color: #fff;">', '</div>');
         $this->session->set_flashdata('error', $err);
+        redirect($_SERVER['HTTP_REFERER']);
       }
-        redirect('contact');
         }
 
   public function sellCar(){
@@ -98,7 +100,7 @@ class Form extends CI_Controller{
                           }else{
                             $msg = 'Some problem occurred, please try again.';
                             $this->session->set_flashdata('error',$msg);
-                            redirect('sell-your-car');
+                            redirect($_SERVER['HTTP_REFERER']);
                           }
                     }
               }

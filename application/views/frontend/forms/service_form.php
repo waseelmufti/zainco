@@ -2,7 +2,7 @@
     Our online application is quick, simple and secure.<br> Once completed, one of our team will contact you straight back.
 </p>
 
-<?= form_open('servicing') ?>
+<?= form_open('servicing', array('class' => 'site_form')) ?>
    <?php if($this->session->flashdata('error')){ ?>
      <div class="twelvecol" style="padding: 5px; background: #ed2728; color: #fff;"><?= $this->session->flashdata('error') ?></div>
 <?php } ?>
