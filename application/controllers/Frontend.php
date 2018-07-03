@@ -190,5 +190,11 @@ public function page(){
     $this->load->view('frontend/single', $data);
     $this->load->view('frontend/inc/footer');
 }
+    public function accident_claims(){
+        $data = array();
+    $this->load->view('frontend/inc/header');
+    $this->load->view('frontend/accident_claim', $data);
+    $this->load->view('frontend/inc/footer');
+    }
     
 }

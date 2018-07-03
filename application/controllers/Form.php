@@ -308,4 +308,39 @@ public function save_car_services(){
     $this->session->set_flashdata('success', $msg);
     redirect('thankyou');
 }/* End Function */    
+    
+    public function accident_claims(){
+        echo '<pre>';
+        $this->load->model('inquiry/accident/accident_model', 'accident_model');
+    /* Setting rules for part exchange form */
+    $this->form_validation->set_rules('name', 'Name', 'required');
+    $this->form_validation->set_rules('ph_no', 'Phone Number', 'required');
+    $this->form_validation->set_rules('email', 'Email', 'valid_email');
+    
+    /* Run validation*/
+    if($this->form_validation->run() != FALSE){
+        $data = array(
+        'form_type' => $this->input->post('form_type'),
+        'name' => $this->input->post('name'),
+        'ph_no' => $this->input->post('ph_no'),
+        'email' => $this->input->post('email'),
+        'time_to_call' => $this->input->post('time_to_call'),
+        );
+        $flag = $this->accident_model->save_record($data);
+        if($flag){
+            $msg = "Thanks for Message us our member of staff will contact you with in 24 hour or call us";
+        $this->session->set_flashdata('success', $msg);
+        redirect('thankyou');
+        }else{
+            $this->session->set_flashdata('error', 'There is a problem, Please Try Again.');
+            redirect($_SERVER['HTTP_REFERER']);
+        }
+    }else{
+        /*If Validation is not successful*/
+        $err = validation_errors('<div style="color: #fff;">', '</div>');
+        $this->session->set_flashdata('error', $err);
+        redirect($_SERVER['HTTP_REFERER']);
+    }
+        
+    }
 }

@@ -109,6 +109,14 @@
             </span>
           </a>
         </li>
+         <li>
+          <a href="<?= site_url('admin/dashboard/accident-claim') ?>">
+            <i class="fa fa-dashboard"></i> <span>Accident Claims</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->

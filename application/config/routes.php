@@ -67,6 +67,7 @@ $route['buy-it-now/(:num)'] = 'frontend/buy_now/$1';
 $route['book-test-drive/(:num)'] = 'frontend/book_test_drive/$1'; 
 $route['send-offer/(:num)'] = 'frontend/send_offer/$1'; 
 $route['part-exchange'] = 'frontend/part_exchange'; 
+$route['accident-claims'] = 'frontend/accident_claims'; 
 $route['enquiry/(:num)'] = 'frontend/enquiry/$1'; 
 $route['get-direction'] = 'frontend/get_direction'; 
 $route['404_override'] = '';
@@ -133,6 +134,10 @@ $route['admin/dashboard/vehicle-health(/:num)?'] = 'service/index';
 $route['admin/dashboard/vehicle-health/show/(:num)'] = 'service/show/$1';
 $route['admin/dashboard/vehicle-health/delete/(:num)'] = 'service/delete/$1';
 
+$route['admin/dashboard/accident-claim(/:num)?'] = 'accident_claim/index';
+$route['admin/dashboard/accident-claim/show/(:num)'] = 'accident_claim/show/$1';
+$route['admin/dashboard/accident-claim/delete/(:num)'] = 'accident_claim/delete/$1';
+
 $route['admin/dashboard/car-dignose(/:num)?'] = 'service/index';
 $route['admin/dashboard/car-dignose/show/(:num)'] = 'service/show/$1';
 $route['admin/dashboard/car-dignose/delete/(:num)'] = 'service/delete/$1';
@@ -144,6 +149,7 @@ $route['carlocator'] = 'form/carLocator';
 $route['enquiry'] = 'form/enquiry';
 $route['save_parts'] = 'form/save_part_exch';
 $route['servicing'] = 'form/save_car_services';
+$route['accident-form'] = 'form/accident_claims';
 require_once(BASEPATH.'database/DB.php');
 $db = & DB();
 $db->select('slug');
