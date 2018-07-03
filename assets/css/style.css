@@ -686,7 +686,7 @@ body {
     float: left;
     width: 100%;
     min-height: 60px;
-    background: url(img-src/themev2/ajax-loader.gif) center center no-repeat
+    background: url(../img/theme2/ajax-loader.gif) center center no-repeat
 }
 
 body {
@@ -894,7 +894,7 @@ textarea {
     transition: border linear .2s, box-shadow linear .2s;
 }
 
-.form-field{
+.form-field {
     font-family: 'Arial', sans-serif !important;
     float: left !important;
     display: inline-block !important;
@@ -915,6 +915,7 @@ textarea {
     -webkit-transition: border linear .2s, box-shadow linear .2s;
     transition: border linear .2s, box-shadow linear .2s;
 }
+
 .sidebar .uneditable-input,
 .sidebar input[type=color],
 .sidebar input[type=date],
@@ -1898,22 +1899,22 @@ ul.tabs {
 }
 
 .message_green {
-    background: url(img-src/themev2/notification-green.gif) no-repeat scroll 15px center #dfe9b7;
+    background: url(../img/theme2/notification-green.gif) no-repeat scroll 15px center #dfe9b7;
     border: 1px solid #bac398
 }
 
 .message_red {
-    background: url(img-src/themev2/notification-red.gif) no-repeat scroll 15px center #f5dcd8;
+    background: url(../img/theme2/notification-red.gif) no-repeat scroll 15px center #f5dcd8;
     border: 1px solid #cdbfbe
 }
 
 .message_blue {
-    background: url(img-src/themev2/notification-blue.gif) no-repeat scroll 15px center #dae6f2;
+    background: url(../img/theme2/notification-blue.gif) no-repeat scroll 15px center #dae6f2;
     border: 1px solid #bdc4ca
 }
 
 .message_yellow {
-    background: url(img-src/themev2/notification-yellow.gif) no-repeat scroll 15px center #f8f2b6;
+    background: url(../img/theme2/notification-yellow.gif) no-repeat scroll 15px center #f8f2b6;
     border: 1px solid #d8d4b7
 }
 
@@ -1939,8 +1940,8 @@ ul.tabs {
 
 @font-face {
     font-family: icomoon;
-    src: url(css-src/themev2/fonts/icomoon-webfont.eot);
-    src: url(css-src/themev2/fonts/icomoon-webfontd41d.eot?#iefix) format('embedded-opentype'), url(css-src/themev2/fonts/icomoon-webfont.woff) format('woff'), url(css-src/themev2/fonts/icomoon-webfont.ttf) format('truetype'), url(css-src/themev2/fonts/icomoon-webfont.svg#ico-freefree) format('svg');
+    src: url(../fonts/icomoon-webfont.eot);
+    src: url(../fonts/icomoon-webfontd41d.eot?#iefix) format('embedded-opentype'), url(../fonts/icomoon-webfont.woff) format('woff'), url(../fonts/icomoon-webfont.ttf) format('truetype'), url(../fonts/icomoon-webfont.svg#ico-freefree) format('svg');
     font-weight: 400;
     font-style: normal
 }
@@ -2848,7 +2849,7 @@ ul.tabs {
     top: 6px;
     right: 6px;
     display: block;
-    background: url(img-src/themev2/rs-default.png) no-repeat -64px 0;
+    background: url(../img/theme2/rs-default.png) no-repeat -64px 0;
     width: 32px;
     height: 32px;
     text-indent: -9999px;
@@ -2905,7 +2906,7 @@ ul.tabs {
 }
 
 #map_canvas .google_map_loading {
-    background: url(img-src/themev2/google/loading-cogs.gif);
+    background: url(../img/theme2/google/loading-cogs.gif);
     background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
@@ -3033,8 +3034,8 @@ legend {
 
 @font-face {
     font-family: uknumberplate;
-    src: url(css-src/themev2/fonts/UKNumberPlate-webfont.eot);
-    src: url(css-src/themev2/fonts/UKNumberPlate-webfontd41d.eot?#iefix) format('embedded-opentype'), url(css-src/themev2/fonts/UKNumberPlate-webfont.html) format('woff2'), url(css-src/themev2/fonts/UKNumberPlate-webfont.woff) format('woff'), url(css-src/themev2/fonts/UKNumberPlate-webfont.ttf) format('truetype'), url(css-src/themev2/fonts/UKNumberPlate-webfont.svg#uknumberplateregular) format('svg');
+    src: url(../fonts/UKNumberPlate-webfont.eot);
+    src: url(../fonts/UKNumberPlate-webfontd41d.eot?#iefix) format('embedded-opentype'), url(../fonts/UKNumberPlate-webfont.html) format('woff2'), url(../fonts/UKNumberPlate-webfont.woff) format('woff'), url(../fonts/UKNumberPlate-webfont.ttf) format('truetype'), url(../fonts/UKNumberPlate-webfont.svg#uknumberplateregular) format('svg');
     font-weight: 400;
     font-style: normal
 }
@@ -5580,7 +5581,7 @@ form[data-vehicle-search] select:hover option {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: url(img-src/themev2/theme/christmas/trees.svg);
+    background: url(../img/theme2/theme/christmas/trees.svg);
     height: 581px;
     z-index: 2;
     background-size: cover;
@@ -5593,7 +5594,7 @@ form[data-vehicle-search] select:hover option {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: url(img-src/themev2/theme/christmas/snow.svg);
+    background: url(../img/theme2/theme/christmas/snow.svg);
     height: 100%;
     z-index: 1;
     background-size: cover;
@@ -7981,183 +7982,183 @@ legend {
 }
 
 #page-hdr-finance {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-finance.jpg) center top no-repeat;
+    background: url(../img/theme/page-hdr-finance.jpg) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-finance-explained {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-finance-explained.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-finance-explained.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-bad-credit {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-badcredit.jpg) center top no-repeat;
+    background: url(../img/theme/page-hdr-badcredit.jpg) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-sellcar {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-sellcar.jpg) center top no-repeat;
+    background: url(../img/theme/page-hdr-sellcar.jpg) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-partex {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-partex.jpg) center top no-repeat;
+    background: url(../img/theme/page-hdr-partex.jpg) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-sourcing {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-sourcing.jpg) center top no-repeat;
+    background: url(../img/theme/page-hdr-sourcing.jpg) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-booking {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-booking.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-booking.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-breakdown {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-breakdown.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-breakdown.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-team {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-ourteam.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-ourteam.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-contact {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-contact.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-contact.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-dealer-guarantee {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-warranty.jpg) center top no-repeat;
+    background: url(../img/theme/page-hdr-warranty.jpg) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-export {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-delivery.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-delivery.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-mot {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-mot.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-mot.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-service {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-service.jpg) center top no-repeat;
+    background: url(../img/theme/page-hdr-service.jpg) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-accessories {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-accessories.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-accessories.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-products {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-products.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-products.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-car-spa {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-car-spa.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-car-spa.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-awards {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-awards.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-awards.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-superstaraward {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-superstaraward.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-superstaraward.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-gap,
 #page-hdr-warranty {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-warranty.jpg) center top no-repeat;
+    background: url(../img/theme/page-hdr-warranty.jpg) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-rac-approved-dealer {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-approved-dealer.jpg) center top no-repeat;
+    background: url(../img/theme/page-hdr-approved-dealer.jpg) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-offers {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-rac-offers.jpg) center top no-repeat;
+    background: url(../img/theme/page-hdr-rac-offers.jpg) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-vehicle-preparation {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-vehicle-preperation.jpg) center top no-repeat;
+    background: url(../img/theme/page-hdr-vehicle-preperation.jpg) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-reserve {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-reserve.jpg) center top no-repeat;
+    background: url(../img/theme/page-hdr-reserve.jpg) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-community {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-community.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-community.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-blog {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-blog.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-blog.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-about {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-about.jpg) center top no-repeat;
+    background: url(../img/theme/page-hdr-about.jpg) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-reviews {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-testimonials.jpg) center top no-repeat;
+    background: url(../img/theme/page-hdr-testimonials.jpg) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-automatic {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-automatic.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-automatic.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-price-pledge {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-price-pledge.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-price-pledge.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-paint {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-paint.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-paint.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-motability {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-motability.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-motability.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-compare {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-compare.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-compare.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-valeting {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-valeting.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-valeting.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-valuation {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-valuation.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-valuation.html) center top no-repeat;
     background-size: cover
 }
 
 #page-hdr-specialists {
-    background: url(img-src/_themev2-globemotors-1372/theme/page-hdr-specialists.html) center top no-repeat;
+    background: url(../img/theme/page-hdr-specialists.html) center top no-repeat;
     background-size: cover
 }
 
@@ -8662,7 +8663,7 @@ footer #fca-disclaimer .pad-15 p {
 
 .row-block.results-adv-search select {
     color: #404040;
-    background: rgba(255, 255, 255, 0) url(img-src/_themev2-globemotors-1372/theme/select-icon-dark.svg) no-repeat;
+    background: rgba(255, 255, 255, 0) url(../img/theme/select-icon-dark.svg) no-repeat;
     background-size: 12px;
     background-position: right 10px center;
     transition: .2s all ease-in-out;
@@ -8675,7 +8676,7 @@ footer #fca-disclaimer .pad-15 p {
     color: #9b9b9b;
     outline: 1px solid #9b9b9b;
     outline-offset: -1px;
-    background: rgba(255, 255, 255, 0) url(img-src/_themev2-globemotors-1372/theme/select-icon-hover.svg) no-repeat;
+    background: rgba(255, 255, 255, 0) url(../img/theme/select-icon-hover.svg) no-repeat;
     background-size: 12px;
     background-position: right 10px center
 }
@@ -9119,7 +9120,7 @@ footer #fca-disclaimer .pad-15 p {
 
 #results .vehicle-sold.youtube a.vehicle-image:after,
 #results .vehicle.youtube a.vehicle-image:after {
-    content: url(img-src/themev2/youtube-sash.png);
+    content: url(../img/theme2/youtube-sash.png);
     display: block;
     position: absolute;
     float: left;
@@ -9773,7 +9774,7 @@ footer #fca-disclaimer .pad-15 p {
     margin-left: -12px;
     position: absolute;
     cursor: pointer;
-    background: url(img-src/themev2/rs-minimal-white.png);
+    background: url(../img/theme2/rs-minimal-white.png);
     background-color: transparent
 }
 
@@ -9936,7 +9937,7 @@ footer #fca-disclaimer .pad-15 p {
     margin-left: -8px;
     position: absolute;
     cursor: pointer;
-    background: url(img-src/themev2/rs-minimal-white.png)
+    background: url(../img/theme2/rs-minimal-white.png)
 }
 
 .rsMinW.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn {
@@ -10029,7 +10030,7 @@ footer #fca-disclaimer .pad-15 p {
     margin: 6px;
     width: 32px;
     height: 32px;
-    background: url(img-src/themev2/rs-minimal-white.png) 0 0;
+    background: url(../img/theme2/rs-minimal-white.png) 0 0;
     background-color: #fff;
     background-color: rgba(255, 255, 255, .75);
     border-radius: 2px
@@ -10057,7 +10058,7 @@ footer #fca-disclaimer .pad-15 p {
     display: block;
     height: 64px;
     border-radius: 4px;
-    background: url(img-src/themev2/rs-minimal-white.png) no-repeat 0 -32px;
+    background: url(../img/theme2/rs-minimal-white.png) no-repeat 0 -32px;
     background-color: #214664;
     background-color: rgba(33, 70, 100, .8);
     transition: .3s
@@ -10094,7 +10095,7 @@ footer #fca-disclaimer .pad-15 p {
     margin: 6px;
     width: 32px;
     height: 32px;
-    background: url(img-src/themev2/rs-minimal-white.png) -64px 0;
+    background: url(../img/theme2/rs-minimal-white.png) -64px 0;
     background-color: #214664;
     background-color: rgba(33, 70, 100, .8)
 }
@@ -10106,7 +10107,7 @@ footer #fca-disclaimer .pad-15 p {
 .rsMinW .rsPreloader {
     width: 20px;
     height: 20px;
-    background-image: url(img-src/themev2/preloaders/preloader.gif);
+    background-image: url(../img/theme2/preloaders/preloader.gif);
     left: 50%;
     top: 50%;
     margin-left: -10px;
@@ -10216,7 +10217,7 @@ footer #fca-disclaimer .pad-15 p {
     margin-left: -16px;
     position: absolute;
     cursor: pointer;
-    background: url(img-src/themev2/rs-default.png);
+    background: url(../img/theme2/rs-default.png);
     background-color: rgba(0, 0, 0, .75);
     border-radius: 2px
 }
@@ -10372,7 +10373,7 @@ footer #fca-disclaimer .pad-15 p {
     margin-left: -8px;
     position: absolute;
     cursor: pointer;
-    background: url(img-src/themev2/rs-default.png)
+    background: url(../img/theme2/rs-default.png)
 }
 
 .rsDefault.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn {
@@ -10465,7 +10466,7 @@ footer #fca-disclaimer .pad-15 p {
     margin: 6px;
     width: 32px;
     height: 32px;
-    background: url(img-src/themev2/rs-default.png) 0 0;
+    background: url(../img/theme2/rs-default.png) 0 0;
     background-color: rgba(0, 0, 0, .75);
     border-radius: 2px
 }
@@ -10539,7 +10540,7 @@ footer #fca-disclaimer .pad-15 p {
     margin: 6px;
     width: 32px;
     height: 32px;
-    background: url(img-src/themev2/rs-default.png) -64px 0;
+    background: url(../img/theme2/rs-default.png) -64px 0;
     background-color: #000;
     background-color: rgba(0, 0, 0, .75)
 }
@@ -10551,7 +10552,7 @@ footer #fca-disclaimer .pad-15 p {
 .rsDefault .rsPreloader {
     width: 20px;
     height: 20px;
-    background-image: url(img-src/themev2/preloaders/preloader-white.gif);
+    background-image: url(../img/theme2/preloaders/preloader-white.gif);
     left: 50%;
     top: 50%;
     margin-left: -10px;
@@ -10883,7 +10884,7 @@ select {
     box-sizing: border-box;
     box-shadow: none;
     color: #404040;
-    background: rgba(255, 255, 255, 0) url(img-src/_themev2-globemotors-1372/theme/select-icon-dark.svg) no-repeat;
+    background: rgba(255, 255, 255, 0) url(../img/theme/select-icon-dark.svg) no-repeat;
     background-size: 12px;
     background-position: right 10px center;
     transition: .2s all ease-in-out;
@@ -10896,7 +10897,7 @@ select:hover {
     color: #9b9b9b;
     outline: 1px solid #9b9b9b;
     outline-offset: -1px;
-    background: rgba(255, 255, 255, 0) url(img-src/_themev2-globemotors-1372/theme/select-icon-hover.svg) no-repeat;
+    background: rgba(255, 255, 255, 0) url(../img/theme/select-icon-hover.svg) no-repeat;
     background-size: 12px;
     background-position: right 10px center
 }
@@ -10907,7 +10908,7 @@ select > option {
 
 .light-select {
     color: #fff;
-    background: rgba(255, 255, 255, 0) url(img-src/_themev2-globemotors-1372/theme/select-icon-light.svg) no-repeat;
+    background: rgba(255, 255, 255, 0) url(../img/theme/select-icon-light.svg) no-repeat;
     background-size: 12px;
     background-position: right 10px center;
     transition: .2s all ease-in-out;
@@ -10920,14 +10921,14 @@ select > option {
     color: #9b9b9b;
     outline: 1px solid #9b9b9b;
     outline-offset: -1px;
-    background: rgba(255, 255, 255, 0) url(img-src/_themev2-globemotors-1372/theme/select-icon-hover.svg) no-repeat;
+    background: rgba(255, 255, 255, 0) url(../img/theme/select-icon-hover.svg) no-repeat;
     background-size: 12px;
     background-position: right 10px center
 }
 
 .dark-select {
     color: #404040;
-    background: rgba(255, 255, 255, 0) url(img-src/_themev2-globemotors-1372/theme/select-icon-dark.svg) no-repeat;
+    background: rgba(255, 255, 255, 0) url(../img/theme/select-icon-dark.svg) no-repeat;
     background-size: 12px;
     background-position: right 10px center;
     transition: .2s all ease-in-out;
@@ -10940,7 +10941,7 @@ select > option {
     color: #9b9b9b;
     outline: 1px solid #9b9b9b;
     outline-offset: -1px;
-    background: rgba(255, 255, 255, 0) url(img-src/_themev2-globemotors-1372/theme/select-icon-hover.svg) no-repeat;
+    background: rgba(255, 255, 255, 0) url(../img/theme/select-icon-hover.svg) no-repeat;
     background-size: 12px;
     background-position: right 10px center
 }
@@ -11440,14 +11441,14 @@ input[type=submit]:focus {
 }
 
 #responsive-slider-with-blocks-1 .rsContent.slide1 {
-    background: #404040 url(img-src/_themev2-globemotors-1372/theme/slide-1.jpg)!important;
+    background: #404040 url(../img/theme/slide-1.jpg)!important;
     background-size: cover!important;
     background-repeat: no-repeat!important;
     background-position: center center!important
 }
 
 #responsive-slider-with-blocks-1 .rsContent.slide2 {
-    background: #404040 url(img-src/_themev2-globemotors-1372/theme/slide-2.jpg)!important;
+    background: #404040 url(../img/theme/slide-2.jpg)!important;
     background-size: cover!important;
     background-repeat: no-repeat!important;
     background-position: center center!important;
@@ -11455,7 +11456,7 @@ input[type=submit]:focus {
 }
 
 #responsive-slider-with-blocks-1 .rsContent.slide3 {
-    background: #404040 url(img-src/_themev2-globemotors-1372/theme/slide-3.jpg)!important;
+    background: #404040 url(../img/theme/slide-3.jpg)!important;
     background-size: cover!important;
     background-repeat: no-repeat!important;
     background-position: center center!important;
@@ -11463,7 +11464,7 @@ input[type=submit]:focus {
 }
 
 #responsive-slider-with-blocks-1 .rsContent.slide4 {
-    background: #404040 url(img-src/_themev2-globemotors-1372/theme/slide-4.jpg)!important;
+    background: #404040 url(../img/theme/slide-4.jpg)!important;
     background-size: cover!important;
     background-repeat: no-repeat!important;
     background-position: center center!important;
@@ -11603,7 +11604,7 @@ input[type=submit]:focus {
     color: #9b9b9b;
     outline: 1px solid #9b9b9b;
     outline-offset: -1px;
-    background: rgba(255, 255, 255, 0) url(img-src/_themev2-globemotors-1372/theme/select-icon-hover.svg) no-repeat;
+    background: rgba(255, 255, 255, 0) url(../img/theme/select-icon-hover.svg) no-repeat;
     background-size: 12px;
     background-position: right 10px center
 }
@@ -12028,12 +12029,12 @@ input[type=submit]:focus {
 }
 
 .promo-pop-up .promo-pop-up__item--2 {
-    background: url(img-src/_themev2-globemotors-1372/theme/promo-2.jpg) center center no-repeat;
+    background: url(../img/theme/promo-2.jpg) center center no-repeat;
     background-size: cover
 }
 
 .promo-pop-up .promo-pop-up__item--3 {
-    background: url(img-src/_themev2-globemotors-1372/theme/promo-3.jpg) center center no-repeat;
+    background: url(../img/theme/promo-3.jpg) center center no-repeat;
     background-size: cover
 }
 
@@ -13859,10 +13860,10 @@ only screen and (max-width:739px) {
     }
 }
 
-</style > <style > @font-face {
+ @font-face {
     font-family: 'FontAwesome';
-    src: url('css-src/themev2/fonts/fontawesome-webfont3e6e.eot?v=4.7.0');
-    src: url('css-src/themev2/fonts/fontawesome-webfontd41d.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('css-src/themev2/fonts/fontawesome-webfont3e6e.html?v=4.7.0') format('woff2'), url('css-src/themev2/fonts/fontawesome-webfont3e6e.woff?v=4.7.0') format('woff'), url('css-src/themev2/fonts/fontawesome-webfont3e6e.ttf?v=4.7.0') format('truetype'), url('css-src/themev2/fonts/fontawesome-webfont3e6e.svg?v=4.7.0#fontawesomeregular') format('svg');
+    src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+    src: url('../fonts/fontawesome-webfontd.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.html?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont3e6e.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
     font-weight: normal;
     font-style: normal
 }
@@ -16898,11 +16899,13 @@ only screen and (max-width:739px) {
     overflow: visible;
     clip: auto
 }
-.label{
+
+.label {
     margin-right: 10px;
     font-size: 16px;
     line-height: 0px;
     color: #696969;
 }
+
 </style >
 /* CSS Document */
