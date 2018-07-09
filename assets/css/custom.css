@@ -73,3 +73,22 @@ ul.tick {
 ul.tick li:before {
   content: '✓';
 }
+.pagenavi2 {
+    display: block;
+    line-height: 32px;
+    margin: 5px 0;
+    float: right;
+/*    width: 100%;*/
+}
+
+.pagenavi2 li{
+    
+	display: inline-block;
+    margin: 0 10px 0 10px;
+    
+}
+
+.pagenavi2 li a{
+    color: #000;
+    font-weight: 500;
+}

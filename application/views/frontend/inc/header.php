@@ -315,7 +315,7 @@
                                                 <li class="n2 "><a class="n2 " href="<?= site_url() ?>" title="Servicing">Servicing</a></li>
                                             </ul>-->
                                         </li>
-                                        <li class="n6 "><a class="n6" href="<?= site_url('warranty') ?>" onclick="return false;" title="Warrenty"><strong>Warrenty</strong> </a>
+                                        <li class="n6 "><a class="n6" href="<?= site_url('warranty') ?>" title="Warrenty"><strong>Warrenty</strong> </a>
                                             <!--<ul>
                                                 <li class="n1 "><a class="n1 " href="<?= site_url('about-us') ?><span aria-hidden="true" class="icon icon-arrow-down"></span>" title="About Us">About Us</a></li>
                                                 <li class="n2 "><a class="n2 " href="<?= site_url('testimonials') ?>" title="Testimonials">Testimonials</a></li>

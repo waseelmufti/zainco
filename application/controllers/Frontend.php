@@ -30,7 +30,7 @@ class Frontend extends CI_Controller{
     $num_links = round($config['total_rows']/$config['per_page']);
     $config['num_links'] = $num_links;
     $config['uri_segment'] = 2;
-    $config['full_tag_open'] = '<ol class="pagenavi">';
+    $config['full_tag_open'] = '<ol class="pagenavi2">';
     $config['full_tag_close'] = '</ol>';
     $config['first_link'] = 'First';
     $config['first_tag_open'] = '<li>';
