@@ -337,11 +337,11 @@
                   <div class="spec one">
                     <div class="pad-10-top-bottom">
                       <ul>
-                        <li><span aria-hidden="true" class=""></span> <?= $car->mileage ?> miles</li>
-                        <li><span aria-hidden="true" class=""></span> <?= $car->color ?></li>
-                        <li><span aria-hidden="true" class=""></span> <?= $car->fuel_type ?></li>
-                        <li><span aria-hidden="true" class=""></span> <?= $car->transmission ?></li>
-                        <li><span aria-hidden="true" class=""></span> <?= $car->engine_capacity ?> L</li>
+                        <li><strong>Mileage: </strong> <?= $car->mileage ?> miles</li>
+                        <li><strong>Color: </strong> <?= $car->color ?></li>
+                        <li><strong>Fuel: </strong> <?= $car->fuel_type ?></li>
+                        <li><strong>Transmission: </strong> <?= $car->transmission ?></li>
+                        <li><strong>Engine Capacity: </strong> <?= $car->engine_capacity ?> L</li>
                       </ul>
                     </div>
                   </div>
@@ -353,7 +353,7 @@
                       <ul>
                         <!--<li><span aria-hidden="true" class=""></span> <?= $car->mpg ?> Avg. MPG</li>
                         <li><span aria-hidden="true" class=""></span> Ins. Group: <?= $car->ins_grp ?></li>-->
-                        <li><span aria-hidden="true" class=""></span> <?= $car->co_emission ?> CO² (g/km)</li>
+                        <li><strong>Carbon Emission: </strong> <?= $car->co_emission ?> CO² (g/km)</li>
                         <!-- <li><span aria-hidden="true" class="icon-tax12"></span> £315.00 12m Tax</li>
                         <li><span aria-hidden="true" class="icon-tax6"></span> £173.25 6m Tax</li> -->
                       </ul>

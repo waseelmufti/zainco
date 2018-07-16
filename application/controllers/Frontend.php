@@ -25,7 +25,7 @@ class Frontend extends CI_Controller{
 
     $total_rows = $this->car_model->records_count('car_table');
     $config['total_rows'] = $total_rows;
-    $config['per_page'] = 2;
+    $config['per_page'] = 10;
     //$config['use_page_numbers'] = TRUE;
     $num_links = round($config['total_rows']/$config['per_page']);
     $config['num_links'] = $num_links;
