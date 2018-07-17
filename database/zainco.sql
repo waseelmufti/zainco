@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 03, 2018 at 07:37 PM
+-- Generation Time: Jul 17, 2018 at 05:26 PM
 -- Server version: 10.1.26-MariaDB
 -- PHP Version: 7.1.9
 
@@ -357,7 +357,8 @@ INSERT INTO `contact_form` (`id`, `name`, `phone`, `email`, `message`, `active`,
 (6, 'test', '00000000', 'test@test.com', 'test', 0, '2018-05-24 15:59:22', '2018-05-24 15:59:22'),
 (7, 'test', '00000000', 'test@test.com', 'test', 0, '2018-05-24 16:01:16', '2018-05-24 16:01:16'),
 (8, 'test', '00000000', 'test@test.com', 'test', 1, '2018-05-24 16:01:55', '2018-05-31 17:09:42'),
-(11, 'waseel', '1234567890', 'waseel@waseel.com', 'this is a test message', 1, '2018-05-31 17:10:43', '2018-06-23 17:03:56');
+(11, 'waseel', '1234567890', 'waseel@waseel.com', 'this is a test message', 1, '2018-05-31 17:10:43', '2018-06-23 17:03:56'),
+(12, 'jkfhaf', '00000000000000', 'fff@fff.com', 'Enter your enquiryfkjlahsflkafhpa ', 0, '2018-07-03 18:23:58', '2018-07-03 18:23:58');
 
 -- --------------------------------------------------------
 
@@ -899,7 +900,7 @@ ALTER TABLE `comfort`
 -- AUTO_INCREMENT for table `contact_form`
 --
 ALTER TABLE `contact_form`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `enquiry`
